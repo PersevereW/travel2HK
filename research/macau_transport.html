@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en" class="fs-0" dir="ltr" data-mode="">
+<head>
+  <base target="_blank">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/static/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+  <!-- <script src="https://kit.fontawesome.com/60c2e70dc2.js" crossorigin="anonymous"></script> -->
+  <link href="https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/solid.min.css" rel="stylesheet" />
+  <link href="https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/regular.min.css" rel="stylesheet" />
+  <link href="https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/light.min.css" rel="stylesheet" />
+  <link href="https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/duotone.min.css" rel="stylesheet" />
+  <link href="https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/brands.min.css" rel="stylesheet" />
+  <link href="https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/custom-icons.min.css" rel="stylesheet" />
+  <script>
+    (function() {
+      var localeRoots = [
+        'zh-hant',
+        'zh-hans',
+        'pt',
+        'en',
+        'ja',
+        'ko',
+        'th',
+        'id',
+        'ru'
+      ];
+      var path = window.location.pathname || '/';
+      var normalized = path.replace(/\/+$/, '') || '/';
+      var segments = normalized.split('/').filter(Boolean);
+      var isHome = normalized === '/' || (
+        segments.length === 1 &&
+        localeRoots.indexOf(segments[0].toLowerCase()) >= 0
+      );
+      if (isHome) {
+        return;
+      }
+
+      var linkId = 'fa-full-font-face-override';
+      if (document.getElementById(linkId)) {
+        return;
+      }
+
+      var fullFontLink = document.createElement('link');
+      fullFontLink.id = linkId;
+      fullFontLink.rel = 'stylesheet';
+      fullFontLink.href = 'https://media.macaotourism.gov.mo/uploads/mgto_fonts/css/fontawesome-full-font-face.css';
+      document.head.appendChild(fullFontLink);
+    })();
+  </script>
+
+  <!-- Start swiper --> 
+  <link rel="stylesheet" href="/static/lib/swiper@9.2.4/swiper-bundle.min.css" />
+  <script src="/static/lib/swiper@9.2.4/swiper-bundle.min.js"></script>
+  <!-- End swiper -->
+
+  <!-- Start focus-trap -->
+  <script src="https://unpkg.com/tabbable@6.1.1/dist/index.umd.js"></script>
+  <script src="https://unpkg.com/focus-trap@7.3.1/dist/focus-trap.umd.js"></script>
+  <!-- End focus-trap -->
+  <meta property="og:image:width"     content="1200" />
+  <meta property="og:image:height"      content="630" />
+  <meta property="og:image"            content="/static/ogimage_default.png" />
+  <meta property="og:description"        content="Macao, a unique destination that preserves a multi-cultural heritage alongside state-of the art tourist facilities and a full calendar of festivals, and special events all year around." />
+  <meta name="description" property="description" content="Macao, a unique destination that preserves a multi-cultural heritage alongside state-of the art tourist facilities and a full calendar of festivals, and special events all year around." />
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NC9R3BG');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Start boomr -->
+  <script src="/static/script/boomr.js"></script>
+  <!-- End boomr -->
+  <title>Local Transportation - Macao Government Tourism Office</title>
+  <link rel="preload" href="/dist/vendors~app.b0b7231489f48cc3c642.css" as="style"><link rel="preload" href="/dist/vendors~app.ecff2efe120d4da10cb4.js" as="script"><link rel="preload" href="/dist/app.1d54adf2478aed193942.js" as="script"><link rel="preload" href="/dist/app.9972f1f7625bf8940348.css" as="style"><link rel="preload" href="/dist/en.localized.7f5693b5f2ab30c17ea4.css" as="style"><link rel="preload" href="/dist/en.localized.7e5881ec0ad4aab7c5cd.js" as="script"><link rel="preload" href="/dist/eea.3575ec8fc977e0a6a4f9.js" as="script">
+  <link rel="stylesheet" href="/dist/vendors~app.b0b7231489f48cc3c642.css"><link rel="stylesheet" href="/dist/app.9972f1f7625bf8940348.css"><link rel="stylesheet" href="/dist/en.localized.7f5693b5f2ab30c17ea4.css">
+  <style id="local-transportation.before-you-travel.stylesheet.en" type="text/css">article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img {
+ display: none;
+}
+
+@supports (filter: grayscale(1)) {
+
+:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img  {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  display: inline;
+}
+
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img {
+ display: none;
+}
+
+@supports (filter: grayscale(1)) {
+
+:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img  {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  display: inline;
+}
+
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img {
+ display: none;
+}
+
+@supports (filter: grayscale(1)) {
+
+:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img  {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  display: inline;
+}
+
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}article .images:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+article .images img {
+  width: 50%;
+  padding: .5em;
+}
+
+@media (max-width:576px) {
+article .images img {
+  width: 100%;
+}
+}#lrt-map {
+    width: 100%;
+    height: 40em;
+    max-height: 100vh;
+    margin-bottom: 1em;
+}
+
+#lrt-map .m-sight-marker .cx-marker {
+   transform: translateY(-50%);
+}
+
+#lrt-map .mapboxgl-popup-anchor-bottom {
+  margin-top: -28px;
+}
+
+
+#lrt-map .popup-wrapper article {
+  padding: 0;
+}
+
+article #stops-map table {display:none}
+
+@media (max-width:576px) {
+#lrt-map {
+	max-height: 61.8vh;
+	max-width:100%;
+}
+
+}:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img {
+ display: none;
+}
+
+@supports (filter: grayscale(1)) {
+
+:root[data-mode=bnw] article .images img,
+:root[data-mode=bnw] article img.images,
+:root[data-mode=bnw] article .DSECWebService img  {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  display: inline;
+}
+
+}</style>
+
+                                <script>!function(a){var e="https://s.go-mpulse.net/boomerang/",t="addEventListener";if("False"=="True")a.BOOMR_config=a.BOOMR_config||{},a.BOOMR_config.PageParams=a.BOOMR_config.PageParams||{},a.BOOMR_config.PageParams.pci=!0,e="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="4W3YC-A5HPG-VVLHA-VP46S-GQ8FL",function(){function n(e){a.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!a.BOOMR||!a.BOOMR.version&&!a.BOOMR.snippetExecuted){a.BOOMR=a.BOOMR||{},a.BOOMR.snippetExecuted=!0;var i,_,o,r=document.createElement("iframe");if(a[t])a[t]("load",n,!1);else if(a.attachEvent)a.attachEvent("onload",n);r.src="javascript:void(0)",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="width:0;height:0;border:0;display:none;",o=document.getElementsByTagName("script")[0],o.parentNode.insertBefore(r,o);try{_=r.contentWindow.document}catch(O){i=document.domain,r.src="javascript:var d=document.open();d.domain='"+i+"';void(0);",_=r.contentWindow.document}_.open()._l=function(){var a=this.createElement("script");if(i)this.domain=i;a.id="boomr-if-as",a.src=e+"4W3YC-A5HPG-VVLHA-VP46S-GQ8FL",BOOMR_lstart=(new Date).getTime(),this.body.appendChild(a)},_.write("<bo"+'dy onload="document._l();">'),_.close()}}(),"".length>0)if(a&&"performance"in a&&a.performance&&"function"==typeof a.performance.setResourceTimingBufferSize)a.performance.setResourceTimingBufferSize();!function(){if(BOOMR=a.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var e=""=="true"?1:0,t="",n="xt6xsxix2exam2xad6zq-f-5b2fb2ffd-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,_={"ak.v":"41","ak.cp":"240658","ak.ai":parseInt("329065",10),"ak.ol":"0","ak.cr":0,"ak.ipv":4,"ak.proto":"h2","ak.rid":"31009b02","ak.r":46558,"ak.a2":e,"ak.m":"","ak.n":"ff","ak.cport":16886,"ak.gh":"173.222.132.134","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"","ak.t":"1793073075","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==KItKj9gTPpMDgBHpVF+JbjX/+XBuh6DNVJXcjprAZ5gp95ITQgLLydM/tDeRACjE1dbzaoIPI4WkhKqGNt3/+F4UJUdH4bASkP5atXwB2qsBi5V18rBstq3WM+2IPqs5L0chDhVC7NWHBhNx91dRskUwXjaMlehDwR/3HHac40iQM+7duggTamhEvxAQnLmwRmybQ4RfbriIZQJEUl8zDyPdWQByOJBvb+Ai1D+WVMJTS/FLgxVv9TDlhv2CC7UB4Hhk1SwEBeD8mcCF8cmdBH5H6ch66JFxa31TpOBFeJvRNi7vtTWGDjOm1wz+I2Xv00Ggg99RInRHXWsg8ZrCGandifIZa4XCEZSYrCc35U7qskSmxz8o1N3KcQKk1/tD58uQRZRajJSSFnv139aDBSxFey4r4Wd1nqVc8W2uGhE=","ak.pv":"152","ak.dpoabenc":"","ak.tf":i};if(""!==t)_["ak.ruds"]=t;var o={i:!1,av:function(e){var t="http.initiator";if(e&&(!e[t]||"spa_hard"===e[t]))_["ak.feo"]=void 0!==a.aFeoApplied?1:0,BOOMR.addVar(_)},rv:function(){var a=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(a)}};BOOMR.plugins.AK={akVars:_,akDNSPreFetchDomain:n,init:function(){if(!o.i){var a=BOOMR.subscribe;a("before_beacon",o.av,null,null),a("onbeacon",o.rv,null,null),o.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NC9R3BG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="app" data-server-rendered="true"><a href="#main" class="sr-only sr-focusable">Skip to Main Content</a> <div aria-live="polite" id="accessibility-message"></div> <!----> <header class="cx-sec m-header"><div class="cx-wrap--page"><div class="cx-row--line m-submenu -shown-md cx-t02"><div><div class="cx-list--sm vue-content-placeholders vue-content-placeholders-is-rounded vue-content-placeholders-is-animated"><div class="--single-line vue-content-placeholders-text" style="width:200px;"><div class="vue-content-placeholders-text__line"></div></div></div></div> <nav role="navigation" id="main-desktop-nav" aria-label="Home" class="desktop"><ul class="cx-list cx-list--sep m-list--sep"><li class="cx-list__item"><a href="/en/video-playlists" class="cx-link">Video Gallery</a></li> <li class="cx-list__item"><a href="/en/barrier-free-access-guide" class="cx-link">Barrier-Free Access Guide</a></li> <li class="cx-list__item"><a href="https://www.dst.gov.mo/en/home.html" rel="noopener noreferrer" target="_blank" class="cx-link">
+              Macao Government Tourism Office website
+            </a></li> <li class="cx-list__item"><div class="cx-dropdown -arrow"><a role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" class="cx-dropdown__trigger"><span class="cx-link cx-link--xs"><span aria-label="Text Size" class="cx-link__icon"><i aria-hidden="true" class="fal fa-font"></i></span> <span id="aa-fontsize">
+      Text Size
+    </span> <span class="cx-link__icon"><i aria-hidden="true" class="fal fa-angle-down"></i></span></span> </a> <div class="cx-dropdown__content m-dropdown__content" style="display:none;"><ul role="listbox" aria-labelledby="aa-fontsize" aria-activedescendant="aa-fointsize-0" class="cx-list cx-list--vertical"><li id="aa-fontsize-0" role="option" aria-selected="true" class="cx-list__item"><a tabindex="0" class="cx-link cx-link--xs -active">
+          Small
+          <span class="cx-link__icon"><i class="fal fa-check"></i></span></a></li> <li id="aa-fontsize-1" role="option" aria-selected="false" class="cx-list__item"><a tabindex="0" class="cx-link cx-link--xs">
+          Medium
+          <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li> <li id="aa-fontsize-2" role="option" aria-selected="false" class="cx-list__item"><a tabindex="0" class="cx-link cx-link--xs">
+          Large
+          <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li></ul></div></div></li> <li class="cx-list__item"><div class="cx-dropdown -arrow"><a role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" class="cx-dropdown__trigger"><span aria-label="Language" class="cx-link cx-link--sm"><span aria-hidden="true" class="cx-link__icon"><i class="fal fa-globe"></i></span> <span>
+      English
+    </span> <span class="cx-link__icon"><i class="fal fa-angle-down"></i></span></span> </a> <div class="cx-dropdown__content m-dropdown__content" style="display:none;"><ul role="listbox" aria-activedescendant="lc-option-en" class="cx-list cx-list--vertical"><li class="cx-list__item"><a id="lc-option-zh-hant" role="option" aria-selected="false" href="/zh-hant/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs">
+            繁體中文
+            <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li><li class="cx-list__item"><a id="lc-option-zh-hans" role="option" aria-selected="false" href="/zh-hans/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs">
+            简体中文
+            <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li><li class="cx-list__item"><a id="lc-option-pt" role="option" aria-selected="false" href="/pt/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs">
+            Português
+            <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li><li class="cx-list__item"><a id="lc-option-en" role="option" aria-selected="true" href="/en/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs -active">
+            English
+            <span class="cx-link__icon"><i class="fal fa-check"></i></span></a></li><li class="cx-list__item"><a id="lc-option-ja" role="option" aria-selected="false" href="/ja/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs">
+            日本語
+            <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li><li class="cx-list__item"><a id="lc-option-ko" role="option" aria-selected="false" href="/ko/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs">
+            한국어
+            <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li><li class="cx-list__item"><a id="lc-option-th" role="option" aria-selected="false" href="/th/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs">
+            ภาษาไทย
+            <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li><li class="cx-list__item"><a id="lc-option-id" role="option" aria-selected="false" href="/id/travelessential/before-you-travel/local-transportation" class="cx-link cx-link--xs">
+            Bahasa Indonesia
+            <span class="cx-link__icon" style="display:none;"><i class="fal fa-check"></i></span></a></li><!----></ul></div></div></li> <li class="cx-list__item"><div><a href="#" tabindex="0" aria-label="Search" class="cx-link"><span aria-hidden="true" class="cx-link__icon"><i class="fal fa-search"></i></span> <span>
+      Search
+    </span></a> <!----></div></li></ul></nav></div> <div class="cx-row--line m-menu"><div><!----> <a href="/en/" aria-label="Home" class="theme-logo router-link-active"><span class="sr-only">Macao Government Tourism Office</span> <span class="theme-logo__img m-header__govlogo" style="background-image:url(&quot;/static/logo/raem.svg&quot;);"></span><span class="theme-logo__img m-header__logo" style="background-image:url(&quot;/static/logo/mgto-logo.svg&quot;);"></span></a></div> <nav role="navigation" id="main-common-nav" aria-label="Menu"><ul class="cx-list m-menu__list -shown-md"><li class="cx-list__item m-menu__list-item"><a href="https://tripplanner.macaotourism.gov.mo/" class="cx-link"><span>Smart Trip Planner</span></a></li> <li class="cx-list__item m-menu__list-item"><a href="#" data-keepcollapse="1" aria-haspopup="true" aria-expanded="false" class="cx-link"><span>Plan Your Trip</span> <span aria-hidden="true" class="cx-link__icon m-link__icon "><i class="fas fa-angle-right"></i></span></a> <!----></li> <li class="cx-list__item m-menu__list-item"><a href="#" data-keepcollapse="1" aria-haspopup="true" aria-expanded="false" class="cx-link"><span>Experience</span> <span aria-hidden="true" class="cx-link__icon m-link__icon "><i class="fas fa-angle-right"></i></span></a> <!----></li> <li class="cx-list__item m-menu__list-item"><a href="/en/dining" class="cx-link">Dining Out</a></li> <li class="cx-list__item m-menu__list-item"><a href="/en/whatson" class="cx-link">What's On</a></li> <li class="cx-list__item m-menu__list-item"><a href="/en/accommodation" class="cx-link">Accommodation</a></li></ul> <!----></nav></div></div></header> <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="progress-bar" style="opacity:0;"><!----></div> <div role="dialog" id="slider-modal" class="cx-modal--full" style="display:none;"><div role="document" class="cx-modal__body"><button aria-label="Close" class="cx-btn cx-modal__close"><i class="fas fa-fw fa-times"></i></button> <div class="cx-card--notify"><div class="slider-modal__counter cx-div--sm">
+     / 0
+  </div> <div style="height:auto;" data-v-210d9f46><div dir="ltr" tabindex="0" class="cx-slider --v2" style="height:auto;" data-v-210d9f46><div class="cx-slider__nav" data-v-210d9f46><div class="cx-slider__pager" style="display:none;" data-v-210d9f46></div> <a href="#" role="button" aria-label="Previous" class="cx-link cx-slider__nav_control" data-v-210d9f46><span class="cx-link__icon cx-slider__prev" style="display:none;" data-v-210d9f46><i class="far fa-2x fa-chevron-left" data-v-210d9f46></i></span></a> <a href="#" role="button" aria-label="Next" class="cx-link cx-slider__nav_control" data-v-210d9f46><span class="cx-link__icon cx-slider__next" data-v-210d9f46><i class="far fa-2x fa-chevron-right" data-v-210d9f46></i></span></a></div> <div class="cx-slider__slide" style="height:auto;pointer-events:auto;overflow:hidden;" data-v-210d9f46></div></div></div></div></div></div> <div role="dialog" id="geo-info-modal" class="cx-modal--full" style="display:none;"><div role="document" class="cx-modal__body"><button aria-label="Close" class="cx-btn cx-modal__close"><i class="fas fa-fw fa-times"></i></button> <div class="cx-card--notify"><div><i class="m-graphic--ngi" style="background-image:none;"></i> <div>No Geographical Information</div></div> <div class="geo-info-modal__wapper" style="display:none;"><div aria-hidden="true" class="geo-info-modal__map geo-info-modal__map-placeholder"><i class="m-graphic--ngi" style="background-image:none;"></i></div> <div class="geo-info-modal__content" style="overflow:hidden;display:none;"><!----> <div class="cx-div" style="display:none;"></div> <div class="cx-div" style="display:none;"></div> <!----></div></div></div></div></div> <div role="dialog" class="modal-manager" style="display:none;"></div> <main id="main"><div><div><!----> <section class="cx-sec"><div class="cx-wrap--page"><div class="cx-row -j-center"><article class="cx-col-md-9"><div class="cx-div--outer"><h1 class="cx-t20 m-title">Local Transportation</h1> <!----></div> <div class="cx-div -fade m-div__content"><div><div class="cx-tab cx-div">
+          
+        <input 
+          type="radio" 
+          name="grp" 
+          id="buses" 
+          onClick="window.AppRouter.replace({ query: {'tab':'buses'}})"
+          checked="checked">
+        <label
+          for="buses"
+          role="tab"
+          tabindex="0"
+          onKeypress="event.key === 'Enter' || event.which === 13 ? this.click() : null"
+          onKeydown="event.key === 'ArrowLeft' || event.which === 37 ? this.previousElementSibling?.previousElementSibling?.focus() : event.key === 'ArrowRight' || event.which === 39 ? this.nextElementSibling?.nextElementSibling?.focus() : null"
+          aria-selected="true"
+          title="Buses"
+        >
+          <span>Buses</span>
+        </label>
+        
+        <input 
+          type="radio" 
+          name="grp" 
+          id="light-rapid-transit-(lrt)" 
+          onClick="window.AppRouter.replace({ query: {'tab':'light-rapid-transit'}})"
+          >
+        <label
+          for="light-rapid-transit-(lrt)"
+          role="tab"
+          tabindex="0"
+          onKeypress="event.key === 'Enter' || event.which === 13 ? this.click() : null"
+          onKeydown="event.key === 'ArrowLeft' || event.which === 37 ? this.previousElementSibling?.previousElementSibling?.focus() : event.key === 'ArrowRight' || event.which === 39 ? this.nextElementSibling?.nextElementSibling?.focus() : null"
+          aria-selected="false"
+          title="Light Rapid Transit (LRT)"
+        >
+          <span>Light Rapid Transit (LRT)</span>
+        </label>
+        
+        <input 
+          type="radio" 
+          name="grp" 
+          id="taxis" 
+          onClick="window.AppRouter.replace({ query: {'tab':'taxis'}})"
+          >
+        <label
+          for="taxis"
+          role="tab"
+          tabindex="0"
+          onKeypress="event.key === 'Enter' || event.which === 13 ? this.click() : null"
+          onKeydown="event.key === 'ArrowLeft' || event.which === 37 ? this.previousElementSibling?.previousElementSibling?.focus() : event.key === 'ArrowRight' || event.which === 39 ? this.nextElementSibling?.nextElementSibling?.focus() : null"
+          aria-selected="false"
+          title="Taxis"
+        >
+          <span>Taxis</span>
+        </label>
+        
+        <input 
+          type="radio" 
+          name="grp" 
+          id="car-hire" 
+          onClick="window.AppRouter.replace({ query: {'tab':'car-hire'}})"
+          >
+        <label
+          for="car-hire"
+          role="tab"
+          tabindex="0"
+          onKeypress="event.key === 'Enter' || event.which === 13 ? this.click() : null"
+          onKeydown="event.key === 'ArrowLeft' || event.which === 37 ? this.previousElementSibling?.previousElementSibling?.focus() : event.key === 'ArrowRight' || event.which === 39 ? this.nextElementSibling?.nextElementSibling?.focus() : null"
+          aria-selected="false"
+          title="Car Hire"
+        >
+          <span>Car Hire</span>
+        </label>
+        
+        <input 
+          type="radio" 
+          name="grp" 
+          id="pedicabs" 
+          onClick="window.AppRouter.replace({ query: {'tab':'pedicabs'}})"
+          >
+        <label
+          for="pedicabs"
+          role="tab"
+          tabindex="0"
+          onKeypress="event.key === 'Enter' || event.which === 13 ? this.click() : null"
+          onKeydown="event.key === 'ArrowLeft' || event.which === 37 ? this.previousElementSibling?.previousElementSibling?.focus() : event.key === 'ArrowRight' || event.which === 39 ? this.nextElementSibling?.nextElementSibling?.focus() : null"
+          aria-selected="false"
+          title="Pedicabs"
+        >
+          <span>Pedicabs</span>
+        </label>
+        
+        <article
+          class="tab-content-article"
+          style="display: block"
+        >
+          <p>A frequent bus service runs between the Macao Peninsula, Taipa and Coloane. Route information in Chinese and Portuguese is posted at every bus stop detailing destinations, itineraries and stops.&nbsp;</p>
+<p>The bus fare is MOP6.00 and passengers should prepare adequate coins for the fare as no change is given on the buses, all of which are air-conditioned. Routes go to and from different spots in the Macao Peninsula, Taipa and Coloane including Macau International Airport. Some buses even traverse narrow streets and alleys in Macao.&nbsp;</p>
+<p>Like everywhere else, it is best to avoid travelling during peak hours. It is also recommended that you bring a map in order to better locate your destination.</p>
+<p>For route information, please visit: <a href="https://www.dsat.gov.mo/dsat/subpage.aspx?a_id=1610598965" target="_blank">www.dsat.gov.mo/dsat/subpage.aspx?a_id=1610598965</a>, or contact the following transportation (bus) companies:</p>
+<p class="info"><strong>TRANSMAC - Transportes Urbanos de Macau, S.A.R.L.</strong><br />Enquiries: <a href="tel:+85328271122">+853 2827 1122</a><br />Website: <a href="http://www.transmac.com.mo" target="_blank">www.transmac.com.mo</a></p>
+<p class="info"><strong>TCM - Sociedade de Transportes Colectivos de Macau, S.A.</strong><br />Enquiries: <a href="tel:+85328850060">+853 2885 0060</a><br />Website: <a href="http://www.tcm.com.mo" target="_blank">www.tcm.com.mo</a></p>
+<p><strong>Macau Pass<br /></strong>Macau Pass is an electronic payment system using IC card technology installed on all public transport in Macao. Passengers need not use coins, and can also use the pass to make purchases at convenience stores, some bakeries, and vending machines.<br />Website: <a href="http://www.macaupass.com" target="_blank">www.macaupass.com</a></p>
+<p class="images"><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/bus1.jpg?imwidth=640" alt="Buses" title="Buses" /><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/bus2.jpg?imwidth=640" alt="Buses" title="Buses" /></p>
+        </article>
+      
+        <article
+          class="tab-content-article"
+          style="display: none"
+        >
+          <p>The Macau Light Rail System is the first rail transit project in Macao, consisting of Taipa Line, Seac Pai Van Line, Hengqin Line and East Line (under construction). It is to provide residents and travelers with convenient, environmentally friendly, reliable, comfortable and barrier-free public transportation.</p>
+<p>For details of routes, fares and timetables, please visit the website of Macao Light Rapid Transit Corporation, Limited:<a href="https://www.mlm.com.mo/en/index.html" target="_blank"> www.mlm.com.mo/en/index.html</a></p>
+<p><strong>Macao Light Rapid Transit Corporation, Limited</strong><br />Tel: <a href="tel:+85328813721">+853 2881 3721</a>, <a href="tel:+85328813722">+853 2881 3722</a>, <a href="tel:+85328813730">+853 2881 3730</a><br />Hotline: <a href="tel:+85385066171">+853 8506 6171</a><br />E-mail: <a href="mailto:info@mlm.com.mo">info@mlm.com.mo</a><br />Website: <a href="http://www.mlm.com.mo" target="_blank">www.mlm.com.mo</a><br />E-publications: <a href="https://www.mlm.com.mo" target="_blank">click here</a></p>
+<div class="images"><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/lrt1.jpg?imwidth=640" alt="Light Rapid Transit (LRT)" title="Light Rapid Transit (LRT)" /><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/lrt2.jpg?imwidth=640" alt="Light Rapid Transit (LRT)" title="Light Rapid Transit (LRT)" /></div>
+        </article>
+      
+        <article
+          class="tab-content-article"
+          style="display: none"
+        >
+          <p>The taxi in Macao is in black with a cream roof. The flag-fall charge is MOP21.00 for the first 1600 metres, with MOP2.00 added for every 220 metres thereafter. MOP2.00 is charged for waiting every 55 seconds at the passenger&rsquo;s request. There is a MOP3.00 surcharge for each item of luggage carried in the boot.&nbsp;For radio taxi service, please call <a href="tel:+85328283283">+853 2828 3283</a>.</p>
+<p>There is a MOP8.00 surcharge for boarding a taxi at the taxi station of Macau International Airport, Taipa Ferry Terminal, Macao Port Zone of Hengqin Port, the Zhuhai-Macao Artificial Island of Hong Kong-Zhuhai-Macao Bridge. Taking a taxi from Macao to Coloane or boarding at the campus of the University of Macau on Hengqin Island, there is a surcharge of MOP5.00. From Taipa to Coloane, a MOP2.00 surcharge applies, while there is no surcharge from Macao to Taipa or from the islands to Macao.</p>
+<div class="images"><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/taxi1.jpg?imwidth=640" alt="Taxis" title="Taxis" /><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/taxi2.jpg?imwidth=640" alt="Taxis" title="Taxis" /></div>
+<p>In addition, there is also a special radio taxi service, which the vehicle is either in blue or red in colour. For special radio taxi service, please call: <a href="tel:+85328812345">+853 288 12345</a>, visit <a href="http://macaotaxi.com/en/" target="_blank">macaotaxi.com/en</a>, download&nbsp;mobile app "Macao Taxi" or scan the QR code of the taxi. Like normal taxi, the fare of the special radio taxi is charged according to the taximeter, please go to <a href="http://macaotaxi.com/en/%e6%9c%8d%e5%8b%99/" target="_blank">macaotaxi.com/en</a> to check the fare details or contact Macau Radio Taxi Services Limited at <a href="tel:+85388939999">+853 8893 9999</a>.</p>
+<div class="images"><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/taxi3.jpg?imwidth=640" alt="Taxis" title="Taxis" /><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/taxi4.jpg?imwidth=640" alt="Taxis" title="Taxis" /></div>
+        </article>
+      
+        <article
+          class="tab-content-article"
+          style="display: none"
+        >
+          <p>If you prefer to drive yourself with a map and guide, you can hire a car and travel around Macao at your own pace. To obtain permission to drive in Macao, please consult the Traffic Department of the Public Security Police Force at Tel: <a href="tel:+85328374214">+853 2837 4214</a> / <a href="tel:+85388989593">+853 8898&nbsp;9593</a>, email: <a href="mailto:psp-info@fsm.gov.mo">psp-info@fsm.gov.mo</a> or website: <a href="https://www.gov.mo/en/services/ps-1488/" target="_blank">https://www.gov.mo/en/services/ps-1488/</a></p>
+<p>For companies of Self-Drive Rent-a-Car, please visit: <a href="https://www.dst.gov.mo/en/public-services/licensed-entities.html?comType=18" target="_blank">https://www.dst.gov.mo/en/public-services/licensed-entities.html?comType=18</a></p>
+        </article>
+      
+        <article
+          class="tab-content-article"
+          style="display: none"
+        >
+          <p>The pedicab - or tricycle rickshaw - is a uniquely leisurely, romantic and airy form of transport which visitors can hire to tour the captivating waterfront of Nam Van Lake and Sai Van Lake as well as the older historic streets of downtown Macao. Hired at the Outer Harbour Ferry Terminal or near Hotel Lisboa, it is recommended that you confirm the price with the rider prior to embarking upon your adventure.</p>
+<div class="images"><img style="max-width: 100%;" src="https://content.macaotourism.gov.mo/uploads/mgto_planyourtrip/pedicabs1.jpg?imwidth=640" alt="Pedicabs" title="Pedicabs" /></div>
+        </article>
+      
+        </div></div></div>  <div class="cx-div"><div id="map-social" class="cx-div"><div class="m-mapitem__social"><div class="cx-t01 m-mapitem__subtitle -fade">
+      
+    </div> <ul class="cx-list"><!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <li class="cx-list__item"><div><a href="#" role="button" class="cx-link"><span class="cx-link__icon"><i class="fal fa-share"></i></span> <span>Share</span></a> <!----></div></li> <!----></ul> <!----></div> <!----></div></div> <section class="cx-t02 -fade -border-top m-breadcrumb"><div class="cx-wrap--page"><div class="cx-row--line m-breadcrumb__row"><div class="m-update">
+        Updated on: 15/6/2026
+      </div> <nav><ul class="cx-list cx-list--breadcrumb"><li class="cx-list__item"><a href="/en/" aria-label="Home" class="router-link-active"><i class="fal fa-home"></i></a></li> <li class="cx-list__item"><a href="/en/travelessential" class="router-link-active">Travel Essential</a></li> <li class="cx-list__item"><a href="/en/travelessential/before-you-travel" class="router-link-active">Before You Travel</a></li> <li class="cx-list__item">Local Transportation</li></ul></nav></div></div></section></article> <nav class="cx-col-md-3"><div class="m-aside cx-t01"><div class="cx-div"><h2 class="m-aside__header cx-t00">Before You Travel</h2> <a href="/en/travelessential/before-you-travel/entry-requirements" class="m-aside__link">Entry Requirements</a><a href="/en/travelessential/before-you-travel/practical-info" class="m-aside__link">Practical Info</a><a href="/en/travelessential/before-you-travel/travelling-to-macao" class="m-aside__link">Travelling to Macao</a><a href="/en/travelessential/before-you-travel/ports-of-entry" class="m-aside__link">Ports of Entry</a><a href="/en/travelessential/before-you-travel/local-transportation" class="m-aside__link router-link-exact-active router-link-active -active">Local Transportation</a><a href="/en/travelessential/before-you-travel/travel-agencies" class="m-aside__link">Travel Agencies</a></div><div class="cx-div"><h2 class="m-aside__header cx-t00">About Macao</h2> <a href="/en/travelessential/about-macao/brief-history" class="m-aside__link">Brief History</a><a href="/en/travelessential/about-macao/location-and-time" class="m-aside__link">Location &amp; Time</a><a href="/en/travelessential/about-macao/population" class="m-aside__link">Population</a><a href="/en/travelessential/about-macao/language" class="m-aside__link">Language</a></div><div class="cx-div"><h2 class="m-aside__header cx-t00">Useful Info</h2> <a href="/en/travelessential/useful-info/tourist-information" class="m-aside__link">Tourist Information</a><a href="/en/travelessential/useful-info/msar-delegations" class="m-aside__link">MSAR Delegations</a><a href="/en/travelessential/useful-info/mgto-representatives" class="m-aside__link">MGTO Representatives</a><a href="/en/travelessential/useful-info/tourism-hotline" class="m-aside__link">Tourism Hotline</a><a href="/en/travelessential/useful-info/emergency-numbers" class="m-aside__link">Emergency Numbers</a><a href="/en/travelessential/useful-info/what-you-need-to-know-about-typhoon-season" class="m-aside__link">What You Need to Know about Typhoon Season</a><a href="/en/travelessential/useful-info/travel-tips" class="m-aside__link">Travel Tips</a><a href="/en/travelessential/useful-info/other-links" class="m-aside__link">Other Links</a><a href="/en/travelessential/useful-info/mobile-apps" class="m-aside__link">Mobile App</a><a href="/en/travelessential/useful-info/brochures" class="m-aside__link">Brochures</a></div></div></nav></div></div></section></div></div></main> <footer class="m-footer"><section class="m-footer__banner" style="display:none;"><h2 class="sr-only">
+      external links
+    </h2> <div class="m-banner"><div class="m-banner__slide" style="height:0px;overflow:hidden;"><div class="m-banner__item" style="transform:translateY(0px);"><div class="cx-row--halfgutter -j-center m-banner__main" style="visibility: hidden;"></div> <div class="cx-row--halfgutter -j-center m-banner__main"></div> <div class="cx-row--halfgutter -j-center m-banner__main"></div> <div class="cx-row--halfgutter -j-center m-banner__main" style="display:none;"></div></div></div> <!----></div></section> <section class="cx-sec m-footer__main"><div class="cx-wrap--page m-wrap--page"><div class="cx-row--nogutter"><div class="cx-col-lg-6 m-footer__contact"><h2 class="cx-t01 m-footer__subtitle"><a href="/en/" class="m-footer__logoLink m-footer__logoLink--mobile router-link-active"><img src="/static/logo/mgto.svg" alt="Macao Government Tourism Office" class="m-footer__logo m-footer__logo--mobile"></a>
+            Macao Government Tourism Office
+          </h2> <div class="cx-row--flat"><div class="cx-col"><a href="/en/" class="router-link-active"><img src="/static/logo/mgto.svg" alt="Macao Government Tourism Office" class="m-footer__logo m-footer__logo--desktop"></a></div> <div class="cx-col"><div><table class="cx-table--borderless m-footer__table"><tbody><tr><th>Address</th> <td>Alameda Dr. Carlos d'Assumpção, n.<sup>os</sup> 335-341, Edifício "Hot Line", 12º andar, Macau<style>a[href$='/travelessential/useful-info/msar-delegations']{display:none}</style><style>.m-searchform__filter :nth-child(3) .cx-dropdown {display:none}</style></td></tr> <tr><th>E-mail</th> <td><a href="mailto:mgto@macaotourism.gov.mo">mgto@macaotourism.gov.mo</a><!----></td></tr> <tr><th>Tel</th> <td dir="ltr"><a href="tel:+85328315566">+853 2831 5566</a></td></tr> <tr><th>Fax</th> <td dir="ltr">+853 2851 0104</td></tr> <tr><th>Tourism Hotline</th> <td dir="ltr"><a href="tel:+85328333000">+853 2833 3000</a></td></tr></tbody></table></div></div></div></div> <div class="cx-col-lg-6 m-footer__social"><h2 class="cx-t01 m-footer__subtitle">
+            Stay Connected
+          </h2> <div class="cx-row"><!----> <div class="cx-col-sm-6"><a href="/en/travelessential/useful-info/mobile-apps" class="m-footer__btn"><div class="cx-row--flat -v-center"><div class="cx-col"><div class="cx-media--icon"><div class="cx-media__graphics m-media__graphics"><i class="fas fa-mobile-alt"></i></div></div></div> <div class="cx-col m-footer__action"><p class="cx-t10 m-footer__action-subhead">
+                      See Macao on the Go
+                    </p> <h3 class="cx-t20">
+                      Download Apps
+                    </h3></div></div></a></div></div> <div><ul class="cx-list--sm m-footer__sociallist"><li class="cx-list__item"><a aria-label="Facebook" title="Facebook - Visit Macao" href="https://www.facebook.com/visitmacao" rel="noopener noreferrer" tabindex="0" target="_blank" class="cx-link"><i class="fab  fa-facebook"></i></a> <!----></li><li class="cx-list__item"><a aria-label="Instagram" title="Instagram - Visit Macao" href="https://www.instagram.com/visitmacao" rel="noopener noreferrer" tabindex="0" target="_blank" class="cx-link"><i class="fab  fa-instagram"></i></a> <!----></li><li class="cx-list__item"><a aria-label="YouTube" title="YouTube - Macao Government Tourism Office" href="https://www.youtube.com/playlist?list=PLs_9eoJxKw7OktzPQ1BpSG0IfutumLZCw" rel="noopener noreferrer" tabindex="0" target="_blank" class="cx-link"><i class="fab  fa-youtube"></i></a> <!----></li><li class="cx-list__item"><a aria-label="TikTok" title="TikTok - Experience Macao" href="https://www.tiktok.com/@macaotourismgov" rel="noopener noreferrer" tabindex="0" target="_blank" class="cx-link"><i class="fab  fa-tiktok"></i></a> <!----></li></ul></div></div></div> <div class="cx-row--line m-footer__submenu"><nav class="cx-footer__nav"><ul class="cx-list cx-list--sep"><li class="cx-list__item"><a href="/en/about-us">About Us</a></li> <li class="cx-list__item"><a href="/en/contact-us">Contact Us</a></li> <li class="cx-list__item"><a href="/en/terms-and-conditions">Terms &amp; Conditions</a></li> <li class="cx-list__item"><a href="/en/privacy-statement">Privacy Statement</a></li> <li class="cx-list__item"><a href="/en/r/performance-pledge" rel="noopener noreferrer" target="_blank">Performance Pledge</a></li></ul></nav> <div class="cx-footer__copyright m-footer__copyright">Copyright © 2026 MGTO. All rights reserved.</div></div></div></section> <a href="https://www.gastronomy.gov.mo" target="_blank" title="Macao - UNESCO Creative City of Gastronomy" class="m-footer__ribbon"><img src="/static/logo/macao_city_of_gastronomy.svg" alt="Macao - UNESCO Creative City of Gastronomy" class="m-footer__gm"> <div class="m-footer__gm-bg" style="background-image:none;"></div></a></footer> <!----></div>
+  <script>window.__INITIAL_STATE__={"ui":{"contentHost":"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002F","mapVisitorFlowMode":false,"freeze":false,"routing":false,"isMobile":false,"isIOS":false,"isAndroid":false,"isMobileView":false,"mobileHeader":false,"isMapHide":false,"showMapOnMobile":false,"pageLoadingPlaceholder":null,"blackAndWhite":false,"disableMapbox":true,"mqls":{}},"uit":{"uit":{"en":{"action":{"cancel":"Cancel","close":"Close","mute":"Mute","open":"Open","pause":"Pause","pauseScroll":"Pause Scroll","play":"Play","search":"Search","searchOnInternet":"Search on Internet","seeMore":"See More","skipToMainContent":"Skip to Main Content","startScroll":"Start Scroll","unmute":"Unmute"},"common":{"1ResultFound":"1 result found","address":"Address","any":"All","colon":": ","date":"Date","details":"Details","email":"E-mail","fax":"Fax","fullDateFormat":"D\u002FM\u002FY","fullDateTimeFormat":"D\u002FM\u002FY h:mm","menu":"Menu","nResultsFound":"{n} results found","nextPage":"Next","noResultsFound":"No results found","orderBy":"Order By","previousPage":"Previous","relevance":"Relevance","searchSpellingCorrect":"Did you mean","tel":"Tel","tourismHotline":"Tourism Hotline","updatedAt":"Updated on: {date}"},"announcement":{"emptyCaption":"No announcement yet.","header":"Announcement","readmore":"Read more"},"home":{"home":"Home"},"videoGallery":{"videoGallery":"Video Gallery"},"enf":{"enf":"Events & Festivities","whatsOn":"What's On"},"trip":{"menuItem2Label":"Macao Full of Fun","menuItem2Link":"\u002Fmacao-full-of-fun","menuItem3Label":"Gastronomy Map","menuItem4Label":"Pedicab Tour","menuItem4Link":"\u002Farticle\u002Fother-tours\u002Fpedicab-tour","menuItem5Label":"Open Top Bus Tour","menuItem5Link":"\u002Farticle\u002Fother-tours\u002Fopen-top-bus-tour","smartTripPlanner":"Smart Trip Planner","suggestedTour":"Walking Tour Routes","trips":"Suggested Tours"},"header":{"accommodation":"Accommodation","diningOut":"Dining Out","experience":"Experience","industryNet":"Macao Government Tourism Office website","mostViewed":"Most Viewed Attraction","planYourTrip":"Plan Your Trip","travelessential":"Travel Essential"},"seo":{"defaultDesc":"Macao, a unique destination that preserves a multi-cultural heritage alongside state-of the art tourist facilities and a full calendar of festivals, and special events all year around."},"accessibility":{"barrierFreeTravelGuide":"Barrier-Free Access Guide"},"footer":{"aboutUs":"About Us","app":"Download Apps","appCaption":"See Macao on the Go","appLink":"\u002Ftravelessential\u002Fuseful-info\u002Fmobile-apps","contactAddress":"Alameda Dr. Carlos d'Assumpção, n.\u003Csup\u003Eos\u003C\u002Fsup\u003E 335-341, Edifício \"Hot Line\", 12º andar, Macau\u003Cstyle\u003Ea[href$='\u002Ftravelessential\u002Fuseful-info\u002Fmsar-delegations']{display:none}\u003C\u002Fstyle\u003E\u003Cstyle\u003E.m-searchform__filter :nth-child(3) .cx-dropdown {display:none}\u003C\u002Fstyle\u003E","contactEmail":"mgto@macaotourism.gov.mo","contactFax":"+853 2851 0104","contactHotline":"+853 2833 3000","contactOffice":"Macao Government Tourism Office","contactTel":"+853 2831 5566","contactUs":"Contact Us","copyright":"Copyright © {year} MGTO. All rights reserved.","eNews":"Subscribe eNews","eNewsCaption":"Don't Miss Any Updates","eNewsLink":"https:\u002F\u002Fems.macaotourism.gov.mo","gastronomyLink":"https:\u002F\u002Fwww.gastronomy.gov.mo","gastronomyTitle":"Macao - UNESCO Creative City of Gastronomy","performancePledge":"Performance Pledge","performancePledgeLink":"\u002Fen\u002Fr\u002Fperformance-pledge","privacyStatement":"Privacy Statement","sitemap":"Sitemap","stayConnected":"Stay Connected","term":"Terms & Conditions"},"chatbot":{"continue":"Agree and Start","iconTitle":"Searching for travel information","popupTitle":"Mak Mak","terms":"Terms & Conditions","termsDetails":"Welcome to the \u003Cb\u003EMak Mak Chatbot Service\u003C\u002Fb\u003E. The conversations in this service will be recorded for technical analysis to improve user experience. Please do not disclose any personal information such as address, telephone number, ID, etc. during the conversation. Please refer to \u003Ca href=\"https:\u002F\u002Fwww.macaotourism.gov.mo\u002Fterms-and-conditions\" target=\"_blank\"\u003ETerms and Conditions\u003C\u002Fa\u003E and \u003Ca href=\"https:\u002F\u002Fwww.macaotourism.gov.mo\u002Fprivacy-statement\" target=\"_blank\"\u003EPrivacy Statement\u003C\u002Fa\u003E."},"sightMap":{"ngi":"No Geographical Information"},"fontSize":{"fontSize":"Text Size","large":"Large","medium":"Medium","small":"Small"},"aboutMacao":{"language":"Language"},"weather":{"humi":"Humi","temp":"Temp","weather":"Weather"},"socialMedia":{"facebook":"Facebook","followUs":"Follow Us on {media}","globe":"Other Media","instagram":"Instagram","pinterest":"Pinterest","tiktok":"TikTok","twitter":"X","vk":"VK","weibo":"Weibo","weixin":"WeChat","weixinRemark":"Use WeChat built-in QR code scanner to scan the QR code above.","x-twitter":"X","youtube":"YouTube"},"search":{"errorMessage":"Whoops! This page may be under maintenance. Please come back later.","header":"Search Header","placeholder":"What would you like to know?"},"pageNotFound":{"backToPreviousLang":"Back to previous version:","header":"404: Page Not Found","noLangForThisPage":"Not available in this language","pageNotFound":"Whoops! 404: Page Not Found"},"pageError":{"header":"500: Internal Server Error","pageError":"Whoops! This page may be under maintenance. Please come back later."},"media":{"VR":"VR Video","aMap":"","audioGuide":"Audio","googleMap":"Google Map","leaflet":"Leaflet","mobileApp":"Mobile App","otherMedia":"","share":"Share","shareHeading":"Share the Content","video":"Video"},"visitorFlowForecast":{"name":"Visitor Flow"},"accommodation":{"roomRate":"Reference Rate"},"searchOnX":{"amap":"","amapUrl":"","google":"Google","googleMobileUrl":"https:\u002F\u002Fwww.google.com\u002Fsearch?cr=countryMO&q={nameZH} {nameEN}","googleUrl":"https:\u002F\u002Fwww.google.com\u002Fsearch?cr=countryMO&q={nameZH} {nameEN}","searchOnX":"Search on {x}"}}},"uitStatus":{"en":{"action":{"unmute":true,"mute":true,"play":true,"pause":true,"skipToMainContent":true,"close":true,"open":true,"pauseScroll":true,"startScroll":true,"search":true,"seeMore":true,"cancel":true,"searchOnInternet":true},"common":{"previousPage":true,"nextPage":true,"menu":true,"tourismHotline":true,"fax":true,"tel":true,"email":true,"address":true,"fullDateTimeFormat":true,"colon":true,"relevance":true,"date":true,"searchSpellingCorrect":true,"orderBy":true,"nResultsFound":true,"1ResultFound":true,"noResultsFound":true,"any":true,"updatedAt":true,"fullDateFormat":true,"details":true},"announcement":{"header":true,"readmore":true,"emptyCaption":true},"home":{"home":true},"videoGallery":{"videoGallery":true},"enf":{"whatsOn":true,"enf":true},"trip":{"smartTripPlanner":true,"menuItem5Link":true,"menuItem5Label":true,"menuItem4Link":true,"menuItem4Label":true,"menuItem3Link":true,"menuItem3Label":true,"menuItem2Link":true,"menuItem2Label":true,"menuItem1Link":true,"menuItem1Label":true,"suggestedTour":true,"trips":true},"header":{"accommodation":true,"diningOut":true,"experience":true,"planYourTrip":true,"industryNet":true,"mostViewed":true,"travelessential":true},"seo":{"defaultDesc":true},"accessibility":{"barrierFreeTravelGuide":true},"footer":{"gastronomyTitle":true,"gastronomyLink":true,"copyright":true,"performancePledgeLink":true,"performancePledge":true,"privacyStatement":true,"term":true,"contactUs":true,"aboutUs":true,"sitemap":true,"appCaption":true,"appLink":true,"app":true,"eNewsCaption":true,"eNewsLink":true,"eNews":true,"stayConnected":true,"contactHotline":true,"contactFax":true,"contactTel":true,"contactEmail":true,"contactAddress":true,"contactOffice":true},"chatbot":{"iconTitle":true,"popupTitle":true,"continue":true,"termsDetails":true,"terms":true},"sightMap":{"ngi":true},"fontSize":{"large":true,"medium":true,"small":true,"fontSize":true},"aboutMacao":{"language":true},"weather":{"weather":true,"humi":true,"temp":true},"socialMedia":{"weixinRemark":true,"globe":true,"vk":true,"pinterest":true,"tiktok":true,"youtube":true,"instagram":true,"twitter":true,"x-twitter":true,"xiaohongshu":true,"weixin":true,"weibo":true,"facebook":true,"followUs":true},"search":{"errorMessage":true,"placeholder":true,"header":true},"pageNotFound":{"backToPreviousLang":true,"noLangForThisPage":true,"pageNotFound":true,"header":true},"pageError":{"pageError":true,"header":true},"followTheStar":{"followTheStar":true},"mlf":{"name":true},"media":{"shareHeading":true,"otherMedia":true,"share":true,"aMap":true,"googleMap":true,"VR":true,"video":true,"mobileApp":true,"leaflet":true,"audioGuide":true},"visitorFlowForecast":{"link":true,"name":true},"accommodation":{"roomRate":true},"searchOnX":{"googleMobileUrl":true,"googleUrl":true,"amapUrl":true,"google":true,"amap":true,"searchOnX":true}}},"uitRequestList":[],"worker":null,"workerResolver":null,"workerRejector":null,"timer":null},"weather":{"brief":{"temp":"-","humi":"-","status":null,"warnings":[]},"detail":{}},"geolocation":{"showVisitorFlow":true,"showPOIFilter":false,"runTest":false,"isGeolocationOn":false,"loading":false,"supportGeolocation":false,"userLocation":[0,0],"showSupportAlert":false,"showFailAlert":false,"mapBoxGeoController":null,"mapBoxGeolocationOn":false},"banner":{"home":{},"footer":{}},"accommodation":{"stars":{},"filter":{},"search":{"locale":"","district":"","star":"","keyword":"","resultCount":0,"results":[]},"hotels":{},"__updatedAt":{},"poi":{"poisMapFilters":{"poisToShow":{"sightseeing":true,"shows-and-entertainment":true,"shopping":true,"fnb":true,"restaurant":true,"whatson":true,"hotel":true,"lrt":true,"freewifi":false,"touristinfo":false,"drink":false,"nursingroom":false,"publictoilet":false,"busstop":false},"range":200},"poisCacheByType":{"sightseeing":null,"shows-and-entertainment":null,"shopping":null,"fnb":null,"restaurant":null,"whatson":null,"hotel":null,"lrt":null,"freewifi":null,"touristinfo":null,"drink":null,"nursingroom":null,"publictoilet":null,"busstop":null},"pois":{},"poisRequestCancel":null,"poisRequestId":0,"poisFetching":false,"poisFetched":false}},"dining":{"recommends":{},"filter":{},"qtsasFilter":{},"qtsasSearch":{"locale":"","category":"","district":"","cuisine":"","keyword":"","resultCount":0,"results":[]},"qtsasRestaurants":{},"restaurantFilter":{},"search":{"locale":"","category":"","cuisine":"","keyword":"","resultCount":0,"results":[]},"restaurants":{},"__updatedAt":{},"poi":{"poisMapFilters":{"poisToShow":{"sightseeing":true,"shows-and-entertainment":true,"shopping":true,"fnb":true,"restaurant":true,"whatson":true,"hotel":true,"lrt":true,"freewifi":false,"touristinfo":false,"drink":false,"nursingroom":false,"publictoilet":false,"busstop":false},"range":200},"poisCacheByType":{"sightseeing":null,"shows-and-entertainment":null,"shopping":null,"fnb":null,"restaurant":null,"whatson":null,"hotel":null,"lrt":null,"freewifi":null,"touristinfo":null,"drink":null,"nursingroom":null,"publictoilet":null,"busstop":null},"pois":{},"poisRequestCancel":null,"poisRequestId":0,"poisFetching":false,"poisFetched":false}},"events":{"filter":{"types":[]},"search":{"locale":"","month":"","type":"","keyword":"","resultCount":0,"whatsonTop":{},"whatsonResults":[],"results":[]},"events":{},"poi":{"poisMapFilters":{"poisToShow":{"sightseeing":true,"shows-and-entertainment":true,"shopping":true,"fnb":true,"restaurant":true,"whatson":true,"hotel":true,"lrt":true,"freewifi":false,"touristinfo":false,"drink":false,"nursingroom":false,"publictoilet":false,"busstop":false},"range":200},"poisCacheByType":{"sightseeing":null,"shows-and-entertainment":null,"shopping":null,"fnb":null,"restaurant":null,"whatson":null,"hotel":null,"lrt":null,"freewifi":null,"touristinfo":null,"drink":null,"nursingroom":null,"publictoilet":null,"busstop":null},"pois":{},"poisRequestCancel":null,"poisRequestId":0,"poisFetching":false,"poisFetched":false}},"eventcalendar":{"introduction":{},"enfs":{},"__updatedAt":{}},"upcomingevent":{"enfs":{},"__updatedAt":{}},"whatshappening":{"cards":{},"banners":{},"__updatedAt":{}},"toptour":{"tours":{}},"socialmedia":{"feeds":{},"subscriptions":{"en":{"data":[{"type":"facebook","name":"Visit Macao","link":"https:\u002F\u002Fwww.facebook.com\u002Fvisitmacao"},{"type":"instagram","name":"Visit Macao","link":"https:\u002F\u002Fwww.instagram.com\u002Fvisitmacao"},{"type":"youtube","name":"Macao Government Tourism Office","link":"https:\u002F\u002Fwww.youtube.com\u002Fplaylist?list=PLs_9eoJxKw7OktzPQ1BpSG0IfutumLZCw"},{"type":"tiktok","name":"Experience Macao","link":"https:\u002F\u002Fwww.tiktok.com\u002F@macaotourismgov"}],"__updatedAt":1793070931338}}},"attraction":{"popular":{},"poi":{"poisMapFilters":{"poisToShow":{"sightseeing":true,"shows-and-entertainment":true,"shopping":true,"fnb":true,"restaurant":true,"whatson":true,"hotel":true,"lrt":true,"freewifi":false,"touristinfo":false,"drink":false,"nursingroom":false,"publictoilet":false,"busstop":false},"range":200},"poisCacheByType":{"sightseeing":null,"shows-and-entertainment":null,"shopping":null,"fnb":null,"restaurant":null,"whatson":null,"hotel":null,"lrt":null,"freewifi":null,"touristinfo":null,"drink":null,"nursingroom":null,"publictoilet":null,"busstop":null},"pois":{},"poisRequestCancel":null,"poisRequestId":0,"poisFetching":false,"poisFetched":false}},"sightmapevent":{"queue":[]},"sightmap":{"overview":{},"groups":{},"entities":{},"entitiesLastLocale":"","poi":{"poisMapFilters":{"poisToShow":{"sightseeing":true,"shows-and-entertainment":true,"shopping":true,"fnb":true,"restaurant":true,"whatson":true,"hotel":true,"lrt":true,"freewifi":false,"touristinfo":false,"drink":false,"nursingroom":false,"publictoilet":false,"busstop":false},"range":200},"poisCacheByType":{"sightseeing":null,"shows-and-entertainment":null,"shopping":null,"fnb":null,"restaurant":null,"whatson":null,"hotel":null,"lrt":null,"freewifi":null,"touristinfo":null,"drink":null,"nursingroom":null,"publictoilet":null,"busstop":null},"pois":{},"poisRequestCancel":null,"poisRequestId":0,"poisFetching":false,"poisFetched":false}},"experience":{"menu":{"en":[{"name":"Sightseeing","category":"sightseeing","groups":[{"name":"Macao World Heritage","group":"macao-world-heritage"},{"name":"Museums & Galleries","group":"museums-and-galleries"},{"name":"Churches","group":"churches"},{"name":"Temples","group":"temples"},{"name":"Gardens","group":"gardens"},{"name":"Fortresses","group":"fortresses"},{"name":"Other Attractions","group":"other-attractions"}]},{"name":"Shows & Entertainment","category":"shows-and-entertainment","groups":[{"name":"Shows","group":"shows"},{"name":"Family Fun","group":"family-fun"},{"name":"Macao Aquatic Trek","group":"macao-aquatic-trek"},{"name":"Cultural & Creative Industries Zones","group":"cultural-and-creative-industries-zones"},{"name":"Sports & Recreation","group":"sports-and-recreation"},{"name":"Flower Viewing","group":"flower-viewing"},{"name":"Wellness","group":"wellness"},{"name":"Gaming","group":"gaming"},{"name":"Nightlife","group":"nightlife"}]},{"name":"Shopping","category":"shopping","groups":[{"name":"Shopping Malls","group":"shopping-malls"},{"name":"Cultural and Creative Shops","group":"cultural-and-creative-shops"},{"name":"Souvenirs","group":"souvenirs"},{"name":"Boutique Retail","group":"boutique-retail"}]}]}},"progress":{"session":0,"total":0,"done":0},"announcement":{"announcement":{}},"video":{"videos":{}},"travelessential":{"menu":{"en":[{"name":"Before You Travel","items":[{"name":"Entry Requirements","category":"before-you-travel","slug":"entry-requirements"},{"name":"Practical Info","category":"before-you-travel","slug":"practical-info"},{"name":"Travelling to Macao","category":"before-you-travel","slug":"travelling-to-macao"},{"name":"Ports of Entry","link":"\u002Ftravelessential\u002Fbefore-you-travel\u002Fports-of-entry"},{"name":"Local Transportation","category":"before-you-travel","slug":"local-transportation"},{"name":"Travel Agencies","link":"\u002Ftravelessential\u002Fbefore-you-travel\u002Ftravel-agencies"}],"id":"before-you-travel"},{"name":"About Macao","items":[{"name":"Brief History","category":"about-macao","slug":"brief-history"},{"name":"Location & Time","category":"about-macao","slug":"location-and-time"},{"name":"Population","category":"about-macao","slug":"population"},{"name":"Language","category":"about-macao","slug":"language"}],"id":"about-macao"},{"name":"Useful Info","items":[{"name":"Tourist Information","link":"\u002Ftravelessential\u002Fuseful-info\u002Ftourist-information"},{"name":"MSAR Delegations","link":"\u002Ftravelessential\u002Fuseful-info\u002Fmsar-delegations"},{"name":"MGTO Representatives","link":"\u002Ftravelessential\u002Fuseful-info\u002Fmgto-representatives"},{"name":"Tourism Hotline","category":"useful-info","slug":"tourism-hotline"},{"name":"Emergency Numbers","category":"useful-info","slug":"emergency-numbers"},{"name":"What You Need to Know about Typhoon Season","category":"useful-info","slug":"what-you-need-to-know-about-typhoon-season"},{"name":"Travel Tips","category":"useful-info","slug":"travel-tips"},{"name":"Other Links","category":"useful-info","slug":"other-links"},{"name":"Mobile App","category":"useful-info","slug":"mobile-apps"},{"name":"Brochures","link":"\u002Ftravelessential\u002Fuseful-info\u002Fbrochures"}],"id":"useful-info"}]}},"article":{"articles":{"before-you-travel":{"local-transportation":{"en":{"title":"Local Transportation","tabs":[{"id":"buses","title":"Buses","content":"\u003Cp\u003EA frequent bus service runs between the Macao Peninsula, Taipa and Coloane. Route information in Chinese and Portuguese is posted at every bus stop detailing destinations, itineraries and stops.&nbsp;\u003C\u002Fp\u003E\r\n\u003Cp\u003EThe bus fare is MOP6.00 and passengers should prepare adequate coins for the fare as no change is given on the buses, all of which are air-conditioned. Routes go to and from different spots in the Macao Peninsula, Taipa and Coloane including Macau International Airport. Some buses even traverse narrow streets and alleys in Macao.&nbsp;\u003C\u002Fp\u003E\r\n\u003Cp\u003ELike everywhere else, it is best to avoid travelling during peak hours. It is also recommended that you bring a map in order to better locate your destination.\u003C\u002Fp\u003E\r\n\u003Cp\u003EFor route information, please visit: \u003Ca href=\"https:\u002F\u002Fwww.dsat.gov.mo\u002Fdsat\u002Fsubpage.aspx?a_id=1610598965\" target=\"_blank\"\u003Ewww.dsat.gov.mo\u002Fdsat\u002Fsubpage.aspx?a_id=1610598965\u003C\u002Fa\u003E, or contact the following transportation (bus) companies:\u003C\u002Fp\u003E\r\n\u003Cp class=\"info\"\u003E\u003Cstrong\u003ETRANSMAC - Transportes Urbanos de Macau, S.A.R.L.\u003C\u002Fstrong\u003E\u003Cbr \u002F\u003EEnquiries: \u003Ca href=\"tel:+85328271122\"\u003E+853 2827 1122\u003C\u002Fa\u003E\u003Cbr \u002F\u003EWebsite: \u003Ca href=\"http:\u002F\u002Fwww.transmac.com.mo\" target=\"_blank\"\u003Ewww.transmac.com.mo\u003C\u002Fa\u003E\u003C\u002Fp\u003E\r\n\u003Cp class=\"info\"\u003E\u003Cstrong\u003ETCM - Sociedade de Transportes Colectivos de Macau, S.A.\u003C\u002Fstrong\u003E\u003Cbr \u002F\u003EEnquiries: \u003Ca href=\"tel:+85328850060\"\u003E+853 2885 0060\u003C\u002Fa\u003E\u003Cbr \u002F\u003EWebsite: \u003Ca href=\"http:\u002F\u002Fwww.tcm.com.mo\" target=\"_blank\"\u003Ewww.tcm.com.mo\u003C\u002Fa\u003E\u003C\u002Fp\u003E\r\n\u003Cp\u003E\u003Cstrong\u003EMacau Pass\u003Cbr \u002F\u003E\u003C\u002Fstrong\u003EMacau Pass is an electronic payment system using IC card technology installed on all public transport in Macao. Passengers need not use coins, and can also use the pass to make purchases at convenience stores, some bakeries, and vending machines.\u003Cbr \u002F\u003EWebsite: \u003Ca href=\"http:\u002F\u002Fwww.macaupass.com\" target=\"_blank\"\u003Ewww.macaupass.com\u003C\u002Fa\u003E\u003C\u002Fp\u003E\r\n\u003Cp class=\"images\"\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Fbus1.jpg?imwidth=640\" alt=\"Buses\" title=\"Buses\" \u002F\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Fbus2.jpg?imwidth=640\" alt=\"Buses\" title=\"Buses\" \u002F\u003E\u003C\u002Fp\u003E","style":"article .images:not(:last-child) {\r\n    margin-bottom: 1rem;\r\n}\r\n\r\narticle .images img {\r\n  width: 50%;\r\n  padding: .5em;\r\n}\r\n\r\n@media (max-width:576px) {\r\narticle .images img {\r\n  width: 100%;\r\n}\r\n}"},{"id":"light-rapid-transit","title":"Light Rapid Transit (LRT)","content":"\u003Cp\u003EThe Macau Light Rail System is the first rail transit project in Macao, consisting of Taipa Line, Seac Pai Van Line, Hengqin Line and East Line (under construction). It is to provide residents and travelers with convenient, environmentally friendly, reliable, comfortable and barrier-free public transportation.\u003C\u002Fp\u003E\r\n\u003Cp\u003EFor details of routes, fares and timetables, please visit the website of Macao Light Rapid Transit Corporation, Limited:\u003Ca href=\"https:\u002F\u002Fwww.mlm.com.mo\u002Fen\u002Findex.html\" target=\"_blank\"\u003E www.mlm.com.mo\u002Fen\u002Findex.html\u003C\u002Fa\u003E\u003C\u002Fp\u003E\r\n\u003Cp\u003E\u003Cstrong\u003EMacao Light Rapid Transit Corporation, Limited\u003C\u002Fstrong\u003E\u003Cbr \u002F\u003ETel: \u003Ca href=\"tel:+85328813721\"\u003E+853 2881 3721\u003C\u002Fa\u003E, \u003Ca href=\"tel:+85328813722\"\u003E+853 2881 3722\u003C\u002Fa\u003E, \u003Ca href=\"tel:+85328813730\"\u003E+853 2881 3730\u003C\u002Fa\u003E\u003Cbr \u002F\u003EHotline: \u003Ca href=\"tel:+85385066171\"\u003E+853 8506 6171\u003C\u002Fa\u003E\u003Cbr \u002F\u003EE-mail: \u003Ca href=\"mailto:info@mlm.com.mo\"\u003Einfo@mlm.com.mo\u003C\u002Fa\u003E\u003Cbr \u002F\u003EWebsite: \u003Ca href=\"http:\u002F\u002Fwww.mlm.com.mo\" target=\"_blank\"\u003Ewww.mlm.com.mo\u003C\u002Fa\u003E\u003Cbr \u002F\u003EE-publications: \u003Ca href=\"https:\u002F\u002Fwww.mlm.com.mo\" target=\"_blank\"\u003Eclick here\u003C\u002Fa\u003E\u003C\u002Fp\u003E\r\n\u003Cdiv class=\"images\"\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Flrt1.jpg?imwidth=640\" alt=\"Light Rapid Transit (LRT)\" title=\"Light Rapid Transit (LRT)\" \u002F\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Flrt2.jpg?imwidth=640\" alt=\"Light Rapid Transit (LRT)\" title=\"Light Rapid Transit (LRT)\" \u002F\u003E\u003C\u002Fdiv\u003E","style":"#lrt-map {\r\n    width: 100%;\r\n    height: 40em;\r\n    max-height: 100vh;\r\n    margin-bottom: 1em;\r\n}\r\n\r\n#lrt-map .m-sight-marker .cx-marker {\r\n   transform: translateY(-50%);\r\n}\r\n\r\n#lrt-map .mapboxgl-popup-anchor-bottom {\r\n  margin-top: -28px;\r\n}\r\n\r\n\r\n#lrt-map .popup-wrapper article {\r\n  padding: 0;\r\n}\r\n\r\narticle #stops-map table {display:none}\r\n\r\n@media (max-width:576px) {\r\n#lrt-map {\r\n\tmax-height: 61.8vh;\r\n\tmax-width:100%;\r\n}\r\n\r\n}"},{"id":"taxis","title":"Taxis","content":"\u003Cp\u003EThe taxi in Macao is in black with a cream roof. The flag-fall charge is MOP21.00 for the first 1600 metres, with MOP2.00 added for every 220 metres thereafter. MOP2.00 is charged for waiting every 55 seconds at the passenger&rsquo;s request. There is a MOP3.00 surcharge for each item of luggage carried in the boot.&nbsp;For radio taxi service, please call \u003Ca href=\"tel:+85328283283\"\u003E+853 2828 3283\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\r\n\u003Cp\u003EThere is a MOP8.00 surcharge for boarding a taxi at the taxi station of Macau International Airport, Taipa Ferry Terminal, Macao Port Zone of Hengqin Port, the Zhuhai-Macao Artificial Island of Hong Kong-Zhuhai-Macao Bridge. Taking a taxi from Macao to Coloane or boarding at the campus of the University of Macau on Hengqin Island, there is a surcharge of MOP5.00. From Taipa to Coloane, a MOP2.00 surcharge applies, while there is no surcharge from Macao to Taipa or from the islands to Macao.\u003C\u002Fp\u003E\r\n\u003Cdiv class=\"images\"\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Ftaxi1.jpg?imwidth=640\" alt=\"Taxis\" title=\"Taxis\" \u002F\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Ftaxi2.jpg?imwidth=640\" alt=\"Taxis\" title=\"Taxis\" \u002F\u003E\u003C\u002Fdiv\u003E\r\n\u003Cp\u003EIn addition, there is also a special radio taxi service, which the vehicle is either in blue or red in colour. For special radio taxi service, please call: \u003Ca href=\"tel:+85328812345\"\u003E+853 288 12345\u003C\u002Fa\u003E, visit \u003Ca href=\"http:\u002F\u002Fmacaotaxi.com\u002Fen\u002F\" target=\"_blank\"\u003Emacaotaxi.com\u002Fen\u003C\u002Fa\u003E, download&nbsp;mobile app \"Macao Taxi\" or scan the QR code of the taxi. Like normal taxi, the fare of the special radio taxi is charged according to the taximeter, please go to \u003Ca href=\"http:\u002F\u002Fmacaotaxi.com\u002Fen\u002F%e6%9c%8d%e5%8b%99\u002F\" target=\"_blank\"\u003Emacaotaxi.com\u002Fen\u003C\u002Fa\u003E to check the fare details or contact Macau Radio Taxi Services Limited at \u003Ca href=\"tel:+85388939999\"\u003E+853 8893 9999\u003C\u002Fa\u003E.\u003C\u002Fp\u003E\r\n\u003Cdiv class=\"images\"\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Ftaxi3.jpg?imwidth=640\" alt=\"Taxis\" title=\"Taxis\" \u002F\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Ftaxi4.jpg?imwidth=640\" alt=\"Taxis\" title=\"Taxis\" \u002F\u003E\u003C\u002Fdiv\u003E","style":":root[data-mode=bnw] article .images img,\r\n:root[data-mode=bnw] article img.images,\r\n:root[data-mode=bnw] article .DSECWebService img {\r\n display: none;\r\n}\r\n\r\n@supports (filter: grayscale(1)) {\r\n\r\n:root[data-mode=bnw] article .images img,\r\n:root[data-mode=bnw] article img.images,\r\n:root[data-mode=bnw] article .DSECWebService img  {\r\n  -webkit-filter: grayscale(1);\r\n  filter: grayscale(1);\r\n  display: inline;\r\n}\r\n\r\n}"},{"id":"car-hire","title":"Car Hire","content":"\u003Cp\u003EIf you prefer to drive yourself with a map and guide, you can hire a car and travel around Macao at your own pace. To obtain permission to drive in Macao, please consult the Traffic Department of the Public Security Police Force at Tel: \u003Ca href=\"tel:+85328374214\"\u003E+853 2837 4214\u003C\u002Fa\u003E \u002F \u003Ca href=\"tel:+85388989593\"\u003E+853 8898&nbsp;9593\u003C\u002Fa\u003E, email: \u003Ca href=\"mailto:psp-info@fsm.gov.mo\"\u003Epsp-info@fsm.gov.mo\u003C\u002Fa\u003E or website: \u003Ca href=\"https:\u002F\u002Fwww.gov.mo\u002Fen\u002Fservices\u002Fps-1488\u002F\" target=\"_blank\"\u003Ehttps:\u002F\u002Fwww.gov.mo\u002Fen\u002Fservices\u002Fps-1488\u002F\u003C\u002Fa\u003E\u003C\u002Fp\u003E\r\n\u003Cp\u003EFor companies of Self-Drive Rent-a-Car, please visit: \u003Ca href=\"https:\u002F\u002Fwww.dst.gov.mo\u002Fen\u002Fpublic-services\u002Flicensed-entities.html?comType=18\" target=\"_blank\"\u003Ehttps:\u002F\u002Fwww.dst.gov.mo\u002Fen\u002Fpublic-services\u002Flicensed-entities.html?comType=18\u003C\u002Fa\u003E\u003C\u002Fp\u003E","style":""},{"id":"pedicabs","title":"Pedicabs","content":"\u003Cp\u003EThe pedicab - or tricycle rickshaw - is a uniquely leisurely, romantic and airy form of transport which visitors can hire to tour the captivating waterfront of Nam Van Lake and Sai Van Lake as well as the older historic streets of downtown Macao. Hired at the Outer Harbour Ferry Terminal or near Hotel Lisboa, it is recommended that you confirm the price with the rider prior to embarking upon your adventure.\u003C\u002Fp\u003E\r\n\u003Cdiv class=\"images\"\u003E\u003Cimg style=\"max-width: 100%;\" src=\"https:\u002F\u002Fcontent.macaotourism.gov.mo\u002Fuploads\u002Fmgto_planyourtrip\u002Fpedicabs1.jpg?imwidth=640\" alt=\"Pedicabs\" title=\"Pedicabs\" \u002F\u003E\u003C\u002Fdiv\u003E","style":""}],"updatedAt":1781489714,"__updatedAt":1793070931341}}}}},"travelagency":{"filter":{},"search":{"locale":"","award":"","keyword":"","resultCount":0,"results":[]},"agencies":{},"__updatedAt":{}},"more":{"content":{}},"infocounter":{"infoCounters":{}},"bordercheckpoints":{"borderCheckpoints":{}},"delegation":{"delegations":{}},"representative":{"representatives":{}},"brochure":{"brochures":{}},"accessibility":{"settings":{}},"viedoplaylists":{"video_playlists":{},"video_gallery":{}},"tag":{"tag":{}},"whatson":{"whatsons":{},"whatsonPdfs":{}},"route":{"name":"TravelEssentialArticle_before-you-travel_en","path":"\u002Fen\u002Ftravelessential\u002Fbefore-you-travel\u002Flocal-transportation","hash":"","query":{},"params":{"slug":"local-transportation"},"fullPath":"\u002Fen\u002Ftravelessential\u002Fbefore-you-travel\u002Flocal-transportation","meta":{},"from":{"name":null,"path":"\u002F","hash":"","query":{},"params":{},"fullPath":"\u002F","meta":{}}},"i18n":{"en":{"action":{"cancel":"Cancel","close":"Close","mute":"Mute","open":"Open","pause":"Pause","pauseScroll":"Pause Scroll","play":"Play","search":"Search","searchOnInternet":"Search on Internet","seeMore":"See More","skipToMainContent":"Skip to Main Content","startScroll":"Start Scroll","unmute":"Unmute"},"common":{"1ResultFound":"1 result found","address":"Address","any":"All","colon":": ","date":"Date","details":"Details","email":"E-mail","fax":"Fax","fullDateFormat":"D\u002FM\u002FY","fullDateTimeFormat":"D\u002FM\u002FY h:mm","menu":"Menu","nResultsFound":"{n} results found","nextPage":"Next","noResultsFound":"No results found","orderBy":"Order By","previousPage":"Previous","relevance":"Relevance","searchSpellingCorrect":"Did you mean","tel":"Tel","tourismHotline":"Tourism Hotline","updatedAt":"Updated on: {date}"},"announcement":{"emptyCaption":"No announcement yet.","header":"Announcement","readmore":"Read more"},"home":{"home":"Home"},"videoGallery":{"videoGallery":"Video Gallery"},"enf":{"enf":"Events & Festivities","whatsOn":"What's On"},"trip":{"menuItem2Label":"Macao Full of Fun","menuItem2Link":"\u002Fmacao-full-of-fun","menuItem3Label":"Gastronomy Map","menuItem4Label":"Pedicab Tour","menuItem4Link":"\u002Farticle\u002Fother-tours\u002Fpedicab-tour","menuItem5Label":"Open Top Bus Tour","menuItem5Link":"\u002Farticle\u002Fother-tours\u002Fopen-top-bus-tour","smartTripPlanner":"Smart Trip Planner","suggestedTour":"Walking Tour Routes","trips":"Suggested Tours"},"header":{"accommodation":"Accommodation","diningOut":"Dining Out","experience":"Experience","industryNet":"Macao Government Tourism Office website","mostViewed":"Most Viewed Attraction","planYourTrip":"Plan Your Trip","travelessential":"Travel Essential"},"seo":{"defaultDesc":"Macao, a unique destination that preserves a multi-cultural heritage alongside state-of the art tourist facilities and a full calendar of festivals, and special events all year around."},"accessibility":{"barrierFreeTravelGuide":"Barrier-Free Access Guide"},"footer":{"aboutUs":"About Us","app":"Download Apps","appCaption":"See Macao on the Go","appLink":"\u002Ftravelessential\u002Fuseful-info\u002Fmobile-apps","contactAddress":"Alameda Dr. Carlos d'Assumpção, n.\u003Csup\u003Eos\u003C\u002Fsup\u003E 335-341, Edifício \"Hot Line\", 12º andar, Macau\u003Cstyle\u003Ea[href$='\u002Ftravelessential\u002Fuseful-info\u002Fmsar-delegations']{display:none}\u003C\u002Fstyle\u003E\u003Cstyle\u003E.m-searchform__filter :nth-child(3) .cx-dropdown {display:none}\u003C\u002Fstyle\u003E","contactEmail":"mgto@macaotourism.gov.mo","contactFax":"+853 2851 0104","contactHotline":"+853 2833 3000","contactOffice":"Macao Government Tourism Office","contactTel":"+853 2831 5566","contactUs":"Contact Us","copyright":"Copyright © {year} MGTO. All rights reserved.","eNews":"Subscribe eNews","eNewsCaption":"Don't Miss Any Updates","eNewsLink":"https:\u002F\u002Fems.macaotourism.gov.mo","gastronomyLink":"https:\u002F\u002Fwww.gastronomy.gov.mo","gastronomyTitle":"Macao - UNESCO Creative City of Gastronomy","performancePledge":"Performance Pledge","performancePledgeLink":"\u002Fen\u002Fr\u002Fperformance-pledge","privacyStatement":"Privacy Statement","sitemap":"Sitemap","stayConnected":"Stay Connected","term":"Terms & Conditions"},"chatbot":{"continue":"Agree and Start","iconTitle":"Searching for travel information","popupTitle":"Mak Mak","terms":"Terms & Conditions","termsDetails":"Welcome to the \u003Cb\u003EMak Mak Chatbot Service\u003C\u002Fb\u003E. The conversations in this service will be recorded for technical analysis to improve user experience. Please do not disclose any personal information such as address, telephone number, ID, etc. during the conversation. Please refer to \u003Ca href=\"https:\u002F\u002Fwww.macaotourism.gov.mo\u002Fterms-and-conditions\" target=\"_blank\"\u003ETerms and Conditions\u003C\u002Fa\u003E and \u003Ca href=\"https:\u002F\u002Fwww.macaotourism.gov.mo\u002Fprivacy-statement\" target=\"_blank\"\u003EPrivacy Statement\u003C\u002Fa\u003E."},"sightMap":{"ngi":"No Geographical Information"},"fontSize":{"fontSize":"Text Size","large":"Large","medium":"Medium","small":"Small"},"aboutMacao":{"language":"Language"},"weather":{"humi":"Humi","temp":"Temp","weather":"Weather"},"socialMedia":{"facebook":"Facebook","followUs":"Follow Us on {media}","globe":"Other Media","instagram":"Instagram","pinterest":"Pinterest","tiktok":"TikTok","twitter":"X","vk":"VK","weibo":"Weibo","weixin":"WeChat","weixinRemark":"Use WeChat built-in QR code scanner to scan the QR code above.","x-twitter":"X","youtube":"YouTube"},"search":{"errorMessage":"Whoops! This page may be under maintenance. Please come back later.","header":"Search Header","placeholder":"What would you like to know?"},"pageNotFound":{"backToPreviousLang":"Back to previous version:","header":"404: Page Not Found","noLangForThisPage":"Not available in this language","pageNotFound":"Whoops! 404: Page Not Found"},"pageError":{"header":"500: Internal Server Error","pageError":"Whoops! This page may be under maintenance. Please come back later."},"media":{"VR":"VR Video","aMap":"","audioGuide":"Audio","googleMap":"Google Map","leaflet":"Leaflet","mobileApp":"Mobile App","otherMedia":"","share":"Share","shareHeading":"Share the Content","video":"Video"},"visitorFlowForecast":{"name":"Visitor Flow"},"accommodation":{"roomRate":"Reference Rate"},"searchOnX":{"amap":"","amapUrl":"","google":"Google","googleMobileUrl":"https:\u002F\u002Fwww.google.com\u002Fsearch?cr=countryMO&q={nameZH} {nameEN}","googleUrl":"https:\u002F\u002Fwww.google.com\u002Fsearch?cr=countryMO&q={nameZH} {nameEN}","searchOnX":"Search on {x}"}}}};(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());</script>
+  <script src="/dist/vendors~app.ecff2efe120d4da10cb4.js" defer></script><script src="/dist/en.localized.7e5881ec0ad4aab7c5cd.js" defer></script><script src="/dist/eea.3575ec8fc977e0a6a4f9.js" defer></script><script src="/dist/app.1d54adf2478aed193942.js" defer></script>
+</body>
+</html>

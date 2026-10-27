@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>首页</title>
+    <meta name="keywords" content="港珠澳大桥穿梭巴士,穿梭巴士,金巴">
+    <meta name="description" content="港珠澳大桥穿梭巴士，是广东省、香港特别行政区、澳门特别行政区三地政府，为使港珠澳大桥建成通车后，内地、香港、澳门三地居民能够通过公共交通方式便捷往来大桥的珠海、香港、澳门三地口岸，以招标方式而确定的营办商。">
+    
+    <link rel="shortcut icon" type="image/x-icon" href="/hzmbweb/static/hzmbhome/favicon.ico">
+    <link rel="bookmark" type="image/x-icon" href="/hzmbweb/static/hzmbhome/favicon.ico">
+    <!--    <link rel="stylesheet" href="/hzmbweb/static/hzmbhome/css/bootstrap.css">-->
+    <!--    <link rel="stylesheet" href="/hzmbweb/static/hzmbhome/css/swiper-4.3.3.min.css">-->
+    <!--    <link rel="stylesheet" href="/hzmbweb/static/hzmbhome/css/common.css">-->
+    <link rel="stylesheet" href="/hzmbweb/static/hzmbhome/css/base.css">
+    <link rel="stylesheet" href="/hzmbweb/static/hzmbhome/css/common.css">
+    
+<link rel="stylesheet" href="/hzmbweb/static/hzmbhome/css/home.css">
+<link rel="stylesheet" href="/hzmbweb/static/hzmbhome/css/swiper-bundle.min.css"/>
+
+    
+    <script>
+		//百度统计
+		var _hmt = _hmt || [];
+		(function() {
+			let hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?ba369ed86b9d2e5439497a8ab9de233e";
+			let s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+    </script>
+
+</head>
+
+<body>
+<div id="app">
+    <!--头部开始-->
+    <!-- 头部 -->
+    <div class="head-box">
+        <!--        <div class="menu-mask"></div>-->
+        <div class="header-wrapper">
+            <div class="header-container">
+                <div class="company-symbol">
+                    <div class="logo"></div>
+                    <div class="name">港珠澳大桥穿梭巴士</div>
+                </div>
+                <!-- pc -->
+                <div class="right-box">
+                    <div class="menu-list">
+                        <div class="menu-item active" onclick="toPage('index')">
+                            <span class="menu-name">主页</span>
+                        </div>
+                        <div class="menu-item " onclick="toPage('airportLine')">
+                            <span class="menu-name">香港机场专线</span>
+                        </div>
+                        <div class="menu-item has-sub-menu ">
+                            <span class="menu-name">购票</span>
+                            <span class="icon"></span>
+                            <div class="sub-menu-list">
+                                <div class="sub-menu-item" data-url="ticket"><span>车票购买</span></div>
+                                <!--                                <div class="sub-menu-item" data-url="airportLine.html">-->
+                                <!--                                    <span>香港机场专线</span>-->
+                                <!--                                </div>-->
+                                <div class="sub-menu-item" data-url="ticket.html?tab=1"><span>乘客须知</span></div>
+                                <div class="sub-menu-item" data-url="ticket.html?tab=2"><span>隐私条款</span></div>
+                            </div>
+                        </div>
+                        <div class="menu-item has-sub-menu ">
+                            <span class="menu-name">实用资讯</span>
+                            <span class="icon"></span>
+                            <div class="sub-menu-list">
+                                <div class="sub-menu-item" data-url="message.html?tab=1"><span>班次信息</span></div>
+                                <div class="sub-menu-item" data-url="message.html?tab=2"><span>车票资讯</span></div>
+                                <div class="sub-menu-item" data-url="message.html?tab=3"><span>自助机使用说明</span>
+                                </div>
+                                <div class="sub-menu-item" data-url="message.html?tab=4"><span>当前轮候时间</span></div>
+                                <div class="sub-menu-item" data-url="message.html?tab=5"><span>乘车地点</span></div>
+                            </div>
+                        </div>
+                        <div class="menu-item " onclick="toPage('notice')">
+                            <span class="menu-name">信息公告</span>
+                        </div>
+                        <div class="menu-item has-sub-menu ">
+                            <span class="menu-name">交通配套</span>
+                            <span class="icon"></span>
+                            <div class="sub-menu-list">
+                                <div class="sub-menu-item" data-url="port.html?tab=1"><span>香港口岸</span></div>
+                                <div class="sub-menu-item" data-url="port.html?tab=2"><span>珠海口岸</span></div>
+                                <div class="sub-menu-item" data-url="port.html?tab=3"><span>澳门口岸</span></div>
+                            </div>
+                        </div>
+                        <div class="menu-item " onclick="toPage('aboutus')">
+                            <span class="menu-name">关于我们</span>
+                        </div>
+                    </div>
+                    <div class="set-box">
+                        <!--<span class="search-icon"></span>-->
+                        <span class="lang-type cur">简</span>
+                        <span class="line-icon"></span>
+                        <span class="lang-type" onclick="changeLang('hk')">繁</span>
+                        <span class="line-icon"></span>
+                        <span class="lang-type" onclick="changeLang('en')">EN</span>
+                    </div>
+                </div>
+                <!-- app -->
+                <div class="menu-icon"></div>
+                <!-- 遮罩 -->
+                <div class="menu-modal none"></div>
+            </div>
+            <!-- lang -->
+            <div class="search-lang-box">
+                <!--            <input type="text" class="search" />-->
+                <div class="lang-list">
+                    <div class="lang" onclick="changeLang('hk')">繁體</div>
+                    <div class="lang" onclick="changeLang('en')">EN</div>
+                </div>
+            </div>
+        </div>
+        
+        
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <img class="bg-img" src="/hzmbweb/static/hzmbhome/img/home/swiper_bg1.jpg" alt="">
+            <div class="text-area pc-dom">
+                <div class="en">Hong Kong Zhuhai Macao Bridge shuttle bus</div>
+                <div class="zh">港珠澳大桥穿梭巴士</div>
+                <!--                <div class="guide">购票网站一站快速购票</div>-->
+                <div class="guide">
+                    <span> 网站购票 </span>
+                    <!--                    <span class="icon"></span>-->
+                    <div class="btn">
+                        <a href="https://i.hzmbus.com" target="_blank">
+                            <span class="label">直接购票</span>
+                            <!--                            <span class="icon"></span>-->
+                        </a>
+                    </div>
+                </div>
+                <div class="guide airline">
+                    <span> 香港机场专线 </span>
+                    <!--                    <span class="icon"></span>-->
+                    <div class="btn" onclick="toPage('airportLine')">
+                        <!--                        <a href="https://i.hzmbus.com/webhtml/airline.html" target="_blank">-->
+                        <span class="label">了解更多</span>
+                        <span class="icon"></span>
+                        <!--                        </a>-->
+                    </div>
+                </div>
+                <!--                <div class="content">-->
+                <!--                    <img src="/hzmbweb/static/hzmbhome/img/home/swiper_bg1_context.png" alt="">-->
+                <!--                </div>-->
+                <div class="btn-box none">
+                    <div class="tag-box">
+                        <span class="tag-icon"></span>
+                        <span class="tag">快速</span>
+                    </div>
+                    <div class="tag-box">
+                        <span class="tag-icon speedy"></span>
+                        <span class="tag">便捷</span>
+                    </div>
+                    <div class="btn">
+                        <a href="https://i.hzmbus.com">
+                            <span class="label">前往购票</span>
+                            <span class="icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-text-area app-dom">
+                <div class="en">Hong Kong Zhuhai Macao Bridge shuttle bus</div>
+                <div class="zh">港珠澳大桥穿梭巴士</div>
+                <div class="guide">
+                    <span> 网站购票 </span>
+                    <!--                    <span class="icon"></span>-->
+                    <div class="btn">
+                        <a href="https://i.hzmbus.com" target="_blank">
+                            <span class="label">直接购票</span>
+                            <!--                            <span class="icon"></span>-->
+                        </a>
+                    </div>
+                </div>
+                <div class="guide airline">
+                    <span> 香港机场专线 </span>
+                    <div class="btn" onclick="toPage('airportLine')">
+                        <!--                        <a href="https://i.hzmbus.com/webhtml/airline.html" target="_blank">-->
+                        <span class="label">了解更多</span>
+                        <span class="icon"></span>
+                        <!--                        </a>-->
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="bg-img" src="/hzmbweb/static/hzmbhome/img/home/swiper_bg2.jpg" alt="">
+            <!--            <div class="text-area pc-dom">-->
+            <!--                <div class="en">Hong Kong Zhuhai Macao Bridge shuttle bus</div>-->
+            <!--                <div class="zh2">连接粤港澳，服务大湾区</div>-->
+            <!--                <div class="guide2">-->
+            <!--                    连接粤港澳，服务大湾区-->
+            <!--                    港珠澳大桥穿梭巴士-->
+            <!--                </div>-->
+            <!--                <div class="en2">为旅客提供安全优质服务，连接粤港澳，促进互动发展</div>-->
+            <!--                <div class="en2" style="margin-bottom: 130px;">为打造粤港澳国际一流湾区和世界级城市群出一分力</div>-->
+            <!--                <a href="/aboutus.html">-->
+            <!--                    <div class="more">-->
+            <!--                        <div class="text">了解更多</div>-->
+            <!--                        <div class="arrow">-->
+            <!--                            <span class="icon"></span>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </a>-->
+            <!--            </div>-->
+            <div class="swiper-text-area app-dom">
+                <div class="en">Hong Kong Zhuhai Macao Bridge shuttle bus</div>
+                <div class="zh">港珠澳大桥穿梭巴士</div>
+                <div class="guide">
+                    <span> 网站购票 </span>
+                    <!--                    <span class="icon"></span>-->
+                    <div class="btn">
+                        <a href="https://i.hzmbus.com" target="_blank">
+                            <span class="label">直接购票</span>
+                            <!--                            <span class="icon"></span>-->
+                        </a>
+                    </div>
+                </div>
+                <div class="guide airline">
+                    <span> 香港机场专线 </span>
+                    <div class="btn" onclick="toPage('airportLine')">
+                        <!--                        <a href="https://i.hzmbus.com/webhtml/airline.html" target="_blank">-->
+                        <span class="label">了解更多</span>
+                        <span class="icon"></span>
+                        <!--                        </a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <img class="bg-img" src="/hzmbweb/static/hzmbhome/img/home/swiper_bg3.jpg" alt="">
+            <!--            <div class="text-area pc-dom">-->
+            <!--                <div class="en">Hong Kong Zhuhai Macao Bridge shuttle bus</div>-->
+            <!--                <div class="zh2">连接粤港澳，服务大湾区</div>-->
+            <!--                <div class="guide2">-->
+            <!--                    连接粤港澳，服务大湾区-->
+            <!--                    港珠澳大桥穿梭巴士-->
+            <!--                </div>-->
+            <!--                <div class="en2">为旅客提供安全优质服务，连接粤港澳，促进互动发展</div>-->
+            <!--                <div class="en2" style="margin-bottom: 130px;">为打造粤港澳国际一流湾区和世界级城市群出一分力</div>-->
+            <!--                <a href="/aboutus.html">-->
+            <!--                    <div class="more">-->
+            <!--                        <div class="text">了解更多</div>-->
+            <!--                        <div class="arrow">-->
+            <!--                            <span class="icon"></span>-->
+            <!--                        </div>-->
+            <!--                    </div>-->
+            <!--                </a>-->
+            <!--            </div>-->
+            <div class="swiper-text-area app-dom">
+                <div class="en">Hong Kong Zhuhai Macao Bridge shuttle bus</div>
+                <div class="zh">港珠澳大桥穿梭巴士</div>
+                <div class="guide">
+                    <span> 网站购票 </span>
+                    <!--                    <span class="icon"></span>-->
+                    <div class="btn">
+                        <a href="https://i.hzmbus.com" target="_blank">
+                            <span class="label">直接购票</span>
+                            <!--                            <span class="icon"></span>-->
+                        </a>
+                    </div>
+                </div>
+                <div class="guide airline">
+                    <span> 香港机场专线 </span>
+                    <div class="btn" onclick="toPage('airportLine')">
+                        <!--                        <a href="https://i.hzmbus.com/webhtml/airline.html" target="_blank">-->
+                        <span class="label">了解更多</span>
+                        <span class="icon"></span>
+                        <!--                        </a>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+</div>
+
+        
+        <!-- app 菜单 -->
+        <div class="mobile-slide-menu app-dom">
+            <div class="slide-menu-item">
+                <div class="menu-item">
+                    <span onclick="toPage('index')">主页</span>
+                </div>
+            </div>
+            <div class="slide-menu-item">
+                <div class="menu-item">
+                    <span>购票</span>
+                    <span class="app-menu-open-icon">
+                    <i class="icon"></i>
+                </span>
+                </div>
+                <div class="sub-menu-list">
+                    <div class="sub-menu-item" data-url="ticket">车票购买</div>
+                    <!--                    <div class="sub-menu-item" data-url="airportLine.html">-->
+                    <!--                        <span>香港机场专线</span>-->
+                    <!--                    </div>-->
+                    <div class="sub-menu-item" data-url="ticket.html?tab=1">乘客须知</div>
+                    <div class="sub-menu-item" data-url="ticket.html?tab=2">隐私条款</div>
+                </div>
+            </div>
+            <div class="slide-menu-item">
+                <div class="menu-item" onclick="toPage('airportLine')">
+                    <span>
+                        香港机场专线
+                    </span>
+                </div>
+            </div>
+            <div class="slide-menu-item">
+                <div class="menu-item">
+                    <span>实用资讯</span>
+                    <span class="app-menu-open-icon">
+                    <i class="icon"></i>
+                </span>
+                </div>
+                <div class="sub-menu-list">
+                    <div class="sub-menu-item" data-url="message.html?tab=1">班次信息</div>
+                    <div class="sub-menu-item" data-url="message.html?tab=2">车票资讯</div>
+                    <div class="sub-menu-item" data-url="message.html?tab=3">自助机使用说明</div>
+                    <div class="sub-menu-item" data-url="message.html?tab=4">当前轮候</div>
+                    <div class="sub-menu-item" data-url="message.html?tab=5">乘车地点</div>
+                </div>
+            </div>
+            <div class="slide-menu-item">
+                <div class="menu-item">
+                    <span onclick="toPage('notice')">信息公告</span>
+                </div>
+            </div>
+            <div class="slide-menu-item">
+                <div class="menu-item">
+                    <span>交通配套</span>
+                    <span class="app-menu-open-icon">
+                    <i class="icon"></i>
+                </span>
+                </div>
+                <div class="sub-menu-list">
+                    <div class="sub-menu-item" data-url="port.html?tab=1">香港口岸</div>
+                    <div class="sub-menu-item" data-url="port.html?tab=2">珠海口岸</div>
+                    <div class="sub-menu-item" data-url="port.html?tab=3">澳门口岸</div>
+                </div>
+            </div>
+            <div class="slide-menu-item">
+                <div class="menu-item">
+                    <span onclick="toPage('aboutus')">关于我们</span>
+                </div>
+            </div>
+            <div class="search-lang-box">
+                <!-- <input type="text" class="search" /> -->
+                <div class="lang-list n-select">
+                    <div class="lang" onclick="changeLang('hk')">繁體</div>
+                    <div class="lang" onclick="changeLang('en')">English</div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    <!--头部结束-->
+    
+    
+<!-- 班次信息 -->
+<div class="car-shift-box pc-dom none">
+    <picture>
+        <img class="shift-img" src="/hzmbweb/static/hzmbhome/img/home/bg3.jpg" alt="">
+    </picture>
+    <div class="content-box">
+        <div class="car-class-box">
+            <div class="box-title">
+                <h3>班次信息</h3>
+                <div class="sub-title">Shift information</div>
+            </div>
+            <div class="class-box">
+                <div class="table-box">
+                    <table class="er-table">
+                        <thead>
+                        <tr>
+                            <td colspan="2">
+                                <div class="td">香港口岸往澳门口岸</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">时间</div>
+                            </td>
+                            <td>
+                                <div class="td">班次</div>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="td">00:00 - 06:14</div>
+                            </td>
+                            <td>
+                                <div class="td">30分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">06:15 - 08:59</div>
+                            </td>
+                            <td>
+                                <div class="td">15至20分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">09:00 - 23:59</div>
+                            </td>
+                            <td>
+                                <div class="td">5至10分钟一班</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="er-table">
+                        <thead>
+                        <tr>
+                            <td colspan="2">
+                                <div class="td">澳门口岸往香港口岸</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">时间</div>
+                            </td>
+                            <td>
+                                <div class="td">班次</div>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="td">00:00 - 05:59</div>
+                            </td>
+                            <td>
+                                <div class="td">30分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">06:00 - 07:59</div>
+                            </td>
+                            <td>
+                                <div class="td">20至30分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">08:00 - 23:59</div>
+                            </td>
+                            <td>
+                                <div class="td">5至10分钟一班</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-box">
+                    <table class="er-table">
+                        <thead>
+                        <tr>
+                            <td colspan="2">
+                                <div class="td">香港口岸往珠海口岸</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">时间</div>
+                            </td>
+                            <td>
+                                <div class="td">班次</div>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr style="height: 54.67px">
+                            <td>
+                                <div class="td">00:00 - 06:59</div>
+                            </td>
+                            <td>
+                                <div class="td">30分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr style="height: 54.67px">
+                            <td>
+                                <div class="td">07:00 - 07:59</div>
+                            </td>
+                            <td>
+                                <div class="td">15至20分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr style="height: 54.67px">
+                            <td>
+                                <div class="td">08:00 - 23:59</div>
+                            </td>
+                            <td>
+                                <div class="td">5至10分钟一班</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="er-table">
+                        <thead>
+                        <tr>
+                            <td colspan="2">
+                                <div class="td">珠海口岸往香港口岸</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">时间</div>
+                            </td>
+                            <td>
+                                <div class="td">班次</div>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="td">00:00 - 06:14</div>
+                            </td>
+                            <td>
+                                <div class="td">30分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">06:15 - 07:59</div>
+                            </td>
+                            <td>
+                                <div class="td">15至20分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">08:00 - 21:59</div>
+                            </td>
+                            <td>
+                                <div class="td">5至10分钟一班</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="td">22:00 - 23:59</div>
+                            </td>
+                            <td>
+                                <div class="td">20至30分钟一班</div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="app-car-shift-box app-dom none">
+    <div class="box-title">
+        <picture>
+            <img class="shift-img" src="/hzmbweb/static/hzmbhome/img/home/m-bcxx.png" alt="">
+        </picture>
+        <div class="content-area">
+            <div class="type-area">
+                <div class="type active">港珠线</div>
+                <div class="type">港澳线</div>
+            </div>
+            <div class="title-area">
+                <h3>班次信息</h3>
+                <div class="sub-title">Shift information</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-box">
+        <div class="car-class-box">
+            <div class="class-box">
+                <table class="er-table">
+                    <thead>
+                    <tr>
+                        <td colspan="2">
+                            <div class="td">香港口岸往珠海口岸</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">时间</div>
+                        </td>
+                        <td>
+                            <div class="td">班次</div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="td">00:00 - 06:59</div>
+                        </td>
+                        <td>
+                            <div class="td">30分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">07:00 - 07:59</div>
+                        </td>
+                        <td>
+                            <div class="td">15至20分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">08:00 - 23:59</div>
+                        </td>
+                        <td>
+                            <div class="td">5至10分钟一班</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="er-table">
+                    <thead>
+                    <tr>
+                        <td colspan="2">
+                            <div class="td">珠海口岸往香港口岸</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">时间</div>
+                        </td>
+                        <td>
+                            <div class="td">班次</div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="td">00:00 - 06:14</div>
+                        </td>
+                        <td>
+                            <div class="td">30分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">06:15 - 07:59</div>
+                        </td>
+                        <td>
+                            <div class="td">15至20分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">08:00 - 21:59</div>
+                        </td>
+                        <td>
+                            <div class="td">5至10分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">22:00 - 23:59</div>
+                        </td>
+                        <td>
+                            <div class="td">20至30分钟一班</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="class-box hide">
+                <table class="er-table">
+                    <thead>
+                    <tr>
+                        <td colspan="2">
+                            <div class="td">香港口岸往澳门口岸</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">时间</div>
+                        </td>
+                        <td>
+                            <div class="td">班次</div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="td">00:00 - 06:14</div>
+                        </td>
+                        <td>
+                            <div class="td">30分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">06:15 - 08:59</div>
+                        </td>
+                        <td>
+                            <div class="td">15至20分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">09:00 - 23:59</div>
+                        </td>
+                        <td>
+                            <div class="td">5至10分钟一班</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="er-table">
+                    <thead>
+                    <tr>
+                        <td colspan="2">
+                            <div class="td">澳门口岸往香港口岸</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">时间</div>
+                        </td>
+                        <td>
+                            <div class="td">班次</div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <div class="td">00:00 - 05:59</div>
+                        </td>
+                        <td>
+                            <div class="td">30分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">06:00 - 07:59</div>
+                        </td>
+                        <td>
+                            <div class="td">20至30分钟一班</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="td">08:00 - 23:59</div>
+                        </td>
+                        <td>
+                            <div class="td">5至10分钟一班</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--机场线-->
+<div class="airport-line-box pc-dom">
+    <div class="bg">
+        <!--        <img src="/hzmbweb/static/hzmbhome/img/airport_line/home_airport_bg.jpg" alt="home_airport_bg">-->
+        <img src="/hzmbweb/static/hzmbhome/img/airport_line/home_airport_bg.jpg" alt="home_airport_bg">
+    </div>
+    <div class="content-box">
+        <div class="airport-box">
+            <div class="left">
+                <div class="title">
+                    港珠澳大桥
+                </div>
+                <div class="content">
+                    珠海口岸往返香港国际机场专线（封关巴士）
+                </div>
+                <div class="tips">
+                    一检直达口岸 行李直挂目的地
+                </div>
+                <div class="more" onclick="toPage('airportLine')">
+                    <!--                    <a href="https://i.hzmbus.com/webhtml/airline.html">-->
+                    了解更多
+                    <!--                    </a>-->
+                </div>
+            </div>
+            <div class="right">
+                <img src="/hzmbweb/static/hzmbhome/img/airport_line/airport_bus.png" alt="airport_bus">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="airport-line-box app-dom">
+    <div class="bg">
+        <!--        <img src="/hzmbweb/static/hzmbhome/img/airport_line/home_airport_bg.jpg" alt="home_airport_bg">-->
+        <img src="/hzmbweb/static/hzmbhome/img/airport_line/mobile_airport_bg.jpg" alt="home_airport_bg">
+    </div>
+    <div class="content-box">
+        <div class="airport-box">
+            <div class="title">
+                港珠澳大桥
+            </div>
+            <div class="content">
+                珠海口岸往返香港国际机场专线（封关巴士）
+            </div>
+            <div class="tips">
+                一检直达口岸 行李直挂目的地
+            </div>
+            <div class="more" onclick="toPage('airportLine')">
+                <!--                <a href="https://i.hzmbus.com/webhtml/airline.html">-->
+                了解更多
+                <!--                </a>-->
+            </div>
+            <img src="/hzmbweb/static/hzmbhome/img/airport_line/airport_bus.png" alt="airport_bus">
+        </div>
+    </div>
+</div>
+
+<!-- 乘车地点 -->
+<div class="pickup-point pc-dom">
+    <picture>
+        <!--        <img class="point-img" src="/hzmbweb/static/hzmbhome/img/home/bg1.jpg" alt="">-->
+        <img class="point-img" src="/hzmbweb/static/hzmbhome/img/airport_line/pickup_point_bg.jpg" alt="">
+    </picture>
+    <div class="content-box">
+        <div class="point-box">
+            <div class="box-title">
+                <h3>乘车地点</h3>
+                <div class="sub-title">Boarding location</div>
+            </div>
+            <div class="location-list">
+                <div class="location-item">
+                    <!-- <div class="location-img no-logo-map" id="hkMap" onclick="openDialog('hk')"></div> -->
+                    <img class="location-img" src="/hzmbweb/static/hzmbhome/img/index/hong_kong_port.jpg" alt="香港口岸" onclick="openDialog('hk')" style="cursor: pointer;">
+                    <div class="location-name">香港口岸</div>
+                    <div class="location-info">港珠澳大桥香港口岸旅检大楼</div>
+                </div>
+                <div class="location-item">
+                    <!-- <div class="location-img no-logo-map" id="zhMap" onclick="openDialog('zh')"></div> -->
+                    <img class="location-img" src="/hzmbweb/static/hzmbhome/img/index/zhuhai_port.jpg" alt="珠海口岸" onclick="openDialog('zh')" style="cursor: pointer;">
+                    <div class="location-name">珠海口岸</div>
+                    <div class="location-info">港珠澳大桥珠海公路口岸</div>
+                </div>
+                <div class="location-item">
+                    <!-- <div class="location-img no-logo-map" id="amMap" onclick="openDialog('am')"></div> -->
+                    <img class="location-img" src="/hzmbweb/static/hzmbhome/img/index/macau_port.jpg" alt="澳门口岸" onclick="openDialog('am')" style="cursor: pointer;">
+                    <div class="location-name">澳门口岸</div>
+                    <div class="location-info">港珠澳大桥澳门边检大楼</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pickup-point app-dom">
+    <div class="content-box">
+        <!-- <picture>
+            <img class="point-img" src="../static/images/home/bg1.jpg" alt="">
+        </picture> -->
+        <div class="point-box">
+            <div class="box-title">
+                <h3 class="title">乘车地点</h3>
+                <div class="sub-title">Boarding location</div>
+            </div>
+            <div class="tab-box">
+                <div class="tab-content">
+                    <div class="tab-item active">香港口岸</div>
+                    <div class="tab-item">珠海口岸</div>
+                    <div class="tab-item">澳门口岸</div>
+                </div>
+            </div>
+            <div class="location-list">
+                <div class="location-item">
+                    <p class="point-name">港珠澳大桥香港口岸旅检大楼</p>
+                    <p class="point-name hide">港珠澳大桥珠海公路口岸</p>
+                    <p class="point-name hide">港珠澳大桥澳门边检大楼</p>
+                    <!-- <div class="location-img no-logo-map" id="mobileMap"></div> -->
+                    <img class="location-img mobile-map-img" src="/hzmbweb/static/hzmbhome/img/index/hong_kong_port.jpg" alt="香港口岸">
+                    <img class="location-img mobile-map-img hide" src="/hzmbweb/static/hzmbhome/img/index/zhuhai_port.jpg" alt="珠海口岸">
+                    <img class="location-img mobile-map-img hide" src="/hzmbweb/static/hzmbhome/img/index/macau_port.jpg" alt="澳门口岸">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- 信息公告 -->
+<div class="information-box pc-dom">
+    <picture>
+        <img class="info-img" src="/hzmbweb/static/hzmbhome/img/home/bg2.jpg" alt="">
+    </picture>
+    <div class="content-box">
+        <div class="info-content">
+            <div class="box-title">
+                <h3>信息公告</h3>
+                <div class="sub-title">Information announcement</div>
+                <div class="more-btn">
+                    <a href="/notice.html">
+                        <span>more</span>
+                    </a>
+                </div>
+            </div>
+            <div class="info-list">
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=497">
+                    <div class="info-item">
+                        <div class="info-label">港珠澳大桥穿梭巴士恢复正常营运</div>
+                        <div class="info-date">2026-07-26</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=494">
+                    <div class="info-item">
+                        <div class="info-label">受台风“红霞”影响港珠澳大桥穿梭巴士暂停服务的公告</div>
+                        <div class="info-date">2026-07-25</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=491">
+                    <div class="info-item">
+                        <div class="info-label">关于第十五届全国运动会“中国移动杯”自行车（公路）比赛期间港珠澳大桥穿梭巴士暂停营运的公告</div>
+                        <div class="info-date">2025-11-04</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=455">
+                    <div class="info-item">
+                        <div class="info-label">港珠澳大桥穿梭巴士恢复营运</div>
+                        <div class="info-date">2025-10-05</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=489">
+                    <div class="info-item">
+                        <div class="info-label">受台风“麦德姆”影响港珠澳大桥穿梭巴士暂停服务的公告</div>
+                        <div class="info-date">2025-10-05</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=486">
+                    <div class="info-item">
+                        <div class="info-label">受台风“桦加沙”影响港珠澳大桥穿梭巴士暂停服务的公告</div>
+                        <div class="info-date">2025-09-22</div>
+                    </div>
+                </a>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<div class="app-information-box app-dom">
+    <div class="content-box">
+        <div class="info-content">
+            <div class="box-title">
+                <h3>信息公告</h3>
+                <div class="sub-title">Information announcement</div>
+                <div class="more-btn">
+                    <a href="/notice.html">
+                        <span>more</span>
+                    </a>
+                </div>
+            </div>
+            <div class="info-list">
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=497">
+                    <div class="info-item">
+                        <div class="info-label">港珠澳大桥穿梭巴士恢复正常营运</div>
+                        <div class="info-date">2026-07-26</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=494">
+                    <div class="info-item">
+                        <div class="info-label">受台风“红霞”影响港珠澳大桥穿梭巴士暂停服务的公告</div>
+                        <div class="info-date">2026-07-25</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=491">
+                    <div class="info-item">
+                        <div class="info-label">关于第十五届全国运动会“中国移动杯”自行车（公路）比赛期间港珠澳大桥穿梭巴士暂停营运的公告</div>
+                        <div class="info-date">2025-11-04</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=455">
+                    <div class="info-item">
+                        <div class="info-label">港珠澳大桥穿梭巴士恢复营运</div>
+                        <div class="info-date">2025-10-05</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=489">
+                    <div class="info-item">
+                        <div class="info-label">受台风“麦德姆”影响港珠澳大桥穿梭巴士暂停服务的公告</div>
+                        <div class="info-date">2025-10-05</div>
+                    </div>
+                </a>
+                                <a href="https://www.hzmbus.com/noticeDetails.html?id=486">
+                    <div class="info-item">
+                        <div class="info-label">受台风“桦加沙”影响港珠澳大桥穿梭巴士暂停服务的公告</div>
+                        <div class="info-date">2025-09-22</div>
+                    </div>
+                </a>
+                            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 放大地图 -->
+<div class="map-dialog pc-dom" style="display: none;">
+    <div class="dialog-modal"></div>
+    <div class="dialog-content">
+        <div class="body-box">
+            <span class="close" onclick="closeDialog()"></span>
+            <img id="dialogMapImg" src="" alt="口岸地图" style="width: 100%; height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+        </div>
+    </div>
+</div>
+
+
+    
+    <!--底部开始-->
+    <div class="footer-box">
+        <div class="contact-info">
+            <div class="wx-box">
+                <div class="qrcode">
+                    <img src="/hzmbweb/static/hzmbhome/img/qrcode.png" alt="">
+                </div>
+                <div class="tip">微信公众号</div>
+            </div>
+            <div class="mobile-box">
+                <p class="label">服务热线</p>
+                <p class="mobile-list">
+                    （86）4008633888
+                    <span class="line"></span>
+                    （852）37533888
+                    <span class="line"></span>
+                    （853）28723888
+                </p>
+                <div class="content2">
+                    <div class="email-box">
+                        <p class="label">电邮地址</p>
+                        <p>services@hzmbus.com</p>
+                    </div>
+                    <div class="handle-service">
+                        <p class="label">人工服务时间</p>
+                        <p>08:00-24:00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-box">
+                <img src="/hzmbweb/static/hzmbhome/img/logo-full.png" alt="">
+            </div>
+        </div>
+        <div class="info-tips">
+            <span>港珠澳大桥穿梭巴士</span>
+            <span><a target="_blank" href="http://beian.miit.gov.cn">粤ICP备18047137号</a></span>
+            <span>技术支持：和方科技</span>
+        </div>
+    </div>
+    
+    <div class="mobile-footer-box">
+        <div class="contact-info">
+            <div class="wx-box">
+                <div class="qrcode">
+                    <img src="/hzmbweb/static/hzmbhome/img/qrcode.png" alt="">
+                </div>
+                <div class="tip">微信公众号</div>
+            </div>
+            <div class="logo-box">
+                <img src="/hzmbweb/static/hzmbhome/img/logo-full.png" alt="">
+            </div>
+        </div>
+        <div class="mobile-box">
+            <p class="label">服务热线</p>
+            <p class="mobile-item">(86) 4008633888</p>
+            <p class="mobile-item">(852) 37533888</p>
+            <p class="mobile-item">(853) 28723888</p>
+            <p class="label">电邮地址</p>
+            <p class="email">services@hzmbus.com</p>
+            <p class="label">人工服务时间</p>
+            <p>08:00-24:00</p>
+        </div>
+        <div class="info-tips">
+            <span><a target="_blank" href="http://beian.miit.gov.cn">粤ICP备18047137号</a></span>
+            <span>技术支持：和方科技</span>
+        </div>
+    </div>
+    
+    <!--底部结束-->
+
+</div>
+</body>
+
+<script src="/hzmbweb/static/hzmbhome/js/jquery-3.4.3.min.js"></script>
+<script src="/hzmbweb/static/hzmbhome/js/common.js"></script>
+
+<!--<script src="/hzmbweb/static/hzmbhome/js/jQuery-3.2.1.min.js"></script>-->
+<!--<script src="/hzmbweb/static/hzmbhome/js/bootstrap.min.js"></script>-->
+<!--<script src="/hzmbweb/static/hzmbhome/js/swiper-4.3.3.min.js"></script>-->
+<!--<script src="/hzmbweb/static/hzmbhome/js/vue.js"></script>-->
+
+
+<script src="/hzmbweb/static/hzmbhome/js/swiper-bundle.min.js"></script>
+<!-- <script src="https://map.qq.com/api/gljs?v=1.exp&key=QSLBZ-VD6WV-F55PG-5QDJP-FU6QT-ZJFE7"></script> -->
+<script src="/hzmbweb/static/hzmbhome/js/home.js"></script>
+
+<script>
+	
+	// function IEVersion()
+	// {
+	// 	var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+	// 	var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+	// 	var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+	// 	var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+	// 	if(isIE)
+	// 	{
+	// 		var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+	// 		reIE.test(userAgent);
+	// 		var fIEVersion = parseFloat(RegExp["$1"]);
+	// 		if(fIEVersion === 7)
+	// 		{
+	// 			return 7;
+	// 		}
+	// 		else if(fIEVersion === 8)
+	// 		{
+	// 			return 8;
+	// 		}
+	// 		else if(fIEVersion === 9)
+	// 		{
+	// 			return 9;
+	// 		}
+	// 		else if(fIEVersion === 10)
+	// 		{
+	// 			return 10;
+	// 		}
+	// 		else
+	// 		{
+	// 			return 6;//IE版本<=7
+	// 		}
+	// 	}
+	// 	else if(isEdge)
+	// 	{
+	// 		return 100;//edge
+	// 	}
+	// 	else if(isIE11)
+	// 	{
+	// 		return 11; //IE11
+	// 	}
+	// 	else
+	// 	{
+	// 		return 100;//不是ie浏览器
+	// 	}
+	// }
+	//
+	// function getClassName(clsName, parent)
+	// {
+	// 	var oParent = document.getElementById(parent) || document;
+	// 	var elements = oParent.getElementsByTagName("*");
+	// 	var ele = [];
+	// 	for(var i = 0; i < elements.length; i++)
+	// 	{
+	// 		if(elements[i].className === clsName)
+	// 		{
+	// 			ele.push(elements[i]);
+	// 		}
+	// 	}
+	// 	return ele;
+	// }
+	//
+	// var ievsion = IEVersion();
+	// var value = getClassName("language_active")[0].innerHTML;
+	// if(ievsion < 10)
+	// {
+	// 	if(value === "繁")
+	// 	{
+	// 		alert("請將瀏覽器升級到IE10或以上版本。");
+	// 	}
+	// 	else
+	// 	{
+	// 		alert("请将浏览器升级到IE10或以上版本。");
+	// 	}
+	
+	// }
+</script>
+</html>

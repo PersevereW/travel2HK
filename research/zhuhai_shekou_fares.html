@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>【招商邮轮】航班票价_港澳珠航班票价</title>
+<meta name="keywords" content="招商邮轮,蛇口邮轮中心,深圳邮轮班次,邮轮航班查询,港澳船票票价,香港机场航线" />
+<meta name="description" content="招商邮轮为您提供邮轮航线、航班价格、航班信息查询等服务,以最优最好的体验服务于您!" />
+<!-- 静态文件，css,js等 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit">
+<link href="/themes/ofc/css/pc_default.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/pc_xl.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/pc_zl.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/pc_ym.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/pc_zw.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/pc_hsy.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/pc_zl_new.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" >
+<link href="/themes/ofc/css/idangerous.swiper.css" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/js/datepicker/jquery.datetimepicker.css" rel="stylesheet" type="text/css" />
+<link href="/themes/ofc/css/pop_style.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" >
+<link href="/themes/ofc/css/swiper-4.4.1.min.css?v=5.3.7.2.202509281348" rel="stylesheet" type="text/css" >
+
+<!-- 测试
+<script>var CWRUMLICENCE = 'J45Engw88NdArvaNl**yH3rLPDfQjPfq/'; </script>
+<script src="https://eop-sit.cmsk1979.com/rum/accounts/1/EndUserAgentPreload.js?v=1608283046"></script>
+ -->
+ 
+<script>var CWRUMLICENCE = 'J45Engw88NeHUZ4Q7qNsK3VS6cXWZzFj';</script>
+<script src="https://eop-tsb.cmsk1979.com/rum/accounts/110/EndUserAgentPreload.js?v=20170419"></script>
+
+<input type="hidden" id="routes" value=""/>
+<script type="text/javascript" src="/themes/ofc/js/jquery.min.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/dynamic/commonUtils.js?v=5.3.7.2.202509281348"></script>
+<script type="text/javascript" src="/themes/ofc/js/datepicker/jquery.datetimepicker.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/img_slide.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/yl_thumb.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/lib.js?v=5.3.7.2.202509281348"></script>
+<script type="text/javascript" src="/themes/ofc/js/idangerous.swiper.min.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/lunbo2.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/webgUI.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/jsencrypt.js"></script>
+<script type="text/javascript" src="/themes/ofc/js/swiper-4.4.1.min.js"></script>
+<div class="domain_config" data-domain='{"0":"https://h5.cmskchp.com","1":"https://web.cmskchp.com","2":"https://www.cmskchp.com"}'></div>
+<script type="text/javascript">
+var routes = $('#routes').val();
+//个人中心-右侧刷新方法
+function right_load(href) {
+    var $memberNav = $('#member_nav');
+    var $li = $memberNav.find('li[href="'+ href +'"]');
+    if ($li.length > 0) {
+    	$li.siblings().removeClass('on');
+    	$li.addClass('on');
+    }
+    $.ajax({
+        url: routes + href,
+        type: 'get',
+        dataType: 'html',
+        success: function (html) {
+        	var html = $.parseHTML(html, document, true);
+            if ($(html).find('#login').length > 0) {
+                window.location.href = routes + '/user/login';
+            } else {
+            	$('#member_nav').next().remove();
+                $('#member_nav').after(html);
+                var li_id = $(html).find('#t').val();
+                if (li_id && li_id != '') {
+                    $('#member_nav').find('.p_con').removeClass('on');
+                    $('#' + li_id).addClass('on');
+                }
+            }
+            $('#memberCenterWindow').removeClass('none');
+        }
+    });
+}
+</script>
+
+</head>
+<body>
+    <!-- 这只是一个代码结构的demo页面，所有页面的代码都将符合如下的代码结构 -->
+    <div class="box">
+        <!-- 导航栏Ajax加载 指向navigator.html-->
+        <div class="navigator" data-menu="HBPJ_SSKY" >
+	<!--公用 顶部导航栏 -->
+	<div class="nav_wrap" id="navigator">
+	    <div class="nav_top ">
+	        <div class="len12 rel hg70">
+                <a href="javascript:void(0);" class="icon_wx">
+                     <div class="erweima2">
+                          <h4>微信号：<b>cmhk-xl</b></h4>
+                          <img src="/themes/ofc/image/erweima.png" width="190" height="190">
+                          <p>微信购票，优惠多多</p>
+                          <i class="triangle"></i>
+                     </div>
+                </a>
+				<!--1025:去掉no_pointer 加入客服电话-->
+                <a href="javascript:void(0);" class="xl_call">
+                    <div class="erweima2 sty_call">
+                          <p class="call_txt"><label>服务电话</label><span>400-883-1872</span></p>
+                          <p class="call_txt none"><label>渡轮客服</label><span>0755-26691213</span></p>
+                          <i class="triangle"></i>
+                     </div>
+                </a>
+                <!--1025:去掉no_pointer 加入客服电话 end-->
+	            <ul class="nav_top_ul">
+	                <li><a href="avascript:void(0);" style="cursor:default">中文</a></li>
+                    <li class="off_line"><a href="javascript:void(0);" class="cross_domain" data-url="/personCenter">个人中心</a></li>
+	            </ul>
+	            <a class="xl_logo" href="/" id='index_logo' ></a>
+	            
+	        </div>
+	    </div>
+	    <!--nav_top end-->
+	    
+	    <!--菜单栏-->
+	   <div class="nav_menu_father">
+	        <ul class="len12" id = "Menu">
+                <li class="nav_menu_list hover_able no_gap INDEX">
+                    <div class="nav_menu_lv1"><a href="/">首页</a></div>
+                </li>
+                <!--data-sub-menu 指向 nav_menu_lv2内对应的id  高亮on 当前显示的页面不会有hover_able-->
+                <li class="nav_menu_list no_gap SSKY">
+                    <div class="nav_menu_lv1" ><a href="/transport">高速客轮</a></div>
+                </li>
+                <li class="nav_menu_list no_gap HSY">
+                    <div class="nav_menu_lv1" ><a href="/hsy">湾区游轮</a></div>
+                </li>
+                <li class="nav_menu_list hover_able YLLY hideCruises none">
+                    <div class="nav_menu_lv1"><a href="javascript:void(0);" class="cross_domain" data-url="/cruise/ofc/index"><span>海洋邮轮</span><i class="icon_new none"></i></a></div>
+                </li>
+                <li class="nav_menu_list hover_able JTZX">
+                    <div class="nav_menu_lv1"><a href="/information">交通资讯</a></div>
+                </li>
+                <li class="nav_menu_list hover_able KHFW">
+                    <div class="nav_menu_lv1"><a href="/common?code=HXCCXZ">客户服务</a></div>
+                </li>
+                <li class="nav_menu_list hover_able GYWM">
+                    <div class="nav_menu_lv1"><a href="/about">关于我们</a></div>
+                </li>
+            </ul>
+	    </div>
+	    <!--nav_menu_wrap end-->
+	    <!-- 二级 -->
+        <div class="nav_yl sed_SSKY none">
+            <div class="nav_yl_list">
+                <a href="/transport" class="childmenu"><span class="KPYD">客票预订</span></a>
+                <a href="/common?code=CCXZ" class="childmenu"><span class="CCXZ">乘船须知</span></a>
+                <a href="/ticketPrice" class="childmenu"><span class="HBPJ">航班票价</span></a>
+            </div>
+        </div> 
+        <div class="nav_yl sed_YLLY none">
+            <div class="nav_yl_list">
+                <!-- 选中添加class=on -->
+                <a href="javascript:void(0);" class="childmenu cross_domain" data-url="/cruise/ofc/index" ><span class="YLSY">邮轮首页</span></a>
+                <a href="javascript:void(0);" class="childmenu cross_domain" data-url="/cruise/ofc/voyages"><span class="YLYD">邮轮预订</span></a>
+                <a href="/cruise/ofc/news" class="childmenu"><span class="YLZX">邮轮资讯</span></a>
+                <a href="javascript:void(0);" class="childmenu cross_domain" data-url="/cruise/ofc/area" ><span class="MDFG">目的地风光</span></a>
+                <a href="/cruise/ofc/wiki" class="childmenu"><span class="CXBK">出行百科</span></a>
+                <a href="javascript:void(0);" class="childmenu cross_domain" data-url="/cruise/ofc/life" ><span class="YLSH">邮轮生活</span></a>
+                <a href="/common?code=PPWH" class="childmenu"><span class="PPWH">品牌文化</span></a>
+                <a href="javascript:void(0);" class="childmenu cross_domain pcard none" data-url="/cruise/ofc/agent/recharge" ><span class="YLCZK">邮轮储值卡</span></a>
+            </div>
+        </div> 
+        <div class="nav_yl sed_GYWM none" >
+            <div class="nav_yl_list">
+                <!-- 选中添加class=on -->
+                <a href="/about?code=GSJS"  class="childmenu"><span class="GSJS">公司介绍</span></a>
+                <a href="/about?code=KCJS"  class="childmenu" ><span class="KCJS">客舱介绍</span></a>
+                <a href="/about?code=FZLC"  class="childmenu"><span class="FZLC">发展历程</span></a>
+                <a href="/about?code=GSWH"  class="childmenu"><span class="GSWH">公司文化</span></a>
+                <a href="/about?code=GSRY"  class="childmenu"><span class="GSRY">公司荣誉</span></a>
+                <a href="/about?code=AQCN"  class="childmenu"><span class="AQCN">安全承诺</span></a>
+                <a href="/about?code=RCZP"  class="childmenu none"><span class="RCZP">人才招聘</span></a>
+            </div>
+        </div>
+        <div class="nav_yl sed_KHFW none" >
+            <div class="nav_yl_list">
+                <!-- 选中添加class=on -->
+                <a href="/server" class="childmenu none"><span class="SWZL">失物招领</span></a>
+                <a href="/common?code=HXCCXZ" class="childmenu"><span class="HXCCXZ">航线和乘船基本流程</span></a>
+                <a href="/common?code=FWSS" class="childmenu"><span class="FWSS">服务设施</span></a>
+                <a href="/common?code=DTJT" class="childmenu"><span class="DTJT">地铁交通</span></a>
+                <a href="/common?code=AQTS" class="childmenu"><span class="AQTS">安全提示</span></a>
+                <a href="/common?code=GKFW" class="childmenu"><span class="GKFW">港口服务</span></a>
+            </div>
+        </div>
+    </div>
+	<!-- nav_wrap end -->
+
+	<!-- 浮动图标 -->
+    <div class="fixed_wrap">
+    	 <!--@TODO 2016-07-27 新增电话按钮-->
+         <span class="phone none" id="navPhone"></span>
+         <!--2016-07-27 新增电话按钮 end-->
+         <span class="weixin">
+             <div class="erweima">
+                  <h4>微信号：<b>cmhk-xl</b></h4>
+                  <img src="/themes/ofc/image/erweima.png" width="190" height="190">
+                  <p>微信购票，优惠多多</p>
+                  <i class="triangle"></i>
+             </div>
+         </span>
+    </div>                
+	<!--@TODO 2016-07-27 电话按钮被点击时显示-->                
+	<div class="call_box none" id="navCallBox">
+        <div class="call_box_con">
+            <div class="call_logo"></div>
+            <div class="call_txt">
+                <p>拨打客服电话</p>
+                <p>400-883-1872</p>
+            </div>
+         </div>
+         <div class="close nav_phone_close pointer"></div>
+     </div>
+	<!--2016-07-27 电话按钮被点击时显示 end--> 
+	
+	<script type="text/javascript" src="/themes/ofc/js/dynamic/navigator.js?v=5.3.7.2.202509281348"></script></div>
+    
+        <!-- 内容包裹层 根据不同页面替换里面内容-->
+        <div class="ajax_wrap">
+            <!-- 页面唯一id标识符  一般情况下id=文件名  eg:ym_1_1_1_login-->
+            <div id="zw_xl_ticket_price">
+                
+                <!-- 页面内容区域 注意：每个页面无论是否有内容 必定有一个content-->
+                <div class="content">                    
+                    <!-- 内页 -->
+					<div class="ticket_price len12">
+					
+						<div class="sidebar" data-selectCode="SZSKZZHJZ">
+                        	<ul>
+                            	<li class="SZSKZXGGA on"><b></b><a href="javascript:void(0);" data-code="SZSKZXGGA">深圳蛇口—香港上环</a></li> 
+<li class="SZSKZXGJC"><b></b><a href="javascript:void(0);" data-code="SZSKZXGJC">深圳蛇口—香港机场</a></li> 
+<li class="SZSKZAMWG"><b></b><a href="javascript:void(0);" data-code="SZSKZAMWG">深圳蛇口—澳门外港</a></li> 
+<li class="SZSKZAMDZ"><b></b><a href="javascript:void(0);" data-code="SZSKZAMDZ">深圳蛇口—澳门氹仔</a></li> 
+<li class="SZSKZWLDD"><b></b><a href="javascript:void(0);" data-code="SZSKZWLDD">深圳蛇口—外伶仃岛/桂山岛</a></li> 
+<li class="SZSKZDAD"><b></b><a href="javascript:void(0);" data-code="SZSKZDAD">深圳蛇口—东澳岛</a></li>
+<li class="SZSKZZHHQ"><b></b><a href="javascript:void(0);" data-code="SZSKZZHHQ">深圳蛇口—珠海横琴</a></li>
+<li class="SZSKZZSG"><b></b><a href="javascript:void(0);" data-code="SZSKZZSG">深圳蛇口—中山港</a></li>
+<li class="SZSKZZHJZ"><b></b><a href="javascript:void(0);" data-code="SZSKZZHJZ">深圳蛇口—珠海九洲</a></li> 
+<li class="SZJCZAMWG"><b></b><a href="javascript:void(0);" data-code="SZJCZAMWG">深圳机场—澳门外港</a></li> 
+<li class="SZJCZAMDZ"><b></b><a href="javascript:void(0);" data-code="SZJCZAMDZ">深圳机场—澳门氹仔</a></li> 
+<li class="SZJCZXGJC"><b></b><a href="javascript:void(0);" data-code="SZJCZXGJC">深圳机场—香港机场</a></li> 
+<li class="SZJCZZSG"><b></b><a href="javascript:void(0);" data-code="SZJCZZSG">深圳机场—中山港</a></li>
+<li class="SZSKWQHSY last"><b></b><a href="javascript:void(0);" data-code="SZSKWQHSY">湾区海上游</a></li> 
+                            </ul>
+                        </div>
+                        
+                        <div class="col_main">
+                        	
+                        </div>
+                        
+                        <div class="clear_fix"></div>
+                        
+                    </div>
+                    
+                </div><!-- content end -->
+    
+            </div>
+        </div> 
+        <div class="foter_fix"></div>
+    </div>
+    <!--底部版权信息 指向footer.html-->
+    <div class="footer"></div>
+    
+</body>
+<script type="text/javascript" src="/themes/ofc/js/dynamic/ticketPrice.js?v=5.3.7.2.202509281348"></script>
+</html>

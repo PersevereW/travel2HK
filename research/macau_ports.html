@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset='UTF-8'>
+<title></title>
+
+<style>
+html,body {
+  padding: 0;
+  margin: 0;
+  -webkit-user-select: none;         
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  height: 100%;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#spam {
+  background-color: lightgray;
+  border-radius: 10px;
+  margin: auto;
+  width: 650px;
+}
+h1 {
+  font-size: 40px;
+  font-family: Arial; 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+p {
+font-size: 20px;
+  text-align: center;
+  font-family: Arial;
+  font-weight: bold;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+small {
+  text-align: center;
+  word-spacing: -1px;
+  font-size: 10px;
+  font-weight: normal;
+  color: gray;
+}
+.flex-row{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.border-bottom{
+border-bottom: 1px solid #333;
+    border-bottom-style: dashed;
+}
+.mT30{
+margin-bottom: 30px;
+}
+.tip {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+.logo-container {
+width:60px; 
+height:60px;
+}
+svg {
+width: 100%;
+height: 100%;
+}
+</style>
+<script>
+window.onload = function () {
+        let svg = document.getElementsByTagName('svg');for (let index = 0; index < svg.length; index++) {
+                svg[index].setAttribute("viewBox", ""+svg[index].getBBox().x+" "+svg[index].getBBox().y+" "+svg[index].getBBox().width+" "+svg[index].getBBox().height)
+        }
+}
+</script>
+</head>
+<body>
+  <div id="spam">
+    <div class="flex-row border-bottom mT30">
+        <div class="logo-container"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C201.91 56.96 123.16 65.82 79.4 65.82 68.57 65.9 57.75 65.3 47 64v224c0 132 209 224 209 224S465 420 465 288V64a251.85 251.85 0 01-32.38 1.8C388.85 65.83 310.12 56.97 256 0z" fill="#e21b1b"/><path fill="#fff" d="M166.68 228.49h178.65V349.4H166.68z"/><g fill="#1a1718"><path d="M308.08 224.56v-61.31a52.08 52.08 0 00-104.16 0v61.31H162.7v128.78h186.57V224.56h-41.2zm-96.29-61.31a44.2 44.2 0 1188.42 0v61.31h-88.42v-61.31zm129.6 182.22H170.58V232.43h170.81v113.04z"/><path d="M252.06 267.04h7.87v45.11h-7.87z"/></g></svg></div>
+		<h1>&nbsp;&nbsp;訪問被禁止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>      
+	</div>	
+	<p class="tip">&nbsp;&nbsp;請聯絡網站管理員</p><p>URL: www.fsm.gov.mo/psp/cht/psp_top9_1.html<br/>Log ID: 1106153880721920858<br/><br/>
+    <small>----------------------------------------------------------------------------------------------------------------</small></p>
+  </div>
+</body>
+</html>
