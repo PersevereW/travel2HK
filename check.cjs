@@ -47,7 +47,7 @@ vm.runInContext(`
  assertTest(esc('<img onerror="x">').includes('&lt;'), 'User text escaped');
  state.events['v3-f1']={title:'<script>alert(1)</script>',note:'"quoted"',done:true};
  assertTest(renderEvent(DAYS[0].events[0]).includes('&lt;script&gt;'), 'Imported text rendered safely');
- user={username:'qhw',isAdmin:true}; for(const name of Object.keys(pages)) {location.hash='#'+name; render(); assertTest(document.querySelector('#main').innerHTML.length>100, 'Page rendered: '+name);}
+ user={username:'configured',isAdmin:true}; for(const name of Object.keys(pages)) {location.hash='#'+name; render(); assertTest(document.querySelector('#main').innerHTML.length>100, 'Page rendered: '+name);}
 `, context);
 assert.ok(nodes.get('#main').innerHTML.includes('用户名'));
 const schema=JSON.parse(fs.readFileSync(path.join(__dirname,'state-schema.json'),'utf8'));
@@ -55,8 +55,9 @@ assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(DAYS.flatMap(d=>d.ev
 assert.equal(vm.runInContext('CHECKS.length',context),schema.checkCount);
 assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(PHOTO_SPOTS.map(s=>s.id))',context)),schema.photoIds);
 vm.runInContext(`
- assertTest(BANKS.length===6 && PACKING.length===7, 'Six banks and seven packing checks');
- assertTest(new Set([...BANKS,...PACKING].map(x=>x.check)).size===13, 'Stable new checklist indices');
+ assertTest(BANKS.length===7 && PACKING.length===7, 'Seven banks and seven packing checks');
+ assertTest(BANKS.find(bank=>bank.id==='hangseng').check===20 && PACKING[0].check===13 && PACKING[6].check===19,'Existing check identifiers preserved');
+ assertTest(new Set([...BANKS,...PACKING].map(x=>x.check)).size===14, 'Stable new checklist indices');
  assertTest(DAYS[1].events.findIndex(e=>e.id==='v3-s-halloween')<DAYS[1].events.findIndex(e=>e.id==='v3-s6'),'Halloween before westbound waterfront');
  for(const item of [...HALLOWEEN,...PACKING,...TRANSIT_GUIDE,...TRAVEL_TIPS,...LAW_TIPS])for(const id of [item.source,item.extraSource,item.thirdSource].filter(Boolean))assertTest(SOURCES.some(s=>s.id===id),'Guide source exists');
  for(const bank of BANKS)assertTest(bank.sources.every(id=>SOURCES.some(s=>s.id===id)),'Bank source exists');

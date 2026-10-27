@@ -3,10 +3,12 @@ import concurrent.futures
 import copy
 import http.client
 import json
+import os
 import tempfile
 import threading
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 from server import TravelServer
 
@@ -44,6 +46,9 @@ class Client:
 
 class AccountsTest(unittest.TestCase):
     def setUp(self):
+        env = patch.dict(os.environ, {'ADMIN_USERNAME': 'admin'})
+        env.start()
+        self.addCleanup(env.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.db = Path(self.temp.name) / 'private.sqlite3'
         self.server = TravelServer(('127.0.0.1', 0), self.db)
@@ -65,14 +70,14 @@ class AccountsTest(unittest.TestCase):
         self.assertEqual(self.client.call('/api/users')[0], 403)
         self.client.login('alice')
         self.assertEqual(self.client.call('/api/users')[0], 403)
-        self.assertEqual(self.client.call('/api/users/qhw', 'DELETE', {})[0], 403)
+        self.assertEqual(self.client.call('/api/users/admin', 'DELETE', {})[0], 403)
         for resource in ['/server.py', '/storage/travel.sqlite3', '/.git/config', '/%2e%2e/server.py', '/research/ant-hk-faq.txt']:
             self.assertEqual(self.client.call(resource)[0], 404)
 
     def test_user_state_isolation_and_persistence(self):
         self.assertEqual(self.client.login('alice')[1]['state'], None)
         changed = copy.deepcopy(DEFAULT)
-        changed.update(note='alice自己的备注', checks=[7, 13], shots=['star-ferry'])
+        changed.update(note='alice自己的备注', checks=[7, 13, 20], shots=['star-ferry'])
         changed['events'] = {'v3-f1': {'done': True, 'note': '<script>stored as text</script>'}}
         self.assertEqual(self.client.save('alice', changed)[0], 200)
         bob = Client(self.port)
@@ -90,19 +95,19 @@ class AccountsTest(unittest.TestCase):
         self.assertEqual(Client(self.port).login('alice')[1]['state'], changed)
 
     def test_username_validation_and_normalization(self):
-        for name in ['', '123456789', '../qhw', '<img>', 'a b', None, ['qhw']]:
+        for name in ['', '123456789', '../qhw', '<img>', 'a b', None, ['admin']]:
             self.assertEqual(self.client.login(name)[0], 400, repr(name))
         self.assertEqual(self.client.login('汉字用户1234')[0], 200)
-        status, result = self.client.login(' QHW ')
-        self.assertEqual((status, result['user']), (200, {'username': 'qhw', 'isAdmin': True}))
-        self.assertEqual(self.client.login('ｑｈｗ')[1]['user']['username'], 'qhw')
+        status, result = self.client.login(' ADMIN ')
+        self.assertEqual((status, result['user']), (200, {'username': 'admin', 'isAdmin': True}))
+        self.assertEqual(self.client.login('ａｄｍｉｎ')[1]['user']['username'], 'admin')
 
     def test_ten_user_limit_is_atomic_and_existing_users_can_login(self):
         with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
             codes = list(pool.map(lambda i: Client(self.port).login('user'+str(i))[0], range(16)))
-        self.assertEqual(codes.count(200), 9)  # Reserved qhw is the tenth slot.
+        self.assertEqual(codes.count(200), 9)  # Configured administrator is the tenth slot.
         self.assertEqual(codes.count(409), 7)
-        self.assertEqual(self.client.login('qhw')[0], 200)
+        self.assertEqual(self.client.login('admin')[0], 200)
         rows = self.client.call('/api/users')[1]['users']
         self.assertEqual(len(rows), 10)
         self.assertEqual(Client(self.port).login(rows[-1]['username'])[0], 200)
@@ -112,8 +117,8 @@ class AccountsTest(unittest.TestCase):
         self.client.login('alice')
         self.client.save('alice', DEFAULT)
         admin = Client(self.port)
-        admin.login('qhw')
-        self.assertEqual(admin.call('/api/users/qhw', 'DELETE', {})[0], 403)
+        admin.login('admin')
+        self.assertEqual(admin.call('/api/users/admin', 'DELETE', {})[0], 403)
         self.assertEqual(admin.call('/api/users/alice', 'DELETE', {})[0], 200)
         self.assertEqual(self.client.call('/api/me')[1]['user'], None)
         self.assertEqual(self.client.save('alice', DEFAULT, 1)[0], 401)
@@ -140,6 +145,44 @@ class AccountsTest(unittest.TestCase):
         self.assertEqual(self.client.call('/api/logout', 'POST', {})[0], 200)
         self.assertIsNone(self.client.call('/api/me')[1]['user'])
         self.assertEqual(self.client.save('alice', DEFAULT)[0], 401)
+
+    def test_admin_environment_change_preserves_data_and_demotes_old_sessions(self):
+        self.client.login('admin')
+        changed = {**DEFAULT, 'note': '原管理员的手帐保留'}
+        self.assertEqual(self.client.save('admin', changed)[0], 200)
+        self.server.shutdown()
+        self.server.server_close()
+        self.thread.join()
+        os.environ['ADMIN_USERNAME'] = ' ＱＨＷ '
+        self.server = TravelServer(('127.0.0.1', 0), self.db)
+        self.thread = threading.Thread(target=self.server.serve_forever, daemon=True)
+        self.thread.start()
+        self.port = self.server.server_port
+        self.client.port = self.port
+        old = self.client.call('/api/me')[1]
+        self.assertEqual(old['user'], {'username': 'admin', 'isAdmin': False})
+        self.assertEqual(old['state'], changed)
+        self.assertEqual(self.client.call('/api/users')[0], 403)
+        configured = Client(self.port)
+        self.assertEqual(configured.login('qhw')[1]['user'], {'username': 'qhw', 'isAdmin': True})
+        rows = configured.call('/api/users')[1]['users']
+        self.assertEqual([row['username'] for row in rows if row['isAdmin']], ['qhw'])
+        self.assertEqual(configured.call('/api/users/qhw', 'DELETE', {})[0], 403)
+
+    def test_invalid_admin_environment_rejected(self):
+        for value in ['', '123456789', 'bad name']:
+            with patch.dict(os.environ, {'ADMIN_USERNAME': value}):
+                with self.assertRaises(ValueError):
+                    TravelServer(('127.0.0.1', 0), self.db)
+
+    def test_changing_admin_with_full_database_keeps_ten_user_limit(self):
+        for index in range(9):
+            self.assertEqual(Client(self.port).login('full'+str(index))[0], 200)
+        with patch.dict(os.environ, {'ADMIN_USERNAME': 'newadmin'}):
+            with self.assertRaisesRegex(RuntimeError, '用户数已达10个'):
+                TravelServer(('127.0.0.1', 0), self.db)
+        self.assertEqual(self.client.login('admin')[1]['user']['isAdmin'], True)
+        self.assertEqual(len(self.client.call('/api/users')[1]['users']), 10)
 
     def test_cross_site_write_rejected(self):
         self.assertEqual(self.client.call('/api/login', 'POST', {'username': 'alice'}, {'Origin': 'https://elsewhere.example'})[0], 403)

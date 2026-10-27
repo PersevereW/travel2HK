@@ -17,7 +17,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent
 SCHEMA = json.loads((ROOT / 'state-schema.json').read_text(encoding='utf-8'))
-MAX_USERS = 10  # Includes the reserved qhw administrator.
+MAX_USERS = 10  # Includes the configured administrator.
 SESSION_AGE = 7 * 24 * 3600
 PUBLIC_FILES = {'index.html', 'style.css', 'data.js', 'guide-data.js', 'app.js'}
 
@@ -71,6 +71,7 @@ def validate_state(value):
 
 class TravelServer(ThreadingHTTPServer):
     def __init__(self, address, db_path):
+        self.admin_username = username(os.environ.get('ADMIN_USERNAME', 'admin'))
         self.db_path = str(db_path)
         Path(db_path).parent.mkdir(parents=True, exist_ok=True)
         with self.db() as db:
@@ -84,7 +85,10 @@ class TravelServer(ThreadingHTTPServer):
                     expires_at INTEGER NOT NULL);
             ''')
             now = int(time.time())
-            db.execute('INSERT OR IGNORE INTO users(username, created_at, updated_at) VALUES(?,?,?)', ('qhw', now, now))
+            if not db.execute('SELECT 1 FROM users WHERE username=?', (self.admin_username,)).fetchone():
+                if db.execute('SELECT count(*) FROM users').fetchone()[0] >= MAX_USERS:
+                    raise RuntimeError('用户数已达10个；请先用原ADMIN_USERNAME启动并释放一个名额，再更改管理员配置')
+                db.execute('INSERT INTO users(username, created_at, updated_at) VALUES(?,?,?)', (self.admin_username, now, now))
             db.execute('DELETE FROM sessions WHERE expires_at < ?', (now,))
         super().__init__(address, Handler)
 
@@ -140,9 +144,8 @@ class Handler(SimpleHTTPRequestHandler):
         secure = '; Secure' if self.headers.get('Origin', '').startswith('https://') or self.headers.get('X-Forwarded-Proto') == 'https' else ''
         return f'travel_session={token}; Path=/; HttpOnly; SameSite=Lax; Max-Age={age}{secure}'
 
-    @staticmethod
-    def profile(row):
-        return {'username': row['username'], 'isAdmin': row['username'] == 'qhw'}
+    def profile(self, row):
+        return {'username': row['username'], 'isAdmin': row['username'] == self.server.admin_username}
 
     def request_body(self):
         origin = self.headers.get('Origin')
@@ -169,11 +172,11 @@ class Handler(SimpleHTTPRequestHandler):
         elif route == '/api/users':
             with self.server.db() as db:
                 row = self.current_user(db)
-                if not row or row['username'] != 'qhw':
-                    self.respond(403, {'error': '仅qhw管理员可以查看用户列表'})
+                if not row or row['username'] != self.server.admin_username:
+                    self.respond(403, {'error': '仅管理员可以查看用户列表'})
                     return
                 rows = db.execute('SELECT username, created_at, updated_at FROM users ORDER BY created_at, username').fetchall()
-            self.respond(200, {'users': [dict(r) for r in rows], 'limit': MAX_USERS})
+            self.respond(200, {'users': [{**dict(r), 'isAdmin': self.profile(r)['isAdmin']} for r in rows], 'limit': MAX_USERS})
         elif route.startswith('/api/'):
             self.respond(404, {'error': '接口不存在'})
         elif self.public_path(route):
@@ -216,7 +219,7 @@ class Handler(SimpleHTTPRequestHandler):
                     now = int(time.time())
                     if not target:
                         if db.execute('SELECT count(*) FROM users').fetchone()[0] >= MAX_USERS:
-                            self.respond(409, {'error': '最多10个用户名（含qhw），请联系管理员删除闲置用户；已有用户名仍可登录'})
+                            self.respond(409, {'error': '最多10个用户名（含管理员），请联系管理员删除闲置用户；已有用户名仍可登录'})
                             return
                         db.execute('INSERT INTO users(username,created_at,updated_at) VALUES(?,?,?)', (name, now, now))
                         target = db.execute('SELECT * FROM users WHERE username=?', (name,)).fetchone()
@@ -246,12 +249,12 @@ class Handler(SimpleHTTPRequestHandler):
                     db.commit()
                     self.respond(200, {'revision': revision + 1})
                 elif method == 'DELETE' and route.startswith('/api/users/'):
-                    if row['username'] != 'qhw':
-                        self.respond(403, {'error': '仅qhw管理员可以删除用户'})
+                    if row['username'] != self.server.admin_username:
+                        self.respond(403, {'error': '仅管理员可以删除用户'})
                         return
                     name = username(unquote(route[len('/api/users/'):]))
-                    if name == 'qhw':
-                        self.respond(403, {'error': '保留qhw管理员，不能删除'})
+                    if name == self.server.admin_username:
+                        self.respond(403, {'error': '保留当前管理员，不能删除'})
                         return
                     deleted = db.execute('DELETE FROM users WHERE username=?', (name,)).rowcount
                     db.commit()

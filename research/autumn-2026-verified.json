@@ -191,6 +191,18 @@
       "name": "国家外汇管理局 · 个人外汇管理及购汇用途",
       "url": "https://www.safe.gov.cn/shanghai/2019/1213/1198.html",
       "detail": "个人购汇用途需真实合规，不能以旅游等名义购汇用于境外证券投资；以现行外汇管理规定为准。"
+    },
+    {
+      "id": "hangsengopen",
+      "name": "恒生香港 · 内地居民开户渠道与文件",
+      "url": "https://www.hangseng.com/zh-cn/cross-border-banking/personal/account-opening/",
+      "detail": "18岁以上内地居民，在香港并连接本地网络，可用恒生Mobile App申请；备身份证、通行证、有效出入境记录等，投资账户另需住址证明。"
+    },
+    {
+      "id": "hangsengfees",
+      "name": "恒生香港 · 手机开户及账户费用",
+      "url": "https://www.hangseng.com/zh-hk/personal/banking/account-opening/mobile/",
+      "detail": "优进理财不设全面理财总值要求并豁免低额结存服务费；与优越理财的资金及收费要求不同。以申请时账户条款为准。"
     }
   ]
 }

@@ -62,6 +62,15 @@ const PACKING = [
 ];
 PACKING.forEach(item=>{item.check=CHECKS.length;CHECKS.push(item.title+'：已准备 / 已确认');});
 
+// Append new checks after existing ones so saved v3 packing selections keep their meaning.
+SOURCES.push(
+ {id:'hangsengopen',name:'恒生香港 · 内地居民开户渠道与文件',url:'https://www.hangseng.com/zh-cn/cross-border-banking/personal/account-opening/',detail:'18岁以上内地居民，在香港并连接本地网络，可用恒生Mobile App申请；备身份证、通行证、有效出入境记录等，投资账户另需住址证明。'},
+ {id:'hangsengfees',name:'恒生香港 · 手机开户及账户费用',url:'https://www.hangseng.com/zh-hk/personal/banking/account-opening/mobile/',detail:'优进理财不设全面理财总值要求并豁免低额结存服务费；与优越理财的资金及收费要求不同。以申请时账户条款为准。'}
+);
+BANKS.push({id:'hangseng',name:'恒生银行 · 香港',tag:'周五在港 / 优进理财可选',apply:'年满18岁、持有效内地身份证和港澳通行证，抵港并连接本地网络后用恒生Mobile App申请；备内地住址、有效香港出入境记录及职业 / 收入等资料，投资账户另需住址证明。',fee:'官方列优进理财不设全面理财总值要求，豁免低额结存服务费、无需月费；不等于汇款或所有交易免费。优越理财是另一账户等级，不混用其资金要求。',fallback:'线上失败再通过官网预约香港分行；沿用周五中环办理窗口，实际分行及时间按预约确认，不为开户反复跨区。',sources:['hangsengopen','hangsengfees'],check:CHECKS.length});
+CHECKS.push('恒生银行 · 香港：已完成申请或已核对下一步补件');
+
+
 const TRANSIT_GUIDE = [
  {name:'香港港铁 / 推荐跨区',fare:'本路线成人八达通示例HK$10.60–46.60 / 程',choice:'罗湖至佐敦46.60；佐敦至中环10.60。普通等，头等另收费；用同一张卡 / 同一种支付方式入出闸，二维码价格不一定等同八达通。',source:'mtr'},
  {name:'普通叮叮车 / 推荐体验',fare:'成人HK$3.30 / 次',choice:'只在港岛部分地区行驶，慢但便宜；后门上、前门下，下车付款。万圣特别电车有另行换票规则，不套普通票价。',source:'tram'},
