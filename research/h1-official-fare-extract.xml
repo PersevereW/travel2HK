@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<H1_EXTRACT source="https://static.data.gov.hk/td/routes-fares-xml/ROUTE_BUS.xml"><ROUTE>
+<ROUTE_ID>1475</ROUTE_ID>
+<COMPANY_CODE>CTB</COMPANY_CODE>
+<ROUTE_NAMEC>H1</ROUTE_NAMEC>
+<ROUTE_NAMES>H1</ROUTE_NAMES>
+<ROUTE_NAMEE>H1</ROUTE_NAMEE>
+<ROUTE_TYPE>1</ROUTE_TYPE>
+<SERVICE_MODE>T</SERVICE_MODE>
+<SPECIAL_TYPE>1</SPECIAL_TYPE>
+<JOURNEY_TIME>65</JOURNEY_TIME>
+<LOC_START_NAMEC>中環 (天星碼頭)</LOC_START_NAMEC>
+<LOC_START_NAMES>中环 (天星码头)</LOC_START_NAMES>
+<LOC_START_NAMEE>Central (Star Ferry)</LOC_START_NAMEE>
+<LOC_END_NAMEC>尖沙咀</LOC_END_NAMEC>
+<LOC_END_NAMES>尖沙咀</LOC_END_NAMES>
+<LOC_END_NAMEE>Tsim Sha Tsui</LOC_END_NAMEE>
+<HYPERLINK_C>https://mobile.citybus.com.hk/nwp3/?f=1&amp;ds=H1&amp;dsmode=1&amp;l=0</HYPERLINK_C>
+<HYPERLINK_S>https://mobile.citybus.com.hk/nwp3/?f=1&amp;ds=H1&amp;dsmode=1&amp;l=2</HYPERLINK_S>
+<HYPERLINK_E>https://mobile.citybus.com.hk/nwp3/?f=1&amp;ds=H1&amp;dsmode=1&amp;l=1</HYPERLINK_E>
+<FULL_FARE>47.6</FULL_FARE>
+<LAST_UPDATE_DATE>2026-06-08T00:00:00</LAST_UPDATE_DATE>
+</ROUTE>
+<ROUTE>
+<ROUTE_ID>8220</ROUTE_ID>
+<COMPANY_CODE>CTB</COMPANY_CODE>
+<ROUTE_NAMEC>H1</ROUTE_NAMEC>
+<ROUTE_NAMES>H1</ROUTE_NAMES>
+<ROUTE_NAMEE>H1</ROUTE_NAMEE>
+<ROUTE_TYPE>1</ROUTE_TYPE>
+<SERVICE_MODE>T</SERVICE_MODE>
+<SPECIAL_TYPE>1</SPECIAL_TYPE>
+<JOURNEY_TIME>64</JOURNEY_TIME>
+<LOC_START_NAMEC>中環 (天星碼頭)</LOC_START_NAMEC>
+<LOC_START_NAMES>中环 (天星码头)</LOC_START_NAMES>
+<LOC_START_NAMEE>Central (Star Ferry)</LOC_START_NAMEE>
+<LOC_END_NAMEC>尖沙咀(不經遮打道)</LOC_END_NAMEC>
+<LOC_END_NAMES>尖沙咀(不经遮打道)</LOC_END_NAMES>
+<LOC_END_NAMEE>Tsim Sha Tsui (omit Chater Road)</LOC_END_NAMEE>
+<HYPERLINK_C>https://mobile.citybus.com.hk/nwp3/?f=1&amp;ds=H1&amp;dsmode=1&amp;l=0</HYPERLINK_C>
+<HYPERLINK_S>https://mobile.citybus.com.hk/nwp3/?f=1&amp;ds=H1&amp;dsmode=1&amp;l=2</HYPERLINK_S>
+<HYPERLINK_E>https://mobile.citybus.com.hk/nwp3/?f=1&amp;ds=H1&amp;dsmode=1&amp;l=1</HYPERLINK_E>
+<FULL_FARE>47.6</FULL_FARE>
+<LAST_UPDATE_DATE>2026-06-08T00:00:00</LAST_UPDATE_DATE>
+</ROUTE>
+</H1_EXTRACT>

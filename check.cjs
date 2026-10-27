@@ -17,23 +17,30 @@ const context = vm.createContext({
 for (const name of ['data.js', 'app.js']) vm.runInContext(fs.readFileSync(path.join(__dirname, name), 'utf8'), context);
 vm.runInContext(`
  const assertTest = (condition, message) => { if (!condition) throw new Error(message); };
- assertTest(DAYS.length === 4 && DAYS.flatMap(d=>d.events).length === 26, 'Four days / 26 stops');
- assertTest(ids.size === 26, 'Event identifiers unique');
+ assertTest(DAYS.length === 4 && DAYS.flatMap(d=>d.events).length === 31, 'Four days / 31 stops');
+ assertTest(ids.size === 31, 'Event identifiers unique');
  assertTest(PORTS.length === 17, '13 Hong Kong controls + 3 Macau controls + other ferry');
  assertTest(PORTS.every(p=>SOURCES.some(s=>s.id===p.source)), 'Port sources exist');
  for (const d of DAYS) for (const e of d.events) if (e.next) assertTest(SOURCES.some(s=>s.id===e.next.source), 'Transport sources exist');
  const total = transportTotals();
- assertTest(total.hkd === 295.3 && total.mop === 6 && total.cnyLow === 146 && total.cnyHigh === 210, 'Currency totals');
- assertTest(validate(defaultState()).version === 2, 'Default backup valid');
- assertTest(tripBudget() === 2913, 'Two Hong Kong nights in HKD, one Zhuhai night in CNY');
+ assertTest(total.hkd === 354.5 && total.mop === 6 && total.cnyLow === 146 && total.cnyHigh === 210, 'Currency totals');
+ assertTest(validate(defaultState()).version === 3, 'Default backup valid');
+ assertTest(tripBudget() === 2967, 'Two Hong Kong nights in HKD, one Zhuhai night in CNY');
  for(const d of DAYS.slice(0,3))assertTest(!d.events.some(e=>e.title.includes('返回深圳')||e.title.includes('罗湖酒店')), 'No repeated Shenzhen overnight');
  assertTest(DAYS[2].events.some(e=>e.title.includes('珠海拱北入住')), 'Sunday overnight in Zhuhai');
  assertTest(DAYS[3].events.some(e=>e.title.includes('莲花山')), 'Monday Shenzhen sightseeing');
- let oldRejected=false;try{validate({...defaultState(),version:1})}catch{oldRejected=true}assertTest(oldRejected,'Old route backups cannot replace new plan');
- const bad = [null, {}, {...defaultState(),day:99}, {...defaultState(),checks:[99]}, {...defaultState(),events:{alien:{done:true}}}, {...defaultState(),events:{'v2-f1':{done:'yes'}}}, {...defaultState(),budget:{...defaultState().budget,hkd:0}}, {...defaultState(),budget:{...defaultState().budget,hotel:NaN}}];
+ let oldRejected=false;try{validate({...defaultState(),version:2})}catch{oldRejected=true}assertTest(oldRejected,'Old route backups cannot replace new plan');
+ const bad = [null, {}, {...defaultState(),day:99}, {...defaultState(),checks:[99]}, {...defaultState(),events:{alien:{done:true}}}, {...defaultState(),events:{'v3-f1':{done:'yes'}}}, {...defaultState(),budget:{...defaultState().budget,hkd:0}}, {...defaultState(),budget:{...defaultState().budget,hotel:NaN}}];
  for(const value of bad){let rejected=false;try{validate(value)}catch{rejected=true}assertTest(rejected,'Invalid backup rejected');}
+ assertTest(PHOTO_SPOTS.length===8 && PHOTO_CREDITS.length===8, 'Eight licensed photo references');
+ assertTest(new Set(PHOTO_SPOTS.map(p=>p.id)).size===8,'Unique photo spot ids');
+ for(const d of DAYS){assertTest(d.route.length>0 && d.routeNote,'Daily geographic route');for(const e of d.events)for(const id of e.photoIds||[])assertTest(spotIds.has(id),'Event photo references resolve');}
+ for(const spot of PHOTO_SPOTS){const c=PHOTO_CREDITS.find(c=>c.id===spot.image);assertTest(c?.path.startsWith('assets/photos/')&&c.source.startsWith('https://commons.wikimedia.org/')&&c.license&&c.licenseUrl.startsWith('https://'), 'Photo attribution metadata');}
+ for(const shots of [['unknown'],['look-left','look-left'],null]){let rejected=false;try{validate({...defaultState(),shots})}catch{rejected=true}assertTest(rejected,'Invalid photo checklists rejected');}
+ assertTest(DAYS[1].events.some(e=>e.next?.mode.includes('H1')&&e.next.note.includes('12 →')), 'Bus boards in Wan Chai to skip Central');
+ assertTest(!DAYS[0].events.some(e=>e.title.includes('尖沙咀')), 'Friday stays in Central / Sheung Wan');
  assertTest(esc('<img onerror="x">').includes('&lt;'), 'User text escaped');
- state.events['v2-f1']={title:'<script>alert(1)</script>',note:'"quoted"',done:true};
+ state.events['v3-f1']={title:'<script>alert(1)</script>',note:'"quoted"',done:true};
  assertTest(renderEvent(DAYS[0].events[0]).includes('&lt;script&gt;'), 'Imported text rendered safely');
  for(const name of Object.keys(pages)) {location.hash='#'+name; render(); assertTest(document.querySelector('#main').innerHTML.length>100, 'Page rendered: '+name);}
 `, context);
@@ -48,4 +55,12 @@ assert.equal(vm.runInContext('state.budget.hotel', migrated), 650);
 assert.equal(vm.runInContext('state.budget.zhuhai', migrated), 280);
 assert.equal(vm.runInContext('state.budget.food', migrated), 190);
 assert.equal(vm.runInContext('legacyBackup.events.f1.title', migrated), legacy.events.f1.title);
-console.log('PASS: data, totals, backup validation, text escaping, and all five pages.');
+
+const oldV2={...legacy,version:2,budget:{hotel:700,zhuhai:300,food:200,other:150,hkd:0.92,mop:0.89},events:{'v2-f1':{title:'Old Friday must not override'},'v2-m4':{note:'保留周一笔记'}}};
+migrated.legacyForTest=oldV2;
+assert.equal(vm.runInContext('migrateLegacy(legacyForTest).events["v2-m4"].note',migrated),'保留周一笔记');
+assert.equal(vm.runInContext('migrateLegacy(legacyForTest).events["v2-f1"]',migrated),undefined);
+assert.equal(vm.runInContext('migrateLegacy(legacyForTest).budget.hotel',migrated),700);
+for(const c of vm.runInContext('PHOTO_CREDITS',migrated))assert.ok(fs.statSync(path.join(__dirname,c.path)).size>1000, 'Local photo exists');
+
+console.log('PASS: data, totals, backup validation, text escaping, and all six pages.');

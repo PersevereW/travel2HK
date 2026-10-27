@@ -12,19 +12,25 @@ const SOURCES = [
  {id:'macauports',name:'澳门治安警察局 · 出入境事务站办公时间',url:'https://www.fsm.gov.mo/psp/cht/psp_top9_1.html',detail:'关闸 06:00–次日01:00；青茂 24 小时（仅限符合条件的持证人）；澳门外港 24 小时，实际航班另查。'},
  {id:'macauroute',name:'澳门交通资讯网 · 3 路与新马路 / 华侨站（第三方线路参考）',url:'https://motransportinfo.com/zh/station/M134',detail:'3 路往关闸方向的站点参考。不是官方实时承诺，临时工程改道以交通局 / 站牌为准。'},
  {id:'szmetro',name:'深圳地铁 · 官方站点与票务查询',url:'https://www.szmc.net/',detail:'默认深圳北—莲花北、市民中心—深圳北；本次未核实官方站间票价，页面用预算区间。'},
- {id:'rail',name:'中国铁路 12306 · 武汉返程 / 西九龙车票',url:'https://www.12306.cn/',detail:'车票按车次、席别、发车站实时报价，未提供返程车次，不能锁定具体离深时间和票价。'}
+ {id:'rail',name:'中国铁路 12306 · 武汉返程 / 西九龙车票',url:'https://www.12306.cn/',detail:'车票按车次、席别、发车站实时报价，未提供返程车次，不能锁定具体离深时间和票价。'},
+{"id": "tram", "name": "香港电车 · 路线、乘车方式与现行票价", "url": "https://www.hktramways.com/en/schedules-fares", "detail": "普通电车成人 HK$3.30 / 次；后门上、前门下，下车付款。普通电车与另售票的 TramOramic 怀旧观光电车不是同一产品。"},
+{"id": "h1fare", "name": "香港运输署 · 巴士路线与全程票价开放数据", "url": "https://static.data.gov.hk/td/routes-fares-xml/ROUTE_BUS.xml", "detail": "H1 路线编号 1475 / 8220，全程票价 HK$47.60；本次仅乘湾仔到尖沙咀一段，按全程价预留，中途分段如有更低价格以当日公布为准。"},
+{"id": "h1stops", "name": "城巴官方 · H1 站序与实时到站", "url": "https://mobile.citybus.com.hk/nwp3/?f=1&ds=H1&dsmode=1&l=2", "detail": "已用官方开放 API 核对：12 厦门街 / 皇后大道东（002481），17 星光大道 / 梳士巴利道（003301）；不保证提前锁定车辆、上层位或目标上车时刻。"},
+{"id": "hktbphoto", "name": "香港旅发局 · 港岛西 / 坚尼地城街区与摄影", "url": "https://www.discoverhongkong.com/eng/neighbourhoods/central-and-western-district/how-to-spend-your-day-in-kennedy-town.html", "detail": "用作港岛西摄影地点参考；页面中的参考图与建议机位分别标注，不将历史照片当作当前设施和标线保证。"},
+{"id": "busguide", "name": "香港旅发局 · 开篷观光巴士体验", "url": "https://www.discoverhongkong.com/tc/deals/hong-kong-night-bus-tour.html", "detail": "“落日飞车”是开篷巴士体验的常见名称。H1 白天路段、H2K 夜游及 Big Bus 是不同路线 / 产品，不把 H2K 18:30 后夜游安排当成日落体验。"},
+{"id": "hko", "name": "香港天文台 · 日出日落时间", "url": "https://www.hko.gov.hk/en/gts/astron2026/files/HKO_almanac_2026.pdf", "detail": "傍晚拍摄窗口只是行程预留，并非精确日落预报；实际日落与天气需临行核对。"}
 ];
 const DAYS = [
   {
     "date": "10.30",
     "weekday": "周五",
-    "short": "赴港开户",
+    "short": "开户街拍",
     "city": "深圳 → 香港",
-    "title": "先到香港，安心办好开户。",
-    "subtitle": "深圳站 08:00 到达 · 香港酒店先寄存 · 建议开户预约 11:30 或之后",
+    "title": "中环办正事，街巷拍港味。",
+    "subtitle": "金融区 → 望左望右街口 → 石板街 → 上环；开户优先，周五不再跨去尖沙咀",
     "events": [
       {
-        "id": "v2-f1",
+        "id": "v3-f1",
         "time": "08:00",
         "title": "深圳站到达 · 直接步行去罗湖口岸",
         "description": "到达的是深圳站（罗湖），不是深圳北站。今天不在深圳寄存或入住，带行李步行去旅检大厅，早餐视通关时间灵活安排。",
@@ -39,7 +45,7 @@ const DAYS = [
         }
       },
       {
-        "id": "v2-f2",
+        "id": "v3-f2",
         "time": "08:30",
         "title": "罗湖过关 · 前往香港佐敦酒店",
         "description": "凭港澳通行证和有效香港签注出境、入境，排队按约 30–60 分钟估算，繁忙时可能更久。香港连续停留至周日，不再每天往返深圳。",
@@ -57,7 +63,7 @@ const DAYS = [
         }
       },
       {
-        "id": "v2-f3",
+        "id": "v3-f3",
         "time": "10:30",
         "title": "佐敦酒店 · 寄存行李后赴中环",
         "description": "默认住佐敦站步行约 5–10 分钟范围，周五、周六连住两晚。需事先确认酒店允许早到寄存，不假定可以提前入住；寄存费另计。交通、通关延误时及时联系银行调整预约。",
@@ -75,150 +81,273 @@ const DAYS = [
         }
       },
       {
-        "id": "v2-f4",
+        "id": "v3-f4",
         "time": "11:30",
         "title": "中环 · 银行开户主任务",
         "description": "为预约、排队、审核、手机银行设置及午餐预留至 15:30。银行尚未指定，中环仅作交通落点；如选汇丰，可查询皇后大道中 1 号总行是否接受所需业务。实际分行、营业时间和开户资料须先确认，未取得预约。",
         "tag": "主要任务",
         "priority": true,
         "next": {
-          "to": "皇后大道中 → 砵典乍街",
+          "to": "皇后像广场 / 终审法院外围",
+          "mode": "步行",
+          "duration": "约 5–10 分钟",
+          "price": "HK$0",
+          "source": "hktbphoto",
+          "kind": "recommend"
+        }
+      },
+      {
+        "id": "v3-f5",
+        "time": "15:40",
+        "title": "皇后像广场 · 金融区建筑人像",
+        "description": "从预约分行走到皇后像广场、终审法院外部行人区，先拍石柱、金融区楼宇和城市人像。只走公共空间，不安排参观法院；开户未完成就跳过此段。",
+        "tag": "顺路街拍",
+        "next": {
+          "to": "毕打街 / 德辅道中路口",
+          "mode": "步行",
+          "duration": "约 5–10 分钟",
+          "price": "HK$0",
+          "source": "hktbphoto",
+          "kind": "recommend"
+        }
+      },
+      {
+        "id": "v3-f6",
+        "time": "16:10",
+        "title": "「望左 / 望右」· 中环街口拍照",
+        "description": "建议在毕打街与德辅道中、遮打道一带合法过路处寻找 LOOK LEFT / LOOK RIGHT 路面标线。它不是唯一固定打卡点，标线是否清晰以现场为准。站在人行道边缘拍脚步与标线，过街只正常通行，不在车道驻留摆拍。",
+        "tag": "你的必拍",
+        "photoIds": [
+          "look-left"
+        ],
+        "next": {
+          "to": "砵典乍街石板街",
           "mode": "步行",
           "duration": "约 10–15 分钟",
           "price": "HK$0",
-          "source": "mtrplan",
+          "source": "hktbphoto",
           "kind": "recommend"
         }
       },
       {
-        "id": "v2-f5",
-        "time": "15:30",
-        "title": "中环 · 石板街与荷李活道散步",
-        "description": "开户完成后再游砵典乍街、大馆外围与荷李活道；若需补件，优先处理银行事项，缩短街区散步。这里只安排免费公共街区，不预订展览。",
-        "tag": "港岛街景",
+        "id": "v3-f7",
+        "time": "16:45",
+        "title": "砵典乍街 · 石板街台阶出片",
+        "description": "沿皇后大道中向西至砵典乍街，从下段向上拍台阶与店铺层次，留 30–40 分钟拍人像。拍完从士丹利街、威灵顿街向西走上环，不再折回皇后像广场。人多时用 2× 镜头压缩背景，别挡住通行。",
+        "tag": "经典街景",
+        "photoIds": [
+          "pottinger"
+        ],
         "next": {
-          "to": "尖沙咀海滨",
-          "mode": "步行回中环站，荃湾线 → 尖沙咀，步行到海滨",
-          "duration": "约 30–45 分钟",
-          "price": "HK$10.60",
-          "source": "mtr",
-          "kind": "recommend",
-          "currency": "HKD",
-          "amount": 10.6,
-          "single": 12.5
+          "to": "上环街区晚餐 / 上环站",
+          "mode": "步行",
+          "duration": "约 20–30 分钟",
+          "price": "HK$0",
+          "source": "hktbphoto",
+          "kind": "recommend"
         }
       },
       {
-        "id": "v2-f6",
-        "time": "17:30",
-        "title": "尖沙咀维港 · 晚餐后回香港酒店",
-        "description": "走星光大道和海滨，晚餐后步行回佐敦酒店。今天不返深圳，无需赶回罗湖；若行李仍在酒店寄存，按酒店要求及时办理入住。",
-        "tag": "维港夜色",
+        "id": "v3-f8",
+        "time": "18:00",
+        "title": "上环晚餐 · 一次过海回佐敦",
+        "description": "在上环用餐，乘港岛线到中环，站内转荃湾线回佐敦。今天把银行和中环街拍集中处理，明天才安排港岛西段、叮叮车和维港。",
+        "tag": "香港第 1 晚",
         "next": {
           "to": "佐敦酒店",
-          "mode": "步行",
-          "duration": "约 25–40 分钟",
-          "price": "HK$0",
-          "source": "mtrplan",
+          "mode": "上环 → 中环，转荃湾线 → 佐敦，步行回酒店",
+          "duration": "约 30–45 分钟（含候车、换乘与步行）",
+          "price": "HK$10.60",
+          "source": "mtr",
+          "currency": "HKD",
+          "amount": 10.6,
+          "single": 12.5,
           "kind": "recommend"
         }
       },
       {
-        "id": "v2-f7",
-        "time": "20:30",
-        "title": "佐敦入住 · 整理开户进度",
-        "description": "确认账户审核、卡片领取或邮寄、后续补件要求。若周五未完成，先联系分行确认周六能否办理；香港连住两晚，不需要重新从深圳入境。",
-        "tag": "香港第 1 晚"
+        "id": "v3-f9",
+        "time": "20:00",
+        "title": "回酒店 · 确认周六体验安排",
+        "description": "核对银行后续补件，并打开城巴 H1 实时到站与香港电车服务公告。周六从湾仔中途站乘 H1，不能保证上层空位；不为争抢前排再绕回中环总站。",
+        "tag": "整理手帐"
       }
-    ]
+    ],
+    "route": [
+      "中环银行区",
+      "皇后像广场",
+      "毕打街路口",
+      "砵典乍街",
+      "上环站"
+    ],
+    "routeNote": "先在中环金融区办理开户，再向西走到石板街、上环；只在回酒店时过海，维港与星光大道集中到周六。"
   },
   {
     "date": "10.31",
     "weekday": "周六",
-    "short": "香港整日",
-    "city": "香港 · 九龙",
-    "title": "不赶口岸，把一天留给香港。",
-    "subtitle": "佐敦 → 旺角 → 油麻地 → 九龙公园 → 庙街 · 若需补办开户，优先去已确认营业的分行",
+    "short": "拍照观光",
+    "city": "港岛西 → 湾仔 → 尖沙咀",
+    "title": "从叮叮声，到维港的暮色。",
+    "subtitle": "坚尼地城 → 东行叮叮车 → 湾仔蓝屋 → H1 开篷巴士 → 星光大道 → 钟楼 → 佐敦",
     "events": [
       {
-        "id": "v2-s1",
-        "time": "09:00",
-        "title": "佐敦早餐 · 乘地铁去旺角",
-        "description": "睡足后在酒店附近早餐，再坐荃湾线到旺角。不安排出境或深圳住宿；如需要银行补办，按已确认的分行安排调整这一天。",
-        "tag": "香港整日",
+        "id": "v3-s1",
+        "time": "08:45",
+        "title": "佐敦早餐 · 直接去坚尼地城",
+        "description": "早餐后过海直达坚尼地城，今天不在旺角、油麻地和港岛之间来回切换。若需补办开户，先确认分行安排，再压缩坚尼地城或湾仔停留，保留傍晚维港窗口。",
+        "tag": "一路向东",
         "next": {
-          "to": "旺角街区",
-          "mode": "荃湾线佐敦 → 旺角",
-          "duration": "约 15–25 分钟（含酒店和出站步行）",
-          "price": "HK$4.90",
+          "to": "坚尼地城站 → 海旁",
+          "mode": "佐敦荃湾线 → 中环，转港岛线 → 坚尼地城",
+          "duration": "约 45–60 分钟（含出站及海旁步行）",
+          "price": "HK$13.20",
           "source": "mtr",
-          "kind": "recommend",
           "currency": "HKD",
-          "amount": 4.9,
-          "single": 5
+          "amount": 13.2,
+          "single": 15.5,
+          "kind": "recommend"
         }
       },
       {
-        "id": "v2-s2",
+        "id": "v3-s2",
         "time": "10:00",
-        "title": "旺角 · 花园街、花墟与街区漫游",
-        "description": "由花园街向北走到花墟、太子周边，再折回旺角。商铺开门时间各异，按街区游览，不承诺每家店已营业。可在旺角午餐，减少来回坐车。",
-        "tag": "街头生活",
+        "title": "坚尼地城 · 海旁与吉席街",
+        "description": "从坚尼地城站步行到新海旁、吉席街一带，拍海风人像和叮叮车穿街。照片中的吉席街用于街景参考，不冒充篮球场海景同一机位；本次不排队进入球场、不绕去西环泳棚。",
+        "tag": "海旁街拍",
+        "photoIds": [
+          "kennedy"
+        ],
         "next": {
-          "to": "油麻地天后庙周边",
+          "to": "坚尼地城电车总站",
           "mode": "步行",
-          "duration": "约 30–45 分钟（从旺角南端起）",
+          "duration": "约 5–15 分钟",
           "price": "HK$0",
-          "source": "mtrplan",
+          "source": "tram",
           "kind": "recommend"
         }
       },
       {
-        "id": "v2-s3",
-        "time": "14:00",
-        "title": "油麻地 · 老街与果栏周边",
-        "description": "看看天后庙外围、果栏周边建筑和老街；市场仍在营业，注意避让搬运。内部场馆开放时间未核实，默认只游公共街区。",
-        "tag": "老香港",
+        "id": "v3-s3",
+        "time": "11:15",
+        "title": "叮叮车 · 从港岛西慢慢坐到湾仔",
+        "description": "在坚尼地城总站乘东行、途经湾仔的电车（看清终点及车内站点指示）。坐到湾仔庄士敦道一带下车，往蓝屋步行。后门上、前门下，下车付款；普通电车成人每次 HK$3.30，不是另收费的怀旧观光电车。",
+        "tag": "必体验",
+        "photoIds": [
+          "dingding"
+        ],
         "next": {
-          "to": "佐敦 → 九龙公园",
+          "to": "湾仔庄士敦道 → 蓝屋周边",
+          "mode": "东行普通叮叮车 + 步行",
+          "duration": "约 65–90 分钟（含候车、乘车与步行，估算）",
+          "price": "HK$3.30",
+          "currency": "HKD",
+          "amount": 3.3,
+          "source": "tram",
+          "kind": "recommend",
+          "note": "可选往跑马地或筲箕湾、途经湾仔的车；以车内指示 / 官方地图确认下车站。上层靠窗坐稳拍摄，不伸出车外。"
+        }
+      },
+      {
+        "id": "v3-s4",
+        "time": "13:00",
+        "title": "湾仔午餐 · 蓝屋、石水渠街与利东街",
+        "description": "在湾仔午餐，然后沿石水渠街拍蓝屋外墙，再向北经太原街、利东街走向皇后大道东厦门街站。预留约两小时用餐和拍照，不进入住宅，不依赖室内展馆开放。",
+        "tag": "彩色港味",
+        "photoIds": [
+          "blue-house"
+        ],
+        "next": {
+          "to": "H1 厦门街站（皇后大道东）",
           "mode": "步行",
-          "duration": "约 25–40 分钟",
+          "duration": "约 10–20 分钟",
           "price": "HK$0",
-          "source": "mtrplan",
+          "source": "hktbphoto",
           "kind": "recommend"
         }
       },
       {
-        "id": "v2-s4",
-        "time": "16:00",
-        "title": "九龙公园 · 尖沙咀自由时间",
-        "description": "在公园休息，可沿广东道向尖沙咀海滨散步。今天不安排必须定时入场的收费景点，为银行补办、购物和体力保留弹性。",
-        "tag": "慢慢逛",
+        "id": "v3-s5",
+        "time": "15:30",
+        "title": "H1 站前准备 · 查到站与座位",
+        "description": "在官方站号 002481「厦门街，皇后大道东」候车，目标约 15:45–16:15 上 H1 往尖沙咀，具体班次当天查看。中途站不保证有上层位；若迟迟无合适车，改湾仔地铁去尖沙咀（另查票价），不要为了车再倒回中环总站。",
+        "tag": "不绕回总站",
+        "photoIds": [
+          "sunset-bus"
+        ],
         "next": {
-          "to": "庙街 / 佐敦晚餐",
+          "to": "星光大道站（梳士巴利道，003301）",
+          "mode": "城巴 H1 开篷观光巴士 · 湾仔厦门街 → 星光大道",
+          "duration": "约 45–70 分钟（含候车与路况缓冲，估算）",
+          "price": "HK$47.60",
+          "currency": "HKD",
+          "amount": 47.6,
+          "source": "h1fare",
+          "kind": "recommend",
+          "note": "运输署 H1 全程票价 HK$47.60；预算按全程价预留，中途站如适用较低分段价以当日公布为准。官方站序：厦门街 12 → 星光大道 17。乘车体验不保证看到海上落日，也不保证开篷车辆 / 前排位。"
+        }
+      },
+      {
+        "id": "v3-s6",
+        "time": "约17:00",
+        "title": "星光大道 · 李小龙与海滨人像",
+        "description": "在梳士巴利道「星光大道」站下车，步行到星光大道东段李小龙铜像一带，先拍人物和海景，再沿海滨向西走。目标 17:00 左右到海边；班次或交通延误时优先海滨光线，别补逛商场。",
+        "tag": "你的必拍",
+        "photoIds": [
+          "avenue-stars"
+        ],
+        "next": {
+          "to": "尖沙咀海滨中段 → 香港文化中心",
           "mode": "步行",
-          "duration": "约 20–35 分钟",
+          "duration": "约 15–25 分钟（不含拍摄）",
           "price": "HK$0",
-          "source": "mtrplan",
+          "source": "hktbphoto",
           "kind": "recommend"
         }
       },
       {
-        "id": "v2-s5",
-        "time": "18:30",
-        "title": "庙街晚餐 · 佐敦酒店休息",
-        "description": "逛佐敦和庙街周边，选择已营业店铺吃晚餐，不依赖夜市摊位的固定开档时间。返酒店后确认周日港澳船票、退房和珠海酒店。",
+        "id": "v3-s7",
+        "time": "17:30–18:30",
+        "title": "维多利亚港 · 暮色、天际线与钟楼",
+        "description": "沿星光大道向西走，拍维港对岸天际线、香港文化中心外部和钟楼。17:00–18:30 是本次留出的傍晚拍摄窗口，不是保证的日落时间；天气和实际落日以天文台为准。暮色时人物用 2×，夜景用主摄和栏杆稳定手机。",
+        "tag": "你的必拍",
+        "photoIds": [
+          "victoria-harbour"
+        ],
+        "next": {
+          "to": "钟楼 → 半岛酒店外部 → 弥敦道晚餐",
+          "mode": "步行",
+          "duration": "约 10–20 分钟",
+          "price": "HK$0",
+          "source": "hktbphoto",
+          "kind": "recommend"
+        }
+      },
+      {
+        "id": "v3-s8",
+        "time": "19:00",
+        "title": "半岛酒店外观 · 沿弥敦道回佐敦",
+        "description": "拍半岛外部街景，在尖沙咀至佐敦之间用晚餐，再沿弥敦道向北回酒店。海滨只走一遍，不再回海港城或跨回港岛。今日步行约 6–9 公里，雨天可跳过部分街拍。",
         "tag": "香港第 2 晚",
         "next": {
           "to": "佐敦酒店",
           "mode": "步行",
-          "duration": "约 5–15 分钟",
+          "duration": "约 20–35 分钟",
           "price": "HK$0",
-          "source": "mtrplan",
+          "source": "hktbphoto",
           "kind": "recommend"
         }
       }
-    ]
+    ],
+    "route": [
+      "坚尼地城",
+      "叮叮车东行",
+      "湾仔蓝屋",
+      "H1 厦门街站",
+      "星光大道",
+      "维港 / 钟楼",
+      "佐敦"
+    ],
+    "routeNote": "港岛由西向东走；H1 在湾仔厦门街站上车，跳过中环、上环段，避免再去周五拍过的区域。尖沙咀海滨从东向西走，最后沿弥敦道向北回酒店。"
   },
   {
     "date": "11.01",
@@ -229,43 +358,43 @@ const DAYS = [
     "subtitle": "推荐 14:30 上环 → 澳门外港 · 晚上关闸 / 拱北步行过关 · 珠海住一晚",
     "events": [
       {
-        "id": "v2-u1",
+        "id": "v3-u1",
         "time": "09:00",
-        "title": "香港最后半天 · 早餐与退房",
-        "description": "上午在佐敦、九龙公园周边自由活动。按酒店规定办理退房，确认能否暂存行李及取回截止时间；默认 12:30 前取齐行李，之后全部随身带走，寄存费另计。",
-        "tag": "仍在香港",
+        "title": "香港退房 · 带行李直接去上环",
+        "description": "吃完早餐退房，取齐全部行李再上地铁。今天不采用“先去港岛拍照、再回佐敦拿行李”的走法；大箱时少走街区，把午餐和候船放在信德中心。",
+        "tag": "只过海一次",
         "next": {
-          "to": "酒店取行李 / 佐敦站",
-          "mode": "步行",
-          "duration": "约 5–15 分钟",
-          "price": "HK$0",
-          "source": "mtrplan",
+          "to": "上环站 → 西港城外围",
+          "mode": "佐敦荃湾线 → 中环，站内换港岛线 → 上环",
+          "duration": "约 30–45 分钟（含酒店与出站步行）",
+          "price": "HK$10.60",
+          "source": "mtr",
+          "currency": "HKD",
+          "amount": 10.6,
+          "single": 12.5,
           "kind": "recommend"
         }
       },
       {
-        "id": "v2-u2",
-        "time": "12:30",
-        "title": "取行李 · 赴上环港澳码头",
-        "description": "从佐敦到上环，再步行至信德中心三楼港澳客轮码头。尽量轻装；大件行李政策、托运附加费用以船公司规定为准，不能将额外寄存点当作默认已安排。",
-        "tag": "去澳门",
+        "id": "v3-u2",
+        "time": "10:00",
+        "title": "上环最后半天 · 西港城与码头周边",
+        "description": "在西港城外围、德辅道西一带拍电车与旧楼，随后沿干诺道西向信德中心走。周五已拍过石板街，今天不再上山重逛；行李全程随身，午餐留在信德中心附近。店铺周日营业以现场为准。",
+        "tag": "朝码头走",
         "next": {
-          "to": "上环信德中心三楼港澳码头",
-          "mode": "荃湾线佐敦 → 中环，站内换港岛线 → 上环，再步行至码头",
-          "duration": "约 35–50 分钟（含换乘与步行）",
-          "price": "HK$10.60",
-          "source": "mtr",
-          "kind": "recommend",
-          "currency": "HKD",
-          "amount": 10.6,
-          "single": 12.5
+          "to": "信德中心三楼港澳码头",
+          "mode": "步行",
+          "duration": "约 10–20 分钟（不含用餐 / 拍照）",
+          "price": "HK$0",
+          "source": "hktbphoto",
+          "kind": "recommend"
         }
       },
       {
         "id": "v2-u3",
         "time": "13:30",
         "title": "港澳码头 · 报到与香港离境",
-        "description": "建议提前 60 分钟到码头，依船票要求完成报到和出境；船公司要求至少提前 30 分钟入闸。此刻香港行程结束，不再从澳门返回香港。",
+        "description": "13:30 前到信德中心三楼港澳码头。建议提前 60 分钟报到，依船票完成出境和检票；船公司要求至少提前 30 分钟入闸。上午带行李一路向码头移动，不再往返佐敦。大件行李托运政策及额外费用以船公司为准。",
         "tag": "候船",
         "next": {
           "to": "澳门外港客运码头",
@@ -350,7 +479,17 @@ const DAYS = [
         "description": "酒店优先选珠海站步行约 10–20 分钟范围。核对周一珠海 → 广州南 → 深圳北两程票，建议选 07:00–07:30 左右从珠海出发、10:00 前到深圳北的实际可售组合；无合适车票则缩短深圳游玩。",
         "tag": "珠海第 1 晚"
       }
-    ]
+    ],
+    "route": [
+      "佐敦退房",
+      "上环站",
+      "西港城外围",
+      "信德中心",
+      "澳门外港",
+      "旧城",
+      "拱北 / 珠海"
+    ],
+    "routeNote": "退房后直接带行李去上环；上午只在码头附近的平路街区慢逛，午餐后进信德中心候船，不再回佐敦取行李。"
   },
   {
     "date": "11.02",
@@ -454,7 +593,16 @@ const DAYS = [
         "description": "建议 15:00 或之后从深圳出发，具体车次、席别、耗时和票价待你填写。周一下午返回按下午离开深圳理解，不承诺下午抵达武汉。若你要求下午到武汉，深圳游玩时间需要大幅缩短。",
         "tag": "待填车次"
       }
-    ]
+    ],
+    "route": [
+      "珠海站",
+      "广州南换乘",
+      "深圳北",
+      "莲花山 / 市民中心",
+      "深圳北",
+      "武汉"
+    ],
+    "routeNote": "跨城后只逛福田一个片区；返回深圳北是接武汉车次所需的回站段，不再增加跨区景点。"
   }
 ];
 // 香港全量范围：入境事务处公布的 13 个管制站。通关手续免费，交通费另算。
@@ -483,6 +631,228 @@ const CHECKS=[
   "身份证、地址证明、税务居民资料 / 税号、账户用途和资金来源资料（按银行要求）",
   "可收短信的手机、漫游 / 数据流量、银行卡及少量港币和澳门币现金",
   "周日上环 → 澳门外港 14:30 船票、13:30 报到安排及行李政策",
-  "周五周六香港两晚、周日珠海一晚；确认早到寄存与退房后取行李时间",
+  "周五周六香港两晚、周日珠海一晚；确认周五早到寄存，周日退房直接带行李去上环",
   "先买周一珠海 → 广州南 → 深圳北中转票，再匹配深圳北 → 武汉下午返程票；查天气与临时改道"
+];
+
+const PHOTO_SPOTS = [
+  {
+    "id": "look-left",
+    "image": "crossing",
+    "day": 0,
+    "order": 1,
+    "title": "望左 / 望右路面标线",
+    "area": "中环 · 毕打街一带",
+    "when": "周五 16:10 · 日间路面更清楚",
+    "where": "毕打街 × 德辅道中 / 遮打道附近合法过路处，按现场标线寻找",
+    "tip": "站在人行道上俯拍鞋子与箭头，人物取半身或背影；不在行车道长时间摆拍。",
+    "frame": "1× 俯拍标线；2× 拍街头半身",
+    "fee": "免费公共街景",
+    "query": "Pedder Street Des Voeux Road Central Hong Kong",
+    "caption": "望左标线示例，原图未标明中环具体路口，不代表建议地点同一机位。",
+    "type": "photo"
+  },
+  {
+    "id": "pottinger",
+    "image": "central",
+    "day": 0,
+    "order": 2,
+    "title": "石板街 · 砵典乍街",
+    "area": "中环 → 上环方向",
+    "when": "周五 16:45 · 开户后顺路",
+    "where": "砵典乍街下段台阶；拍完经威灵顿街向上环走",
+    "tip": "利用台阶纵深，人物站在侧边不挡路。背景人多时拍中景，等一小段空档再按快门。",
+    "frame": "2× 人像，1× 台阶纵深",
+    "fee": "免费公共街景",
+    "query": "Pottinger Street Hong Kong",
+    "caption": "石板街实景参考；游客、店铺装饰和光线会变化。",
+    "type": "photo"
+  },
+  {
+    "id": "kennedy",
+    "image": "kennedy",
+    "day": 1,
+    "order": 3,
+    "title": "坚尼地城 · 海旁与电车街",
+    "area": "港岛西端",
+    "when": "周六 10:00 · 白天海旁与街景",
+    "where": "坚尼地城新海旁、吉席街周边公共行人区",
+    "tip": "海旁拍侧身与风吹头发，吉席街拍旧楼和电车层次。街景图不是球场机位；本次不排队进球场。",
+    "frame": "海旁 2× 人像；街景 1×",
+    "fee": "免费公共街景",
+    "query": "Kennedy Town New Praya Hong Kong",
+    "caption": "图为吉席街电车街景，不是海旁或篮球场同一角度。",
+    "type": "photo"
+  },
+  {
+    "id": "dingding",
+    "image": "tram",
+    "day": 1,
+    "order": 4,
+    "title": "叮叮车 · 把港岛坐进镜头",
+    "area": "坚尼地城 → 湾仔 · 东行",
+    "when": "周六 11:15 · 普通电车一段直坐",
+    "where": "坚尼地城总站东行上车，往湾仔庄士敦道方向",
+    "tip": "坐稳后用车窗做画框，拍侧脸、倒影和流动街景；玻璃反光明显时让镜头靠近窗，但不伸出车外。",
+    "frame": "1× 车窗叙事，短视频 5–10 秒",
+    "fee": "普通电车成人 HK$3.30 / 次",
+    "query": "Kennedy Town Tram Terminus Hong Kong",
+    "caption": "电车实景参考图摄于夜间；本次安排白天普通电车体验，涂装和车辆可能不同。",
+    "type": "experience"
+  },
+  {
+    "id": "blue-house",
+    "image": "bluehouse",
+    "day": 1,
+    "order": 5,
+    "title": "湾仔蓝屋 · 彩色街角人像",
+    "area": "石水渠街 → 太原街 / 利东街",
+    "when": "周六 13:00–15:00 · 午餐后",
+    "where": "蓝屋石水渠街外部行人区，拍完向北走去 H1 厦门街站",
+    "tip": "人站蓝色墙面边侧，用楼宇竖线构图；保留门窗层次。这里是生活街区，不进入住宅拍照。",
+    "frame": "2× 中景人像；1× 建筑全景",
+    "fee": "外部街景免费，未安排室内参观",
+    "query": "Blue House Stone Nullah Lane Hong Kong",
+    "caption": "蓝屋历史实景图；现场外墙和遮挡以当天为准。",
+    "type": "photo"
+  },
+  {
+    "id": "sunset-bus",
+    "image": "bus",
+    "day": 1,
+    "order": 6,
+    "title": "落日飞车 · H1 开篷巴士",
+    "area": "湾仔厦门街 → 尖沙咀",
+    "when": "周六约 15:45–16:15 目标上车 · 当天查到站",
+    "where": "官方站号 002481 厦门街（皇后大道东），H1 往尖沙咀；003301 星光大道站下",
+    "tip": "上层有座时坐稳拍半身与城市背景，不为前排倒回总站。风大收好帽子；穿隧道时不拍照，不站立或探身。",
+    "frame": "1× 人物 + 城市；避免广角贴脸",
+    "fee": "按官方全程价 HK$47.60 预留",
+    "query": "Amoy Street Queen's Road East bus stop Hong Kong",
+    "caption": "图为真实 H1 开篷车的历史涂装，非本次车辆、座位或日落保证。",
+    "type": "experience"
+  },
+  {
+    "id": "avenue-stars",
+    "image": "stars",
+    "day": 1,
+    "order": 7,
+    "title": "星光大道 · 海风与电影感",
+    "area": "尖沙咀海滨东段 → 西行",
+    "when": "周六目标 17:00 · 到港后先拍",
+    "where": "李小龙铜像与星光大道公共海滨；之后向西走向文化中心",
+    "tip": "人物与栏杆留一点距离，用海面做留白；拍背影、侧脸和手印细节。避免把整个下午耗在商场里。",
+    "frame": "2× 人像；1× 人物与海景",
+    "fee": "公共海滨免费",
+    "query": "Bruce Lee Statue Avenue of Stars Hong Kong",
+    "caption": "星光大道公共海滨实景图，具体人流与光线会变化。",
+    "type": "photo"
+  },
+  {
+    "id": "victoria-harbour",
+    "image": "harbour",
+    "day": 1,
+    "order": 8,
+    "title": "维多利亚港 · 蓝调与夜景",
+    "area": "星光大道 → 文化中心 / 钟楼",
+    "when": "周六预留 17:30–18:30 · 以天气和天文台为准",
+    "where": "尖沙咀海滨面向港岛天际线，沿海滨一路向西到钟楼",
+    "tip": "先拍暮色人物，再拍夜景。手机主摄降低一点曝光，利用栏杆稳定，人物夜景优先附近自然灯光。",
+    "frame": "1× 天际线；2× 暮色半身",
+    "fee": "公共海滨免费",
+    "query": "Tsim Sha Tsui Promenade Clock Tower Hong Kong",
+    "caption": "从尖沙咀看港岛的维港夜景全景参考，非实时天气。",
+    "type": "photo"
+  }
+];
+
+const PHOTO_CREDITS = [
+  {
+    "id": "stars",
+    "path": "assets/photos/stars.jpg",
+    "title": "File:Avenue of Stars 01-10-2022(6).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Avenue_of_Stars_01-10-2022(6).jpg",
+    "author": "LN9267",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "​This photo is taken in Tsim Sha Tsui.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "harbour",
+    "path": "assets/photos/harbour.jpg",
+    "title": "File:Central and Victoria Harbour at night, view from Tsim Sha Tsui, Hong Kong, China - 香港，中国 (16903027347).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Central_and_Victoria_Harbour_at_night,_view_from_Tsim_Sha_Tsui,_Hong_Kong,_China_-_%E9%A6%99%E6%B8%AF%EF%BC%8C%E4%B8%AD%E5%9B%BD_(16903027347).jpg",
+    "author": "Romain Pontida",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "description": "6 pictures panorama stitched with Hugin",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "tram",
+    "path": "assets/photos/tram.jpg",
+    "title": "File:Hong Kong Tramways 36(112) Kennedy Town to Happy Valley 05-03-2016.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Tramways_36(112)_Kennedy_Town_to_Happy_Valley_05-03-2016.jpg",
+    "author": "LN9267",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "This photo is taken in Kennedy Town.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "bus",
+    "path": "assets/photos/bus.jpg",
+    "title": "File:(HKG-Hong Kong) Citybus 59909 SJ5717 H1 2024-05-29.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:(HKG-Hong_Kong)_Citybus_59909_SJ5717_H1_2024-05-29.jpg",
+    "author": "S5A-0043",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "description": "Photo by S5A-0043. CC-BY.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "kennedy",
+    "path": "assets/photos/kennedy.jpg",
+    "title": "File:Trams lining up on Catchick Street near the Kennedy Town Terminus (Hong Kong).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Trams_lining_up_on_Catchick_Street_near_the_Kennedy_Town_Terminus_(Hong_Kong).jpg",
+    "author": "Mk2010",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Trams lining up on Catchick Street near the Kennedy Town Terminus, Hong Kong.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "bluehouse",
+    "path": "assets/photos/bluehouse.jpg",
+    "title": "File:Blue House, Hong Kong.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Blue_House,_Hong_Kong.jpg",
+    "author": "Prosperity Horizons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Blue House in Wan Chai, Hong Kong.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "central",
+    "path": "assets/photos/central.jpg",
+    "title": "File:Pottinger Street in Hong Kong.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Pottinger_Street_in_Hong_Kong.jpg",
+    "author": "Evancyk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "The stone-paved steps on Pottinger Street in Hong Kong's Central district. The steps lead up to Tai Kwun, a revitalized historical police station that is now a culture site run by the Jockey Club. Lower down, many stalls sell holiday decorations for partygoers around Halloween and Christmastimes.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "crossing",
+    "path": "assets/photos/crossing.jpg",
+    "title": "File:Hong Kong ⇦ Look Left 望左 road surface marking.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_%E2%87%A6_Look_Left_%E6%9C%9B%E5%B7%A6_road_surface_marking.jpg",
+    "author": "cogdogblog",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "description": "香港望左路面标线示例；原图未标明本项目建议的中环具体路口，不将其标作同一机位。",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  }
 ];

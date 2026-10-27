@@ -1,0 +1,90 @@
+[
+  {
+    "id": "stars",
+    "path": "assets/photos/stars.jpg",
+    "title": "File:Avenue of Stars 01-10-2022(6).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Avenue_of_Stars_01-10-2022(6).jpg",
+    "author": "LN9267",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "​This photo is taken in Tsim Sha Tsui.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "harbour",
+    "path": "assets/photos/harbour.jpg",
+    "title": "File:Central and Victoria Harbour at night, view from Tsim Sha Tsui, Hong Kong, China - 香港，中国 (16903027347).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Central_and_Victoria_Harbour_at_night,_view_from_Tsim_Sha_Tsui,_Hong_Kong,_China_-_%E9%A6%99%E6%B8%AF%EF%BC%8C%E4%B8%AD%E5%9B%BD_(16903027347).jpg",
+    "author": "Romain Pontida",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "description": "6 pictures panorama stitched with Hugin",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "tram",
+    "path": "assets/photos/tram.jpg",
+    "title": "File:Hong Kong Tramways 36(112) Kennedy Town to Happy Valley 05-03-2016.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_Tramways_36(112)_Kennedy_Town_to_Happy_Valley_05-03-2016.jpg",
+    "author": "LN9267",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "This photo is taken in Kennedy Town.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "bus",
+    "path": "assets/photos/bus.jpg",
+    "title": "File:(HKG-Hong Kong) Citybus 59909 SJ5717 H1 2024-05-29.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:(HKG-Hong_Kong)_Citybus_59909_SJ5717_H1_2024-05-29.jpg",
+    "author": "S5A-0043",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "description": "Photo by S5A-0043. CC-BY.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "kennedy",
+    "path": "assets/photos/kennedy.jpg",
+    "title": "File:Trams lining up on Catchick Street near the Kennedy Town Terminus (Hong Kong).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Trams_lining_up_on_Catchick_Street_near_the_Kennedy_Town_Terminus_(Hong_Kong).jpg",
+    "author": "Mk2010",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Trams lining up on Catchick Street near the Kennedy Town Terminus, Hong Kong.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "bluehouse",
+    "path": "assets/photos/bluehouse.jpg",
+    "title": "File:Blue House, Hong Kong.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Blue_House,_Hong_Kong.jpg",
+    "author": "Prosperity Horizons",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "Blue House in Wan Chai, Hong Kong.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "central",
+    "path": "assets/photos/central.jpg",
+    "title": "File:Pottinger Street in Hong Kong.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Pottinger_Street_in_Hong_Kong.jpg",
+    "author": "Evancyk",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "The stone-paved steps on Pottinger Street in Hong Kong's Central district. The steps lead up to Tai Kwun, a revitalized historical police station that is now a culture site run by the Jockey Club. Lower down, many stalls sell holiday decorations for partygoers around Halloween and Christmastimes.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "crossing",
+    "path": "assets/photos/crossing.jpg",
+    "title": "File:Hong Kong ⇦ Look Left 望左 road surface marking.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_%E2%87%A6_Look_Left_%E6%9C%9B%E5%B7%A6_road_surface_marking.jpg",
+    "author": "cogdogblog",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "description": "香港望左路面标线示例；原图未标明本项目建议的中环具体路口，不将其标作同一机位。",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  }
+]
