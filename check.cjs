@@ -5,20 +5,20 @@ const vm = require('node:vm');
 const path = require('node:path');
 const nodes = new Map();
 const node = selector => {
-  if (!nodes.has(selector)) nodes.set(selector, { textContent: '', innerHTML: '', style: {}, addEventListener() {}, classList: { toggle() {} } });
+  if (!nodes.has(selector)) nodes.set(selector, { textContent: '', innerHTML: '', style: {}, addEventListener() {}, toggleAttribute() {}, classList: { toggle() {} } });
   return nodes.get(selector);
 };
 const context = vm.createContext({
   document: { querySelector: node, querySelectorAll: () => [] },
   window: { addEventListener() {} }, location: { hash: '#itinerary' },
   localStorage: { getItem: () => null, setItem() {} },
-  setTimeout: () => 0, clearTimeout() {}, console
+  fetch: () => new Promise(()=>{}), AbortSignal, setTimeout: () => 0, clearTimeout() {}, console
 });
-for (const name of ['data.js', 'app.js']) vm.runInContext(fs.readFileSync(path.join(__dirname, name), 'utf8'), context);
+for (const name of ['data.js', 'guide-data.js', 'app.js']) vm.runInContext(fs.readFileSync(path.join(__dirname, name), 'utf8'), context);
 vm.runInContext(`
  const assertTest = (condition, message) => { if (!condition) throw new Error(message); };
- assertTest(DAYS.length === 4 && DAYS.flatMap(d=>d.events).length === 32, 'Four days / 32 stops');
- assertTest(ids.size === 32, 'Event identifiers unique');
+ assertTest(DAYS.length === 4 && DAYS.flatMap(d=>d.events).length === 33, 'Four days / 33 stops');
+ assertTest(ids.size === 33, 'Event identifiers unique');
  assertTest(PORTS.length === 17, '13 Hong Kong controls + 3 Macau controls + other ferry');
  assertTest(PORTS.every(p=>SOURCES.some(s=>s.id===p.source)), 'Port sources exist');
  for (const d of DAYS) for (const e of d.events) if (e.next) assertTest(SOURCES.some(s=>s.id===e.next.source), 'Transport sources exist');
@@ -47,18 +47,31 @@ vm.runInContext(`
  assertTest(esc('<img onerror="x">').includes('&lt;'), 'User text escaped');
  state.events['v3-f1']={title:'<script>alert(1)</script>',note:'"quoted"',done:true};
  assertTest(renderEvent(DAYS[0].events[0]).includes('&lt;script&gt;'), 'Imported text rendered safely');
- for(const name of Object.keys(pages)) {location.hash='#'+name; render(); assertTest(document.querySelector('#main').innerHTML.length>100, 'Page rendered: '+name);}
+ user={username:'qhw',isAdmin:true}; for(const name of Object.keys(pages)) {location.hash='#'+name; render(); assertTest(document.querySelector('#main').innerHTML.length>100, 'Page rendered: '+name);}
 `, context);
-assert.ok(nodes.get('#main').innerHTML.includes('数据来源'));
+assert.ok(nodes.get('#main').innerHTML.includes('用户名'));
+const schema=JSON.parse(fs.readFileSync(path.join(__dirname,'state-schema.json'),'utf8'));
+assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(DAYS.flatMap(d=>d.events.map(e=>e.id)))',context)),schema.eventIds);
+assert.equal(vm.runInContext('CHECKS.length',context),schema.checkCount);
+assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(PHOTO_SPOTS.map(s=>s.id))',context)),schema.photoIds);
+vm.runInContext(`
+ assertTest(BANKS.length===6 && PACKING.length===7, 'Six banks and seven packing checks');
+ assertTest(new Set([...BANKS,...PACKING].map(x=>x.check)).size===13, 'Stable new checklist indices');
+ assertTest(DAYS[1].events.findIndex(e=>e.id==='v3-s-halloween')<DAYS[1].events.findIndex(e=>e.id==='v3-s6'),'Halloween before westbound waterfront');
+ for(const item of [...HALLOWEEN,...PACKING,...TRANSIT_GUIDE,...TRAVEL_TIPS,...LAW_TIPS])for(const id of [item.source,item.extraSource,item.thirdSource].filter(Boolean))assertTest(SOURCES.some(s=>s.id===id),'Guide source exists');
+ for(const bank of BANKS)assertTest(bank.sources.every(id=>SOURCES.some(s=>s.id===id)),'Bank source exists');
+ user=null;location.hash='#users';render();assertTest(page==='itinerary','Guest cannot render admin page');
+ user={username:'visitor',isAdmin:false};render();assertTest(page==='itinerary','Nonadmin cannot render admin page');
+`,context);
 const legacy = {version:1, note:'保留我的总备注', events:{f1:{title:'旧版酒店，不应覆盖新路线'}}, budget:{food:190,other:80,hkd:0.91,mop:0.88}};
 context.localStorage.getItem = key => key === 'travel_to_HK_v1' ? JSON.stringify(legacy) : null;
 const migrated = vm.createContext({...context});
-for (const name of ['data.js', 'app.js']) vm.runInContext(fs.readFileSync(path.join(__dirname, name), 'utf8'), migrated);
-assert.equal(vm.runInContext('state.note', migrated), legacy.note);
+for (const name of ['data.js', 'guide-data.js', 'app.js']) vm.runInContext(fs.readFileSync(path.join(__dirname, name), 'utf8'), migrated);
+assert.equal(vm.runInContext('state.note', migrated), '');
 assert.equal(vm.runInContext('Object.keys(state.events).length', migrated), 0);
 assert.equal(vm.runInContext('state.budget.hotel', migrated), 650);
 assert.equal(vm.runInContext('state.budget.zhuhai', migrated), 280);
-assert.equal(vm.runInContext('state.budget.food', migrated), 190);
+assert.equal(vm.runInContext('state.budget.food', migrated), 200);
 assert.equal(vm.runInContext('legacyBackup.events.f1.title', migrated), legacy.events.f1.title);
 
 const oldV2={...legacy,version:2,budget:{hotel:700,zhuhai:300,food:200,other:150,hkd:0.92,mop:0.89},events:{'v2-f1':{title:'Old Friday must not override'},'v2-m4':{note:'保留周一笔记'}}};
@@ -68,4 +81,4 @@ assert.equal(vm.runInContext('migrateLegacy(legacyForTest).events["v2-f1"]',migr
 assert.equal(vm.runInContext('migrateLegacy(legacyForTest).budget.hotel',migrated),700);
 for(const c of vm.runInContext('PHOTO_CREDITS',migrated))assert.ok(fs.statSync(path.join(__dirname,c.path)).size>1000, 'Local photo exists');
 
-console.log('PASS: data, totals, backup validation, text escaping, and all six pages.');
+console.log('PASS: data, totals, backup validation, text escaping, and all eight page renderers (admin protected).');

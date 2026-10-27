@@ -1,0 +1,196 @@
+{
+  "checkedAt": "2026-10-27",
+  "method": "Official web pages and search indices; Ant Bank Hong Kong/Macao FAQs rendered in a headless browser because source HTML is empty. Text below is a factual summary, not an HTML snapshot.",
+  "limitations": [
+    "ICBC Asia pages and PDF direct requests returned 403; indexed official PDF supplies VTM locations and hours. Reconfirm before travel.",
+    "Event timings may change; costume-consumption free ride offers have not been subtracted from budget."
+  ],
+  "sources": [
+    {
+      "id": "halloween",
+      "name": "香港旅发局 · 2026 全城万圣节活动",
+      "url": "https://www.discoverhongkong.com/eng/events/halloween/citywide-halloween-cosplay-celebration.html",
+      "detail": "核对2026年日期：皇后像广场装置17–31日；31日中环、兰桂坊、旺角及尖东设活动。仅把与行程日期和方向匹配的项目纳入默认路线。"
+    },
+    {
+      "id": "halloweentst",
+      "name": "尖沙咀中心 / 帝国中心 · TST East Halloween Beats",
+      "url": "https://www.tsimshatsuicentre.com.hk/sc/promotions/tst-east-halloween-beats/",
+      "detail": "10月31日么地道花园16:00–23:00，免费入场；市集16:00起，DJ19:00起。默认只作傍晚短逛，不声称该时段有DJ。"
+    },
+    {
+      "id": "halloweenlkf",
+      "name": "兰桂坊协会 · LKF Halloween 2026",
+      "url": "https://lankwaifong.com/pages/lkf-halloween-2026",
+      "detail": "31日为 Monsters Night；街区活动与酒吧消费分开，不把30日写成31日主题派对。"
+    },
+    {
+      "id": "halloweenmonth",
+      "name": "香港旅发局 · 万圣月、主题乐园及特别电车",
+      "url": "https://www.discoverhongkong.com/eng/events/halloween.html",
+      "detail": "主题乐园另购票；万圣特别电车及观光巴士需满足装扮、指定消费及换票规则，与本行程普通电车 / H1 不同。"
+    },
+    {
+      "id": "hsbcapp",
+      "name": "汇丰香港 · 手机开户资格与流程",
+      "url": "https://www.hsbc.com.hk/ways-to-bank/mobile-apps/banking/account-opening/",
+      "detail": "页面包含指定地区 / 证件手机申请及非HKID分行预约说明；按实际App入口核验，不保证每位访客都能纯线上完成。"
+    },
+    {
+      "id": "hsbccard",
+      "name": "汇丰香港 · Mastercard 借记卡（蓝狮子）",
+      "url": "https://www.hsbc.com.hk/zh-cn/debit-cards/products/mastercard-debit-card/",
+      "detail": "借记卡关联汇丰One等合资格综合账户，可在开户时或App内申请；不是独立存款账户或信用卡。"
+    },
+    {
+      "id": "za",
+      "name": "众安银行 · 访港旅客开户资格",
+      "url": "https://bank.za.group/faqs/Individuals/Account_opening/Open_an_account_for_a_visitor_in_HongKong/66503e51b359be4a195230e8",
+      "detail": "18岁以上、在港、有效内地身份证、可收短信的内地手机号、同手机号内地储蓄卡及国家移民管理局记录。"
+    },
+    {
+      "id": "zafees",
+      "name": "众安银行 · 银行收费表",
+      "url": "https://bank.za.group/",
+      "detail": "从官网进入银行收费表核对账户与卡片费用；无账户管理费不代表实体卡、汇款及所有交易免费。"
+    },
+    {
+      "id": "anthk",
+      "name": "蚂蚁银行香港 · 常见问题 / 访港旅客",
+      "url": "https://www.antbank.hk/questions?lang=zh_hk",
+      "detail": "浏览器读取动态FAQ：支持合资格内地访客在港App申请，无最低结余收费、无实体卡；访客证券服务受限。摘要见research。"
+    },
+    {
+      "id": "antmo",
+      "name": "蚂蚁银行澳门 · 常见问题",
+      "url": "https://www.antbank.mo/questions",
+      "detail": "浏览器读取动态FAQ：访澳旅客需在澳申请；身份证及通行证、可用手机号。银行开户后证券服务另申请，当前无实体卡。"
+    },
+    {
+      "id": "antmofees",
+      "name": "蚂蚁银行澳门 · 港美股收费表",
+      "url": "https://www.antbank.mo/invest/fee",
+      "detail": "美股 / 港股交易有收费，按账户协议及最新收费表核对；不把银行账户免管理费等同证券交易免费。"
+    },
+    {
+      "id": "antmoapp",
+      "name": "蚂蚁银行澳门 · 官方开发者应用介绍",
+      "url": "https://apps.apple.com/mo/app/%E8%9E%9E%E8%9F%BB%E9%8A%80%E8%A1%8C-%E6%BE%B3%E9%96%80/id1454335260",
+      "detail": "开发者为ANT BANK (MACAO) LIMITED，列无开户门槛 / 无账户管理费。下载从银行官网进入，香港和澳门版分开。"
+    },
+    {
+      "id": "icbcapp",
+      "name": "工银亚洲 · 全新客户网点开户",
+      "url": "https://www.icbcasia.com/hk/sc/promotion/mobile-banking-account-opening-service.html",
+      "detail": "官方搜索摘要：内地身份证新客可手机提交申请，需在香港激活。线上预申请不等同全程远程完成。"
+    },
+    {
+      "id": "icbcvtm",
+      "name": "工银亚洲 · 2026-04-02 VTM 网络公告",
+      "url": "https://v.icbc.com.cn/userfiles/resources/icbc/haiwai/asia/download/tc/2026/press20260402c.pdf",
+      "detail": "官方PDF索引核对：落马洲站3楼票务大堂311号闸内、罗湖站LOW K5铺闸外；专人在线开户每日08:00–20:00。直读PDF受403限制，位置及时间来自官方索引，临行再确认。"
+    },
+    {
+      "id": "bocopen",
+      "name": "中银香港 · 大湾区个人服务宝典（开户）",
+      "url": "https://www.bochk.com/dam/crossborderservices/25GBAserviceguide_southcross.pdf",
+      "detail": "第9–10页：内地访客可在港手机开户；身份证、通行证、近7日发出电子出入境记录、内地电话地址及税务资料；分行作补办。"
+    },
+    {
+      "id": "bocfees",
+      "name": "中银香港 · 一般银行服务收费",
+      "url": "https://www.bochk.com/sc/servicecharge.html",
+      "detail": "个人储蓄 / 往来账户服务月费按表豁免；个人FPS本地转账等值HK$3,000,000或以下豁免。不包括所有跨境汇款及中转行费用。"
+    },
+    {
+      "id": "hkessentials",
+      "name": "香港旅发局 · 旅客须知",
+      "url": "https://www.discoverhongkong.com/eng/travel-guide/traveller-essentials.html",
+      "detail": "香港220V / 50Hz、英式方脚三插；紧急求助999。通讯、支付及旅游支持入口。"
+    },
+    {
+      "id": "moessentials",
+      "name": "澳门旅游局 · 实用资料",
+      "url": "https://www.macaotourism.gov.mo/en/article/before-you-travel/practical-info",
+      "detail": "澳门230V / 50Hz；货币、支付、医疗及通讯。入境携现金及无记名可转让票据总值达MOP120,000须申报。"
+    },
+    {
+      "id": "octopus",
+      "name": "八达通 · 标准租用版及退款",
+      "url": "https://www.octopus.com.hk/en/consumer/customer-service/refund/index.html",
+      "detail": "租用版有押金；发卡90天内等适用情况下退卡，手续费HK$11或余额1%，取较高者。售卖版规则不同。"
+    },
+    {
+      "id": "hktaxi",
+      "name": "香港运输署 · 的士收费",
+      "url": "https://www.td.gov.hk/en/transport_in_hong_kong/public_transport/taxi/taxi_fare_of_hong_kong/index.html",
+      "detail": "市区红的首2公里HK$29，后按里程 / 等待计价，行李及过海等可有附加费；大额钞票不保证可找零。"
+    },
+    {
+      "id": "taxipay",
+      "name": "香港政府 · 的士电子支付安排",
+      "url": "https://www.info.gov.hk/gia/general/202603/15/P2026031300594p.htm",
+      "detail": "2026-04-01起司机需提供至少一种二维码及一种非二维码电子支付；不代表每种钱包都受支持。"
+    },
+    {
+      "id": "molrt",
+      "name": "澳门轻轨 · 车票与票价",
+      "url": "https://www.mlm.com.mo/en/general_ticket.html",
+      "detail": "成人单程票按计费站数MOP6 / 8 / 10 / 12；跨海区间按两站计。默认澳门半岛旧城路线不必乘轻轨。"
+    },
+    {
+      "id": "hksmoking",
+      "name": "香港卫生署 · 2026控烟法例与罚则",
+      "url": "https://www.taco.gov.hk/t/english/legislation/legislation_tcl.html",
+      "detail": "2026-01-01起吸烟罪行定额罚款HK$3,000并扩展禁烟场景；04-30起公众地方禁管有指定另类吸烟产品物质；进口禁令另适用。"
+    },
+    {
+      "id": "hkcustoms",
+      "name": "香港海关 · 旅客禁运 / 受管制物品",
+      "url": "https://www.customs.gov.hk/en/service-enforcement-information/passenger-clearance/prohibited-controlled-items/index.html",
+      "detail": "药物、武器、食品和动植物等受不同法规管制。个人自用不能概括豁免所有禁运项目。"
+    },
+    {
+      "id": "hkentrytips",
+      "name": "香港旅发局 · 海关及入境提醒",
+      "url": "https://www.discoverhongkong.com/eng/travel-guide/traveller-essentials/immigrations-and-customs/in.html",
+      "detail": "CBD受危险药物管制；胡椒喷雾、电击器等不可当普通防身用品携入；现金等总值超过HK$120,000须按出入境规则申报或披露。"
+    },
+    {
+      "id": "hktobacco",
+      "name": "香港海关 · 烟酒免税额度",
+      "url": "https://www.customs.gov.hk/en/service-enforcement-information/passenger-clearance/duty-free-concessions/index.html",
+      "detail": "18岁以上自用旅客香烟免税额度19支；超过额度须申报，并不涵盖电子烟或加热烟。"
+    },
+    {
+      "id": "hklitter",
+      "name": "香港政府 · 乱抛垃圾 / 吐痰定额罚款",
+      "url": "https://www.news.gov.hk/chi/2023/10/20231020/20231020_125804_174.html",
+      "detail": "相关公众地方洁净罪行定额罚款HK$3,000，自2023-10-22生效；不能把烟头随手扔地上。"
+    },
+    {
+      "id": "mtrrules",
+      "name": "港铁 · 香港铁路附例",
+      "url": "https://www.highspeed.mtr.com.hk/sc/main/mtr-by-laws.html",
+      "detail": "普通港铁已付车费区域内不可饮食，清水也属饮品；勿逃票、冲门或擅用不适用优惠票。"
+    },
+    {
+      "id": "mosmoking",
+      "name": "澳门旅游局 · 禁带电子烟提示",
+      "url": "https://www.macaotourism.gov.mo/en/events/whatson/13779/?type=null",
+      "detail": "禁止个人携带电子烟入澳门，违反可罚MOP4,000；禁烟区规定另外适用。"
+    },
+    {
+      "id": "moemergency",
+      "name": "澳门政府 · 紧急服务",
+      "url": "https://www.gov.mo/en/services/ps-1544/",
+      "detail": "紧急医疗、消防及警务求助999。一般旅游咨询用+853 2833 3000。"
+    },
+    {
+      "id": "fxrules",
+      "name": "国家外汇管理局 · 个人外汇管理及购汇用途",
+      "url": "https://www.safe.gov.cn/shanghai/2019/1213/1198.html",
+      "detail": "个人购汇用途需真实合规，不能以旅游等名义购汇用于境外证券投资；以现行外汇管理规定为准。"
+    }
+  ]
+}
