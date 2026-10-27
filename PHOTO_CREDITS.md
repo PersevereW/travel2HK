@@ -75,3 +75,12 @@
 - 来源：[Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Hong_Kong_%E2%87%A6_Look_Left_%E6%9C%9B%E5%B7%A6_road_surface_marking.jpg>)
 - 许可：[CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 - 改动：缩放与压缩；网页以 cover 方式裁切显示。
+
+## starferry
+
+- 本地文件：`assets/photos/starferry.jpg`
+- 原图标题：File:Day Star Star Ferry Central to Tsim Sha Tsui 07-04-2023.jpg
+- 作者：LN9267
+- 来源：[Wikimedia Commons](<https://commons.wikimedia.org/wiki/File:Day_Star_Star_Ferry_Central_to_Tsim_Sha_Tsui_07-04-2023.jpg>)
+- 许可：[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+- 改动：缩放与压缩；网页以 cover 方式裁切显示。

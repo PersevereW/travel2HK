@@ -18,7 +18,8 @@ const SOURCES = [
 {"id": "h1stops", "name": "城巴官方 · H1 站序与实时到站", "url": "https://mobile.citybus.com.hk/nwp3/?f=1&ds=H1&dsmode=1&l=2", "detail": "已用官方开放 API 核对：12 厦门街 / 皇后大道东（002481），17 星光大道 / 梳士巴利道（003301）；不保证提前锁定车辆、上层位或目标上车时刻。"},
 {"id": "hktbphoto", "name": "香港旅发局 · 港岛西 / 坚尼地城街区与摄影", "url": "https://www.discoverhongkong.com/eng/neighbourhoods/central-and-western-district/how-to-spend-your-day-in-kennedy-town.html", "detail": "用作港岛西摄影地点参考；页面中的参考图与建议机位分别标注，不将历史照片当作当前设施和标线保证。"},
 {"id": "busguide", "name": "香港旅发局 · 开篷观光巴士体验", "url": "https://www.discoverhongkong.com/tc/deals/hong-kong-night-bus-tour.html", "detail": "“落日飞车”是开篷巴士体验的常见名称。H1 白天路段、H2K 夜游及 Big Bus 是不同路线 / 产品，不把 H2K 18:30 后夜游安排当成日落体验。"},
-{"id": "hko", "name": "香港天文台 · 日出日落时间", "url": "https://www.hko.gov.hk/en/gts/astron2026/files/HKO_almanac_2026.pdf", "detail": "傍晚拍摄窗口只是行程预留，并非精确日落预报；实际日落与天气需临行核对。"}
+{"id": "hko", "name": "香港天文台 · 日出日落时间", "url": "https://www.hko.gov.hk/en/gts/astron2026/files/HKO_almanac_2026.pdf", "detail": "傍晚拍摄窗口只是行程预留，并非精确日落预报；实际日落与天气需临行核对。"},
+{"id": "starferry", "name": "天星小轮官方 · 普通渡轮航线、票价与班次", "url": "https://www.starferry.com.hk/en/service", "detail": "中环—尖沙咀：周一至周五非公众假期成人上层 HK$5、下层 HK$4；周末及公众假期上层 HK$6.50、下层 HK$5.60。周五中环出发 09:55–20:40 班距 6–8 分钟，首末班 06:30–23:30。无预留座位；官网随身物品限 40×40×17.5cm，本次周五行李留酒店，不安排周日携大箱乘船。"}
 ];
 const DAYS = [
   {
@@ -26,8 +27,8 @@ const DAYS = [
     "weekday": "周五",
     "short": "开户街拍",
     "city": "深圳 → 香港",
-    "title": "中环办正事，街巷拍港味。",
-    "subtitle": "金融区 → 望左望右街口 → 石板街 → 上环；开户优先，周五不再跨去尖沙咀",
+    "title": "中环街拍之后，坐天星过海。",
+    "subtitle": "开户 → 金融区 → 石板街 → 望左望右 → 中环七号码头 → 天星小轮 → 九龙酒店",
     "events": [
       {
         "id": "v3-f1",
@@ -103,24 +104,6 @@ const DAYS = [
         "description": "从预约分行走到皇后像广场、终审法院外部行人区，先拍石柱、金融区楼宇和城市人像。只走公共空间，不安排参观法院；开户未完成就跳过此段。",
         "tag": "顺路街拍",
         "next": {
-          "to": "毕打街 / 德辅道中路口",
-          "mode": "步行",
-          "duration": "约 5–10 分钟",
-          "price": "HK$0",
-          "source": "hktbphoto",
-          "kind": "recommend"
-        }
-      },
-      {
-        "id": "v3-f6",
-        "time": "16:10",
-        "title": "「望左 / 望右」· 中环街口拍照",
-        "description": "建议在毕打街与德辅道中、遮打道一带合法过路处寻找 LOOK LEFT / LOOK RIGHT 路面标线。它不是唯一固定打卡点，标线是否清晰以现场为准。站在人行道边缘拍脚步与标线，过街只正常通行，不在车道驻留摆拍。",
-        "tag": "你的必拍",
-        "photoIds": [
-          "look-left"
-        ],
-        "next": {
           "to": "砵典乍街石板街",
           "mode": "步行",
           "duration": "约 10–15 分钟",
@@ -131,17 +114,35 @@ const DAYS = [
       },
       {
         "id": "v3-f7",
-        "time": "16:45",
+        "time": "16:00",
         "title": "砵典乍街 · 石板街台阶出片",
-        "description": "沿皇后大道中向西至砵典乍街，从下段向上拍台阶与店铺层次，留 30–40 分钟拍人像。拍完从士丹利街、威灵顿街向西走上环，不再折回皇后像广场。人多时用 2× 镜头压缩背景，别挡住通行。",
+        "description": "由皇后大道中走入砵典乍街下段台阶，预留约 30 分钟拍街景人像。拍完沿士丹利街 / 威灵顿街向东走出毕打街，接下一段路面标线与码头，不原路下台阶再绕上环。人多时用 2× 镜头压缩背景，别挡住通行。",
         "tag": "经典街景",
         "photoIds": [
           "pottinger"
         ],
         "next": {
-          "to": "上环街区晚餐 / 上环站",
+          "to": "毕打街 / 德辅道中路口",
           "mode": "步行",
-          "duration": "约 20–30 分钟",
+          "duration": "约 10–15 分钟（经不同街段向东走）",
+          "price": "HK$0",
+          "source": "hktbphoto",
+          "kind": "recommend"
+        }
+      },
+      {
+        "id": "v3-f6",
+        "time": "16:45",
+        "title": "「望左 / 望右」· 中环街口拍照",
+        "description": "建议在毕打街与德辅道中、遮打道一带合法过路处寻找 LOOK LEFT / LOOK RIGHT 路面标线。它不是唯一固定打卡点，标线是否清晰以现场为准。站在人行道边缘拍脚步与标线，过街只正常通行，不在车道驻留摆拍。",
+        "tag": "你的必拍",
+        "photoIds": [
+          "look-left"
+        ],
+        "next": {
+          "to": "中环七号码头（天星小轮）",
+          "mode": "步行",
+          "duration": "约 15–25 分钟（经行人天桥 / 中环码头方向）",
           "price": "HK$0",
           "source": "hktbphoto",
           "kind": "recommend"
@@ -149,19 +150,37 @@ const DAYS = [
       },
       {
         "id": "v3-f8",
-        "time": "18:00",
-        "title": "上环晚餐 · 一次过海回佐敦",
-        "description": "在上环用餐，乘港岛线到中环，站内转荃湾线回佐敦。今天把银行和中环街拍集中处理，明天才安排港岛西段、叮叮车和维港。",
-        "tag": "香港第 1 晚",
+        "time": "17:20",
+        "title": "中环七号码头 · 乘天星小轮过海",
+        "description": "在中环七号码头选择往尖沙咀的普通渡轮上层入口，目标约 17:30 左右搭船，实际班次以现场为准。周五此时官网班距约 6–8 分钟；成人上层 HK$5，下层 HK$4。本次行李仍放香港酒店，只带符合官网 40×40×17.5cm 尺寸限制的白天随身物品；普通渡轮不是另售票的维港游，也不是周日往澳门的喷射飞航。",
+        "tag": "新增体验",
         "next": {
-          "to": "佐敦酒店",
-          "mode": "上环 → 中环，转荃湾线 → 佐敦，步行回酒店",
-          "duration": "约 30–45 分钟（含候车、换乘与步行）",
-          "price": "HK$10.60",
-          "source": "mtr",
+          "to": "尖沙咀天星码头",
+          "mode": "普通天星小轮 · 中环七号码头 → 尖沙咀 · 上层",
+          "duration": "乘船约 8–10 分钟；含候船和进出闸约 20–35 分钟（估算）",
+          "price": "HK$5.00",
+          "source": "starferry",
+          "kind": "recommend",
           "currency": "HKD",
-          "amount": 10.6,
-          "single": 12.5,
+          "amount": 5,
+          "note": "周五非公众假期成人上层价；同航线周末上层 HK$6.50、下层 HK$5.60。官网中环往尖沙咀周五 09:55–20:40 班距 6–8 分钟，航班会随海况调整，不保证固定 17:30 发船。"
+        },
+        "photoIds": [
+          "star-ferry"
+        ]
+      },
+      {
+        "id": "v3-ferry-walkback",
+        "time": "约18:00",
+        "title": "尖沙咀码头 · 沿弥敦道回佐敦",
+        "description": "下船后经梳士巴利道接弥敦道向北，沿途晚餐，再步行回佐敦酒店。今天只把天星作为回酒店的过海体验，不加星光大道来回折返；星光大道、钟楼和海滨完整拍摄放周六。",
+        "tag": "顺路回酒店",
+        "next": {
+          "to": "佐敦酒店 / 周边晚餐",
+          "mode": "步行",
+          "duration": "约 25–40 分钟（不含晚餐）",
+          "price": "HK$0",
+          "source": "mtrplan",
           "kind": "recommend"
         }
       },
@@ -176,11 +195,14 @@ const DAYS = [
     "route": [
       "中环银行区",
       "皇后像广场",
-      "毕打街路口",
       "砵典乍街",
-      "上环站"
+      "毕打街路口",
+      "中环七号码头",
+      "天星小轮",
+      "尖沙咀码头",
+      "佐敦"
     ],
-    "routeNote": "先在中环金融区办理开户，再向西走到石板街、上环；只在回酒店时过海，维港与星光大道集中到周六。"
+    "routeNote": "石板街后沿士丹利街 / 威灵顿街向东走出毕打街，再向北去码头，不原路返回石板街。天星小轮承担周五回九龙的过海段；周六保留 H1 和星光大道主拍，不安排当天来回坐船。"
   },
   {
     "date": "10.31",
@@ -637,13 +659,29 @@ const CHECKS=[
 
 const PHOTO_SPOTS = [
   {
+    "id": "pottinger",
+    "image": "central",
+    "day": 0,
+    "order": 1,
+    "title": "石板街 · 砵典乍街",
+    "area": "中环 → 上环方向",
+    "when": "周五 16:00 · 开户后顺路",
+    "where": "砵典乍街下段台阶；拍完经士丹利街 / 威灵顿街向东接毕打街",
+    "tip": "利用台阶纵深，人物站在侧边不挡路。背景人多时拍中景，等一小段空档再按快门。",
+    "frame": "2× 人像，1× 台阶纵深",
+    "fee": "免费公共街景",
+    "query": "Pottinger Street Hong Kong",
+    "caption": "石板街实景参考；游客、店铺装饰和光线会变化。",
+    "type": "photo"
+  },
+  {
     "id": "look-left",
     "image": "crossing",
     "day": 0,
-    "order": 1,
+    "order": 2,
     "title": "望左 / 望右路面标线",
     "area": "中环 · 毕打街一带",
-    "when": "周五 16:10 · 日间路面更清楚",
+    "when": "周五 16:45 · 街拍后向北接码头",
     "where": "毕打街 × 德辅道中 / 遮打道附近合法过路处，按现场标线寻找",
     "tip": "站在人行道上俯拍鞋子与箭头，人物取半身或背影；不在行车道长时间摆拍。",
     "frame": "1× 俯拍标线；2× 拍街头半身",
@@ -653,26 +691,26 @@ const PHOTO_SPOTS = [
     "type": "photo"
   },
   {
-    "id": "pottinger",
-    "image": "central",
+    "id": "star-ferry",
+    "image": "starferry",
     "day": 0,
-    "order": 2,
-    "title": "石板街 · 砵典乍街",
-    "area": "中环 → 上环方向",
-    "when": "周五 16:45 · 开户后顺路",
-    "where": "砵典乍街下段台阶；拍完经威灵顿街向上环走",
-    "tip": "利用台阶纵深，人物站在侧边不挡路。背景人多时拍中景，等一小段空档再按快门。",
-    "frame": "2× 人像，1× 台阶纵深",
-    "fee": "免费公共街景",
-    "query": "Pottinger Street Hong Kong",
-    "caption": "石板街实景参考；游客、店铺装饰和光线会变化。",
-    "type": "photo"
+    "order": 3,
+    "title": "天星小轮 · 坐船过维港",
+    "area": "中环七号码头 → 尖沙咀 · 单程",
+    "when": "周五目标 17:30 左右 · 班次以现场为准",
+    "where": "中环七号码头往尖沙咀普通渡轮上层入口，下船后向北回佐敦",
+    "tip": "坐稳后拍侧脸、木椅、舷窗与港岛天际线；靠窗有位再选，船上不设预留座位。只带白天随身小包，行李留酒店。",
+    "frame": "1× 舷窗框景；2× 人物与海港",
+    "fee": "周五成人上层 HK$5；下层 HK$4",
+    "query": "Central Pier 7 Star Ferry Hong Kong",
+    "caption": "真实天星小轮历史实景图，非本次船只、座位或日落光线保证。普通渡轮与另售票的维港游不同。",
+    "type": "experience"
   },
   {
     "id": "kennedy",
     "image": "kennedy",
     "day": 1,
-    "order": 3,
+    "order": 4,
     "title": "坚尼地城 · 海旁与电车街",
     "area": "港岛西端",
     "when": "周六 10:00 · 白天海旁与街景",
@@ -688,7 +726,7 @@ const PHOTO_SPOTS = [
     "id": "dingding",
     "image": "tram",
     "day": 1,
-    "order": 4,
+    "order": 5,
     "title": "叮叮车 · 把港岛坐进镜头",
     "area": "坚尼地城 → 湾仔 · 东行",
     "when": "周六 11:15 · 普通电车一段直坐",
@@ -704,7 +742,7 @@ const PHOTO_SPOTS = [
     "id": "blue-house",
     "image": "bluehouse",
     "day": 1,
-    "order": 5,
+    "order": 6,
     "title": "湾仔蓝屋 · 彩色街角人像",
     "area": "石水渠街 → 太原街 / 利东街",
     "when": "周六 13:00–15:00 · 午餐后",
@@ -720,7 +758,7 @@ const PHOTO_SPOTS = [
     "id": "sunset-bus",
     "image": "bus",
     "day": 1,
-    "order": 6,
+    "order": 7,
     "title": "落日飞车 · H1 开篷巴士",
     "area": "湾仔厦门街 → 尖沙咀",
     "when": "周六约 15:45–16:15 目标上车 · 当天查到站",
@@ -736,7 +774,7 @@ const PHOTO_SPOTS = [
     "id": "avenue-stars",
     "image": "stars",
     "day": 1,
-    "order": 7,
+    "order": 8,
     "title": "星光大道 · 海风与电影感",
     "area": "尖沙咀海滨东段 → 西行",
     "when": "周六目标 17:00 · 到港后先拍",
@@ -752,7 +790,7 @@ const PHOTO_SPOTS = [
     "id": "victoria-harbour",
     "image": "harbour",
     "day": 1,
-    "order": 8,
+    "order": 9,
     "title": "维多利亚港 · 蓝调与夜景",
     "area": "星光大道 → 文化中心 / 钟楼",
     "when": "周六预留 17:30–18:30 · 以天气和天文台为准",
@@ -853,6 +891,17 @@ const PHOTO_CREDITS = [
     "license": "CC0",
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "description": "香港望左路面标线示例；原图未标明本项目建议的中环具体路口，不将其标作同一机位。",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "starferry",
+    "path": "assets/photos/starferry.jpg",
+    "title": "File:Day Star Star Ferry Central to Tsim Sha Tsui 07-04-2023.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Day_Star_Star_Ferry_Central_to_Tsim_Sha_Tsui_07-04-2023.jpg",
+    "author": "LN9267",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "This photo was taken at the Central Pier.",
     "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
   }
 ];

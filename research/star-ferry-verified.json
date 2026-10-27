@@ -1,0 +1,21 @@
+{
+  "source": "https://www.starferry.com.hk/en/service",
+  "checkedOn": "2026-10-27",
+  "route": "Central – Tsim Sha Tsui",
+  "weekdayAdultUpperHKD": 5,
+  "weekdayAdultLowerHKD": 4,
+  "weekendAdultUpperHKD": 6.5,
+  "weekendAdultLowerHKD": 5.6,
+  "fridayCentralDeparturePeriod": "09:55–20:40",
+  "fridayFrequencyMinutes": [
+    6,
+    8
+  ],
+  "serviceHours": "06:30–23:30",
+  "carryOnDimensionsCm": [
+    40,
+    40,
+    17.5
+  ],
+  "notes": "网页通过网络查询工具读取；本地 curl 未成功获取 HTML，故只保留已核对的数据摘要，不伪造网页快照。"
+}

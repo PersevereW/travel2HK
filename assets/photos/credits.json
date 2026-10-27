@@ -86,5 +86,16 @@
     "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
     "description": "香港望左路面标线示例；原图未标明本项目建议的中环具体路口，不将其标作同一机位。",
     "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
+  },
+  {
+    "id": "starferry",
+    "path": "assets/photos/starferry.jpg",
+    "title": "File:Day Star Star Ferry Central to Tsim Sha Tsui 07-04-2023.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Day_Star_Star_Ferry_Central_to_Tsim_Sha_Tsui_07-04-2023.jpg",
+    "author": "LN9267",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "description": "This photo was taken at the Central Pier.",
+    "changes": "缩放与压缩；网页以 cover 方式裁切显示。"
   }
 ]
