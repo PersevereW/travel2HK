@@ -55,11 +55,12 @@ assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(DAYS.flatMap(d=>d.ev
 assert.equal(vm.runInContext('CHECKS.length',context),schema.checkCount);
 assert.deepEqual(JSON.parse(vm.runInContext('JSON.stringify(PHOTO_SPOTS.map(s=>s.id))',context)),schema.photoIds);
 vm.runInContext(`
+ assertTest(HUANGGANG_ROUTES.filter(r=>r.direction==='south').length===2 && HUANGGANG_ROUTES.filter(r=>r.direction==='north').length===4,'Both directions and destination-specific alternatives');
  assertTest(BANKS.length===7 && PACKING.length===7, 'Seven banks and seven packing checks');
  assertTest(BANKS.find(bank=>bank.id==='hangseng').check===20 && PACKING[0].check===13 && PACKING[6].check===19,'Existing check identifiers preserved');
  assertTest(new Set([...BANKS,...PACKING].map(x=>x.check)).size===14, 'Stable new checklist indices');
  assertTest(DAYS[1].events.findIndex(e=>e.id==='v3-s-halloween')<DAYS[1].events.findIndex(e=>e.id==='v3-s6'),'Halloween before westbound waterfront');
- for(const item of [...HALLOWEEN,...PACKING,...TRANSIT_GUIDE,...TRAVEL_TIPS,...LAW_TIPS])for(const id of [item.source,item.extraSource,item.thirdSource].filter(Boolean))assertTest(SOURCES.some(s=>s.id===id),'Guide source exists');
+ for(const item of [...HALLOWEEN,...PACKING,...TRANSIT_GUIDE,...TRAVEL_TIPS,...LAW_TIPS,...HUANGGANG_ROUTES])for(const id of [item.source,item.extraSource,item.thirdSource,item.noteSource].filter(Boolean))assertTest(SOURCES.some(s=>s.id===id),'Guide source exists');
  for(const bank of BANKS)assertTest(bank.sources.every(id=>SOURCES.some(s=>s.id===id)),'Bank source exists');
  user=null;location.hash='#users';render();assertTest(page==='itinerary','Guest cannot render admin page');
  user={username:'visitor',isAdmin:false};render();assertTest(page==='itinerary','Nonadmin cannot render admin page');

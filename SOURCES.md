@@ -82,3 +82,14 @@
 - [恒生官方跨境开户](https://www.hangseng.com/zh-cn/cross-border-banking/personal/account-opening/)支持年满18岁的合资格内地居民在港连接本地网络后使用恒生Mobile App申请；证件、出入境记录、住址和职业等按银行要求准备。
 - [官方手机开户及账户费用](https://www.hangseng.com/zh-hk/personal/banking/account-opening/mobile/)列优进理财无需全面理财总值要求、豁免低额结存服务费；不与优越理财的资金门槛混用，也不推断汇款和全部交易免费。
 - 第7个银行目标的勾选编号追加为20，已有银行卡编号7–12和出行准备编号13–19保持不变，旧备份可继续使用。
+
+## 皇岗往返专题（2026-10-28核对）
+
+- [运输署新皇岗交通](https://www.td.gov.hk/tc/transport_in_hong_kong/land_based_cross_boundary_transport/athp/)确认B10成人全程HK$12.10、B13成人HK$27.60，两线双向06:00–次日00:30；口岸24小时不能推断它们通宵。B13为港岛线，非尖沙咀直达。
+- [巴士全程票价XML](https://static.data.gov.hk/td/routes-fares-xml/ROUTE_BUS.xml)新下载确认268X成人16.20、268B / 269B 20.80、B10 12.10；[九巴公告](https://www.kmb.hk/news_detail.html?id=1368&year=2026)官方索引确认指定组合按两程较高一程优惠。直接网页为空、浏览器加载超时，已明确这一限制，具体转乘条件需查看APP1933。合资格B10+268X按16.20、268B / 269B+B10按20.80列示。
+- 九巴开放API站序与站点数据确认：北行268B / 269B可在尖东站K11 MUSEA（YT632）或尖沙咀转车站中间道（YT102）上车，目的地方向分别朗屏、天水围，途经大榄隧道；南行268X往西九龙方向途经旺角。未声称大榄所有路线一定在同一站柱换车。
+- 港铁2026-10-27 CSV快照确认尖沙咀(3)→葵芳(22)成人八达通11、单程票13；加B10后分别23.10 / 25.10。地铁+B10不套九巴公交联程优惠。
+- [八达通官方10-12新闻稿](https://www.octopus.com.hk/sc/corporate/media/press-releases/2026/20261012.html)区分深圳地铁特惠站的港铁3元优惠与登记满4程回赠；不将任一种额外扣减B10联程预算。优惠机具体位于A口仍未独立核实。
+- [保安局合作查验](https://www.sb.gov.hk/chi/hg/clearance.html)和[口岸FAQ](https://www.sb.gov.hk/chi/hg/faq.html)核对方向楼层、实体证件及不同通道资格；不把一次排队 / 三闸视为每位旅客无登记刷脸。用户所述安检机数量和“完全不排队”仅为当次体验。
+- 三个小红书短链无法读取。去程25元、车上20+30分钟、畅通时北上35分钟保留为用户提供参考。尚无承运人当前25元优惠公告，不能保证资格、支付方式、有效期。第三方[巴士资讯网](https://www.i-busnet.com/china/busroute/shenzhen/tst-huanggang.html)仍列成人八达通日间38、深宵43（23:30–05:59），其他支付更贵；网页与用户南下优惠有差异，已并列注明、要求购票前向承运人确认。
+- 全部原始数值摘要与官方API摘录保存于research/huanggang-2026-10-28.json；没有将未读取的笔记写作已核实文章。默认四日路线及费用保持原计算，皇岗只提供替换参考。

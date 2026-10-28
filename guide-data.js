@@ -102,3 +102,27 @@ const LAW_TIPS = [
  {title:'逗留与账户如实使用',text:'遵守入境凭条的逗留期限，访客不从事未经许可的工作；开户如实申报税务、用途及资金来源。境内个人购汇不可用于境外证券投资，境外开户并不会自动解除外汇用途限制。',source:'imm',extraSource:'fxrules'}
 ];
 SOURCES.push({id:'fxrules',name:'国家外汇管理局 · 个人外汇管理及购汇用途',url:'https://www.safe.gov.cn/shanghai/2019/1213/1198.html',detail:'个人购汇用途需真实合规，不能以旅游等名义购汇用于境外证券投资；以现行外汇管理规定为准。'});
+
+SOURCES.push(
+ {id:'hgtransport',name:'运输署 · 新皇岗口岸交通、票价与服务时间',url:'https://www.td.gov.hk/tc/transport_in_hong_kong/land_based_cross_boundary_transport/athp/',detail:'2026-10-28核对：口岸24小时；B10成人HK$12.10，B13成人HK$27.60，两线双向06:00–次日00:30。B13往返小西湾，服务港岛，不是尖沙咀直达线。'},
+ {id:'hgkmb',name:'九巴 · 皇岗B10及指定路线转乘优惠',url:'https://www.kmb.hk/news_detail.html?id=1368&year=2026',detail:'官方公告索引列大部分指定组合按两程较高票价收费，含268X及268B / 269B；直读页面为空、浏览器加载超时，结合官方票价XML和站序核对，实际转乘时限 / 支付条件以APP1933为准。'},
+ {id:'hgfares',name:'运输署 · B10、268X、268B / 269B票价开放数据',url:'https://static.data.gov.hk/td/routes-fares-xml/ROUTE_BUS.xml',detail:'2026-10-28下载核对全程成人价：B10 12.10、268X 16.20、268B / 269B 20.80港币；联程价需另符合九巴优惠，不把两程票价直接相加。'},
+ {id:'hgstops',name:'九巴官方开放数据 · 268B / 269B及换乘站序',url:'https://data.etabus.gov.hk/v1/transport/kmb/route-stop/268B/inbound/1',detail:'北行268B / 269B含尖东站K11 MUSEA（YT632）、尖沙咀转车站中间道（YT102），至大榄隧道转车站；南行268X经过旺角站。选对行车方向及换乘站位。'},
+ {id:'hgcitybus',name:'城巴官方 · B13路线资料',url:'https://rt.data.gov.hk/v2/transport/citybus/route/CTB/B13',detail:'官方API核对B13往返皇岗与小西湾（蓝湾半岛）；中环等港岛站可直达口岸，尖沙咀旅客需另选交通。'},
+ {id:'hgoctopus',name:'八达通 · 皇岗回赠与深圳地铁特惠站',url:'https://www.octopus.com.hk/sc/corporate/media/press-releases/2026/20261012.html',detail:'皇岗站拍卡特惠用于同日经罗湖 / 落马洲乘港铁的HK$3扣减；不是B10立减。10.12–11.11登记后同一指定路线满4程的回赠另按规则，B10每4程HK$10。'},
+ {id:'hgclearance',name:'保安局 · 皇岗合作查验及登记资格',url:'https://www.sb.gov.hk/chi/hg/clearance.html',detail:'读证与刷脸的资格和登记要求分别适用；内地旅客应备实体通行证及有效香港签注，不把一次排队等同无条件刷脸。'},
+ {id:'hghall',name:'保安局 · 皇岗楼层与通讯常见问题',url:'https://www.sb.gov.hk/chi/hg/faq.html',detail:'港方公共运输交汇处L2；深圳往香港查验L4、香港往深圳L5。楼内流动网络为内地网络，Wi-Fi.HK免费Wi-Fi另有覆盖。'},
+ {id:'hgcoachref',name:'巴士资讯网 · 油尖跨境快线（第三方参考）',url:'https://www.i-busnet.com/china/busroute/shenzhen/tst-huanggang.html',detail:'第三方列日间成人八达通HK$38，深宵HK$43，其他支付不同；童军中心 / 中港城上车。与用户所提供南下HK$25优惠有差异，保留差异并提醒购票前确认。'},
+ {id:'hguserdirect',name:'用户提供的小红书笔记 · 皇岗南下直达',url:'https://xhslink.cn/o/6ZMqCvdfrfe',detail:'用户提供南下新皇岗至中港城HK$25、约50分钟，北上HK$38；短链无法读取，优惠资格 / 期限 / 支付方式未独立核实。'},
+ {id:'hguserbus',name:'用户提供的小红书笔记 · B10转268X实测',url:'https://xhslink.cn/o/3c5A7Ye0pRS',detail:'用户提供12.10 + 4.10 = HK$16.20、车上20+30分钟。路线和票价规则另核官方资料，笔记全文无法读取；耗时保留实测标签。'},
+ {id:'hguserreturn',name:'用户提供的小红书笔记 · 尖沙咀经葵芳回皇岗',url:'https://xhslink.cn/o/8nyisSE4Ger',detail:'用户提供尖沙咀至葵芳地铁11+B10 12.10=23.10港币。已与港铁成人八达通数据、运输署B10价交叉核对；排队体验不视为未来保证。'}
+);
+
+const HUANGGANG_ROUTES = [
+ {id:'hg-south-coach',direction:'south',title:'直达尖沙咀 · 中港城',tag:'少换乘 / 优惠需现场核实',fare:'HK$25 南下优惠（待确认）',steps:['深圳地铁7号线皇岗口岸站 → 按A口指示进联检大楼','L4办理出境深圳 / 入境香港 → L2跨境巴士区','确认当班到中港城，再乘油尖跨境快线'],duration:'约50分钟（用户笔记实测，非门到门承诺）',payment:'HK$25仅记录南下优惠，不能套到回程。当前第三方价表仍列成人日间八达通38、深宵43，优惠票种、支付方式与有效期要在售票处确认；其他支付可能更贵。',tip:'中港城在海港城旁，但不是所有时段终点；部分班次去童军中心或油麻地，买票时核对下客点。另加地铁、步行、候车与通关时间。',source:'hgtransport',extraSource:'hgcoachref',noteSource:'hguserdirect'},
+ {id:'hg-south-bus',direction:'south',title:'B10 → 大榄隧道 → 268X → 旺角',tag:'去旺角推荐 / 性价比高',fare:'合资格联程 HK$16.20',steps:['皇岗口岸港方L2 → B10往葵芳','大榄隧道转车站下车，按指示找268X南行站位','268X往高铁西九龙站方向，在旺角站一带下车'],duration:'车上约20 + 30分钟（用户实测），不含候车 / 换乘 / 通关',payment:'同一张成人八达通按九巴指定组合、方向和时限转乘：按现行两程较高票价16.20计算；笔记扣费为B10先12.10、268X再4.10。现金或不同支付工具不默认享优惠。',tip:'适合以旺角为目的地；若实际去佐敦，可查询268X继续南行的下车站，避免先去旺角再折返。具体站位、到站与优惠条件看APP1933。',source:'hgfares',extraSource:'hgkmb',noteSource:'hguserbus'},
+ {id:'hg-north-coach',direction:'north',title:'尖沙咀直达 · 童军中心 / 中港城',tag:'少换乘推荐 / 带行李可选',fare:'日间成人八达通参考 HK$38',steps:['确认童军中心跨境巴士总站或中港城当班上车点','乘往皇岗口岸的油尖跨境快线','口岸L2下车 → L5办理香港出境 / 深圳入境'],duration:'畅通时约35分钟（用户实测）；勿据此倒推末班或预约',payment:'HK$38是日间八达通参考价，不是所有支付方式统一价。第三方资料列23:30–05:59深宵八达通43；微信 / 支付宝 / 现金另价，以承运人当日售票为准。',tip:'南下25优惠不能拿来买北上票。中港城并非全天有车，夜间先确认童军中心等实际站点；另留候车、拥堵、口岸楼内步行及查验时间。',source:'hgcoachref',extraSource:'hgtransport',noteSource:'hguserdirect'},
+ {id:'hg-north-bus',direction:'north',title:'268B / 269B → 大榄隧道 → B10',tag:'尖东出发推荐 / 巴士性价比高',fare:'合资格联程预计 HK$20.80',steps:['尖东站K11 MUSEA（YT632）或尖沙咀转车站中间道（YT102）上车','268B往朗屏 / 269B往天水围方向 → 大榄隧道转车站','找往皇岗口岸的B10站位换乘，不要跟南行站台混淆'],duration:'车上约55–85分钟（规划），另加候车、换乘步行及通关',payment:'268B / 269B全程20.80，B10全程12.10；符合九巴指定联程条件时按较高一程20.80计算，不是32.90。未享优惠或改用现金须重新查价。',tip:'上车前确认路线方向，不能乘往红磡的反向车。官方站序已核实上述两个上车点；大榄换乘的具体站柱与步行按现场指示和APP1933。',source:'hgstops',extraSource:'hgfares',thirdSource:'hgkmb'},
+ {id:'hg-north-mtr',direction:'north',title:'荃湾线尖沙咀 → 葵芳 → B10',tag:'不想等268B / 269B时的备选',fare:'HK$11.00 + 12.10 = 23.10',steps:['尖沙咀站乘荃湾线往荃湾方向 → 葵芳','B出口按地图步行至葵翠邨公共运输交汇处B10站点','B10往皇岗口岸 → L2下车后上L5查验'],duration:'地铁约25–35分钟 + B10约45–60分钟（规划），换乘及排队另计',payment:'地铁11.00为成人八达通普通等；单程票13.00时两段合计25.10。港铁与B10不套九巴两程较高票价优惠。',tip:'B出口与过马路路线来自用户笔记，按实时导航及车站指示复核；不要把“B出口”直接当B10站名。B10全线服务时间双向06:00–次日00:30，发车以当天到站为准。',source:'mtr',extraSource:'hgtransport',noteSource:'hguserreturn'},
+ {id:'hg-island-b13',direction:'north',title:'港岛直达皇岗 · 城巴B13',tag:'适合中环 / 北角等港岛地区',fare:'成人全程 HK$27.60',steps:['在港岛B13沿线确认往皇岗方向的站点','城巴B13直达皇岗口岸港方公共运输交汇处','L2下车 → L5查验 → 深圳地铁7号线'],duration:'中环至口岸约60–100分钟（规划），起点、路况及候车不同',payment:'B13全线往返皇岗与小西湾（蓝湾半岛），两端服务06:00–次日00:30；以城巴App确认站点、方向、班次及分段收费。',tip:'B13不是尖沙咀直达线；从尖沙咀出发无需为了搭它先跨海到港岛。若人在中环，则可直接查询B13，减少额外换乘。',source:'hgtransport',extraSource:'hgcitybus'}
+];

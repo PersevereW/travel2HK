@@ -1,0 +1,333 @@
+{
+  "checkedAt": "2026-10-28",
+  "officialFaresSource": "https://static.data.gov.hk/td/routes-fares-xml/ROUTE_BUS.xml",
+  "officialFareExtract": [
+    {
+      "ROUTE_ID": "1113",
+      "COMPANY_CODE": "KMB",
+      "ROUTE_NAMEC": "268B",
+      "ROUTE_NAMES": "268B",
+      "ROUTE_NAMEE": "268B",
+      "ROUTE_TYPE": "1",
+      "SERVICE_MODE": "T",
+      "SPECIAL_TYPE": "1",
+      "JOURNEY_TIME": "66",
+      "LOC_START_NAMEC": "朗屏站",
+      "LOC_START_NAMES": "朗屏站",
+      "LOC_START_NAMEE": "LONG PING STATION",
+      "LOC_END_NAMEC": "紅磡(紅鸞道)",
+      "LOC_END_NAMES": "红磡(红鸾道)",
+      "LOC_END_NAMEE": "HUNG HOM (HUNG LUEN ROAD)",
+      "HYPERLINK_C": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268B&lang=zh-hk",
+      "HYPERLINK_S": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268B&lang=zh-cn",
+      "HYPERLINK_E": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268B&lang=en",
+      "FULL_FARE": "20.8",
+      "LAST_UPDATE_DATE": "2025-09-23T00:00:00"
+    },
+    {
+      "ROUTE_ID": "1115",
+      "COMPANY_CODE": "KMB",
+      "ROUTE_NAMEC": "269B",
+      "ROUTE_NAMES": "269B",
+      "ROUTE_NAMEE": "269B",
+      "ROUTE_TYPE": "1",
+      "SERVICE_MODE": "R",
+      "SPECIAL_TYPE": "0",
+      "JOURNEY_TIME": "70",
+      "LOC_START_NAMEC": "天水圍市中心",
+      "LOC_START_NAMES": "天水围市中心",
+      "LOC_START_NAMEE": "TIN SHUI WAI TOWN CENTRE",
+      "LOC_END_NAMEC": "紅磡(紅鸞道)",
+      "LOC_END_NAMES": "红磡(红鸾道)",
+      "LOC_END_NAMEE": "HUNG HOM (HUNG LUEN ROAD)",
+      "HYPERLINK_C": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=269B&lang=zh-hk",
+      "HYPERLINK_S": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=269B&lang=zh-cn",
+      "HYPERLINK_E": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=269B&lang=en",
+      "FULL_FARE": "20.8",
+      "LAST_UPDATE_DATE": "2025-01-05T00:00:00"
+    },
+    {
+      "ROUTE_ID": "8203",
+      "COMPANY_CODE": "KMB",
+      "ROUTE_NAMEC": "268X",
+      "ROUTE_NAMES": "268X",
+      "ROUTE_NAMEE": "268X",
+      "ROUTE_TYPE": "1",
+      "SERVICE_MODE": "R",
+      "SPECIAL_TYPE": "0",
+      "JOURNEY_TIME": "76",
+      "LOC_START_NAMEC": "洪水橋(洪福邨)",
+      "LOC_START_NAMES": "洪水桥(洪福邨)",
+      "LOC_START_NAMEE": "HUNG SHUI KIU (HUNG FUK ESTATE)",
+      "LOC_END_NAMEC": "高鐵(西九龍站)",
+      "LOC_END_NAMES": "高铁(西九龙站)",
+      "LOC_END_NAMEE": "HIGH SPEED RAIL WEST KOWLOON STATION",
+      "HYPERLINK_C": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268X&lang=zh-hk",
+      "HYPERLINK_S": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268X&lang=zh-cn",
+      "HYPERLINK_E": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268X&lang=en",
+      "FULL_FARE": "16.2",
+      "LAST_UPDATE_DATE": "2026-09-16T00:00:00"
+    },
+    {
+      "ROUTE_ID": "8617",
+      "COMPANY_CODE": "KMB",
+      "ROUTE_NAMEC": "269B",
+      "ROUTE_NAMES": "269B",
+      "ROUTE_NAMEE": "269B",
+      "ROUTE_TYPE": "1",
+      "SERVICE_MODE": "T",
+      "SPECIAL_TYPE": "1",
+      "JOURNEY_TIME": "81",
+      "LOC_START_NAMEC": "天恩邨",
+      "LOC_START_NAMES": "天恩邨",
+      "LOC_START_NAMEE": "TIN YAN ESTATE",
+      "LOC_END_NAMEC": "紅磡(紅鸞道)",
+      "LOC_END_NAMES": "红磡(红鸾道)",
+      "LOC_END_NAMEE": "HUNG HOM (HUNG LUEN ROAD)",
+      "HYPERLINK_C": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=269B&lang=zh-hk",
+      "HYPERLINK_S": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=269B&lang=zh-cn",
+      "HYPERLINK_E": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=269B&lang=en",
+      "FULL_FARE": "20.8",
+      "LAST_UPDATE_DATE": "2025-01-05T00:00:00"
+    },
+    {
+      "ROUTE_ID": "1000333",
+      "COMPANY_CODE": "KMB",
+      "ROUTE_NAMEC": "268X",
+      "ROUTE_NAMES": "268X",
+      "ROUTE_NAMEE": "268X",
+      "ROUTE_TYPE": "1",
+      "SERVICE_MODE": "T",
+      "SPECIAL_TYPE": "1",
+      "JOURNEY_TIME": "61",
+      "LOC_START_NAMEC": "朗屏邨悅屏樓",
+      "LOC_START_NAMES": "朗屏邨悦屏楼",
+      "LOC_START_NAMEE": "YUET PING HOUSE LONG PING ESTATE",
+      "LOC_END_NAMEC": "高鐵(西九龍站)",
+      "LOC_END_NAMES": "高铁(西九龙站)",
+      "LOC_END_NAMEE": "HIGH SPEED RAIL WEST KOWLOON STATION",
+      "HYPERLINK_C": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268X&lang=zh-hk",
+      "HYPERLINK_S": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268X&lang=zh-cn",
+      "HYPERLINK_E": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268X&lang=en",
+      "FULL_FARE": "16.2",
+      "LAST_UPDATE_DATE": "2026-09-16T00:00:00"
+    },
+    {
+      "ROUTE_ID": "1000592",
+      "COMPANY_CODE": "KMB",
+      "ROUTE_NAMEC": "268B",
+      "ROUTE_NAMES": "268B",
+      "ROUTE_NAMEE": "268B",
+      "ROUTE_TYPE": "1",
+      "SERVICE_MODE": "T",
+      "SPECIAL_TYPE": "1",
+      "JOURNEY_TIME": "79",
+      "LOC_START_NAMEC": "洪元路(洪福邨)",
+      "LOC_START_NAMES": "洪元路(洪福邨)",
+      "LOC_START_NAMEE": "HUNG FUK ESTATE HUNG YUEN ROAD",
+      "LOC_END_NAMEC": "紅磡(紅鸞道)",
+      "LOC_END_NAMES": "红磡(红鸾道)",
+      "LOC_END_NAMEE": "HUNG HOM (HUNG LUEN ROAD)",
+      "HYPERLINK_C": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268B&lang=zh-hk",
+      "HYPERLINK_S": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268B&lang=zh-cn",
+      "HYPERLINK_E": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=268B&lang=en",
+      "FULL_FARE": "20.8",
+      "LAST_UPDATE_DATE": "2025-02-24T00:00:00"
+    },
+    {
+      "ROUTE_ID": "1000728",
+      "COMPANY_CODE": "KMB",
+      "ROUTE_NAMEC": "B10",
+      "ROUTE_NAMES": "B10",
+      "ROUTE_NAMEE": "B10",
+      "ROUTE_TYPE": "1",
+      "SERVICE_MODE": "R",
+      "SPECIAL_TYPE": "0",
+      "JOURNEY_TIME": "51",
+      "LOC_START_NAMEC": "皇崗口岸",
+      "LOC_START_NAMES": "皇岗口岸",
+      "LOC_START_NAMEE": "HUANGGANG PORT",
+      "LOC_END_NAMEC": "葵芳(葵翠邨)",
+      "LOC_END_NAMES": "葵芳(葵翠邨)",
+      "LOC_END_NAMEE": "KWAI FONG (KWAI TSUI ESTATE)",
+      "HYPERLINK_C": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=B10&lang=zh-hk",
+      "HYPERLINK_S": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=B10&lang=zh-cn",
+      "HYPERLINK_E": "https://search.kmb.hk/KMBWebSite/?action=routesearch&route=B10&lang=en",
+      "FULL_FARE": "12.1",
+      "LAST_UPDATE_DATE": "2026-10-12T00:00:00"
+    }
+  ],
+  "officialStopsSource": "https://data.etabus.gov.hk/v1/transport/kmb/",
+  "officialStopsExtract": [
+    {
+      "route": "268B",
+      "direction": "inbound",
+      "stops": [
+        {
+          "seq": "5",
+          "id": "9CAF2FDA35EEF9E2",
+          "name": "尖东站 K11 MUSEA (YT632)"
+        },
+        {
+          "seq": "6",
+          "id": "AB057A63C24E990E",
+          "name": "尖沙咀转车站 - 中间道 (YT102)"
+        },
+        {
+          "seq": "13",
+          "id": "643D73028E9E8490",
+          "name": "大榄隧道转车站 (YL232)"
+        },
+        {
+          "seq": "14",
+          "id": "E481F7170B1F6FC3",
+          "name": "大榄隧道转车站 (YL236)"
+        }
+      ]
+    },
+    {
+      "route": "269B",
+      "direction": "inbound",
+      "stops": [
+        {
+          "seq": "5",
+          "id": "9CAF2FDA35EEF9E2",
+          "name": "尖东站 K11 MUSEA (YT632)"
+        },
+        {
+          "seq": "6",
+          "id": "AB057A63C24E990E",
+          "name": "尖沙咀转车站 - 中间道 (YT102)"
+        },
+        {
+          "seq": "13",
+          "id": "643D73028E9E8490",
+          "name": "大榄隧道转车站 (YL232)"
+        },
+        {
+          "seq": "14",
+          "id": "0D7A1D0AECA1D999",
+          "name": "大榄隧道转车站 (YL234)"
+        }
+      ]
+    },
+    {
+      "route": "268X",
+      "direction": "outbound",
+      "stops": [
+        {
+          "seq": "13",
+          "id": "3ECEF3B735084236",
+          "name": "大榄隧道转车站 (YL791)"
+        },
+        {
+          "seq": "14",
+          "id": "447C1D79A10C83E2",
+          "name": "大榄隧道转车站 (YL794)"
+        },
+        {
+          "seq": "15",
+          "id": "6C1C752975B8A257",
+          "name": "旺角鸦兰街 (MK650)"
+        },
+        {
+          "seq": "16",
+          "id": "68D0BC0C7164F763",
+          "name": "旺角站,旺角中心 (MK511)"
+        },
+        {
+          "seq": "17",
+          "id": "102CF3166EF7ABFF",
+          "name": "旺角登打士街 (MK524)"
+        }
+      ]
+    },
+    {
+      "route": "B10",
+      "direction": "inbound",
+      "stops": [
+        {
+          "seq": "2",
+          "id": "3ECEF3B735084236",
+          "name": "大榄隧道转车站 (YL791)"
+        },
+        {
+          "seq": "3",
+          "id": "D127A33746CCDB16",
+          "name": "大榄隧道转车站 (YL795)"
+        },
+        {
+          "seq": "5",
+          "id": "376B94FDBA371A25",
+          "name": "葵芳(葵翠邨)总站 (KW914)"
+        }
+      ]
+    }
+  ],
+  "mtr": {
+    "source": "https://opendata.mtr.com.hk/data/mtr_lines_fares.csv",
+    "snapshot": "research/mtr_fares.html (2026-10-27)",
+    "origin": 3,
+    "destination": 22,
+    "adultOctopus": 11,
+    "adultSingle": 13,
+    "withB10AdultOctopus": 23.1
+  },
+  "busHours": {
+    "source": "https://www.td.gov.hk/tc/transport_in_hong_kong/land_based_cross_boundary_transport/athp/",
+    "B10": {
+      "fare": 12.1,
+      "bothDirections": "06:00–00:30 next day"
+    },
+    "B13": {
+      "fare": 27.6,
+      "bothDirections": "06:00–00:30 next day",
+      "destination": "Siu Sai Wan (Island Resort), Hong Kong Island"
+    }
+  },
+  "transferPolicy": {
+    "source": "https://www.kmb.hk/news_detail.html?id=1368&year=2026",
+    "method": "Official indexed announcement; source HTML is empty and headless browser timed out. Fare and stop information separately downloaded from official open data.",
+    "summary": "Most designated interchange combinations pay the higher of the two fares. Eligibility, payment and interchange time limits must be reconfirmed in APP1933.",
+    "B10_268X_eligibleTotal": 16.2,
+    "B10_268B_or_269B_eligibleTotal": 20.8
+  },
+  "discounts": {
+    "source": "https://www.octopus.com.hk/sc/corporate/media/press-releases/2026/20261012.html",
+    "station3HKD": "Same-day MTR journeys via Lo Wu or Lok Ma Chau after tapping Octopus at a participating Shenzhen metro concession station; not a B10 fare deduction.",
+    "B10registrationRebate": "2026-10-12 to 2026-11-11: same registered B10 route four eligible rides earns HKD10; separate promotion, not an instant per-ride discount."
+  },
+  "coach": {
+    "source": "https://www.i-busnet.com/china/busroute/shenzhen/tst-huanggang.html",
+    "sourceType": "third-party reference, not operator confirmation",
+    "adultOctopusDaytime": 38,
+    "adultOctopusLateNight": 43,
+    "lateNight": "23:30–05:59",
+    "userReportedSouthboundPromo": 25,
+    "promoStatus": "Not independently verified. Unknown eligibility, payment method and expiry; source webpage still lists adult southbound HKD38. Ask operator before buying.",
+    "userReportedDrivingMinutes": {
+      "south": 50,
+      "northIfUncongested": 35
+    }
+  },
+  "userNotes": [
+    {
+      "url": "https://xhslink.cn/o/6ZMqCvdfrfe",
+      "topic": "Southbound coach promo"
+    },
+    {
+      "url": "https://xhslink.cn/o/3c5A7Ye0pRS",
+      "topic": "B10+268X: 12.1+4.1, onboard20+30min"
+    },
+    {
+      "url": "https://xhslink.cn/o/8nyisSE4Ger",
+      "topic": "TST-KwaiFong+B10:11+12.1"
+    }
+  ],
+  "limitations": [
+    "All three user-provided shortlinks could not be read; notes treated as user-supplied reports, not browsed articles.",
+    "Bus driving and waiting time estimates do not guarantee customs queues or traffic.",
+    "Shenzhen metro A exit concession-machine location and Kwai Fong B exit walking instructions are user-provided; exact on-site positions were not independently verified.",
+    "No change to default itinerary or default budget; these are alternative Huanggang routes."
+  ]
+}
