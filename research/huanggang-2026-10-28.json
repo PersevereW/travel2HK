@@ -304,11 +304,12 @@
     "adultOctopusLateNight": 43,
     "lateNight": "23:30–05:59",
     "userReportedSouthboundPromo": 25,
-    "promoStatus": "Not independently verified. Unknown eligibility, payment method and expiry; source webpage still lists adult southbound HKD38. Ask operator before buying.",
+    "promoStatus": "Payment method clarified by user as Octopus only, southbound. Current eligibility and expiry have not been independently confirmed with the operator; third-party standard fare page still lists adult southbound HKD38. Confirm current promotion before buying.",
     "userReportedDrivingMinutes": {
       "south": 50,
       "northIfUncongested": 35
-    }
+    },
+    "userReportedPromoPaymentMethod": "Octopus only; user clarification. WeChat Pay, Alipay and cash do not qualify; southbound only."
   },
   "userNotes": [
     {
